@@ -16,6 +16,11 @@
             android:persistent="false"
             android:entries="@array/doze_brightness_entries"
             android:entryValues="@array/doze_brightness_values" />
+
+        <SwitchPreference
+            android:key="doze_invert"
+            android:title="@string/doze_invert_title"
+            android:summary="@string/doze_invert_summary" />
     
         <ListPreference
             android:key="lightbar_mode"
