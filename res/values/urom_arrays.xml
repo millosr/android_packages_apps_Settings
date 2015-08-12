@@ -77,9 +77,9 @@
     
     <!-- Array for lightbar -->
     <string-array name="lightbar_mode_entries">
-        <item>Always off</item>
-        <item>On with 5s timeout</item>
-        <item>On/Off with the screen</item>
+        <item>@string/lightbar_mode_entries_off</item>
+        <item>@string/lightbar_mode_entries_5s</item>
+        <item>@string/lightbar_mode_entries_on</item>
     </string-array>
 
     <string-array name="lightbar_mode_values" translatable="false" >
@@ -90,8 +90,8 @@
 
     <!-- Array for mainkeys layout -->
     <string-array name="mainkeys_layout_entries">
-        <item>Deprecated (Android 2.3)</item>
-        <item>Modern (Android 4.4+)</item>
+        <item>@string/mainkeys_layout_entries_deprecated</item>
+        <item>@string/mainkeys_layout_entries_modern</item>
     </string-array>
 
     <string-array name="mainkeys_layout_values" translatable="false" >

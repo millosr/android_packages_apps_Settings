@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- uRom -->
+    <string name="urom_category">nAOSProm</string>
+    <string name="urom_display_category">Display &amp; notifiche</string>
+    <string name="urom_memory_category">Memoria</string>
+    <string name="urom_buttons_category">Pulsanti</string>
+    <string name="urom_generic_custom">Personalizza</string>
+    <string name="urom_generic_disabled">Disabilita</string>
+    <string name="urom_generic_default">Default</string>
+    <string name="urom_generic_reset">Reset</string>
+    <string name="urom_help_summary">(*) riavvio richiesto</string>
+    <string name="urom_screen_adaptive">Adattivo</string>
+    <string name="urom_settings_title">Altro</string>
+ 
+    <!-- Ram minfree -->
+    <string name="ram_minfree_title">Low memory killer (*)</string>
+    <string name="ram_minfree_automatic">Automatico</string>
+ 
+    <!-- zram -->
+    <string name="zram_size_title">Swap in memoria (*)</string>
+ 
+    <!-- lightbar -->
+    <string name="lightbar_mode_title">Barra luminosa (*)</string>
+    <string name="lightbar_mode_entries_off">Sempre spenta</string>
+    <string name="lightbar_mode_entries_5s">Accesa per 5s</string>
+    <string name="lightbar_mode_entries_on">Accesa/Spenta con lo schermo</string>
+    <string name="lightbar_flash_title">Notifiche Barra Luminosa (*)</string>
+    <string name="lightbar_flash_summary">Lampeggia all\'arrivo di una notifica</string>
+ 
+    <!-- hw keys layout -->
+    <string name="mainkeys_layout_title">Layout Pulsanti Fisici (*)</string>
+    <string name="mainkeys_layout_entries_deprecated">Vecchio (Android 2.3)</string>
+    <string name="mainkeys_layout_entries_modern">Moderno (Android 4.4+)</string>
+ 
+    <!-- hw keys music -->
+    <string name="mainkeys_music_title">Controllo musica con pulsanti fisici (*)</string>
+    <string name="mainkeys_music_summary">Controlla la musica quando lo schermo è spento</string>
+ 
+    <!-- doze brightness -->
+    <string name="doze_brightness_title">Livello luminosità ambiente (*)</string>
+    <string name="doze_invert_title">Inverti ambient color</string>
+    <string name="doze_invert_summary">Disabilita solo con temi notifiche scuri</string>
+ 
+    <!-- color calibration -->
+    <string name="color_calibration_title">Calibrazione colori</string>
+    <string name="color_calibration_summary">Calibra i colori dello schermo</string>
+    <string name="color_red_title">Rosso</string>
+    <string name="color_green_title">Verde</string>
+    <string name="color_blue_title">Blu</string>
+ 
+    <!-- fast charge -->
+    <string name="fast_charge">Ricarica veloce USB</string>
+ 
+    <!-- BitSyko Layers -->
+    <string name="bitsyko_layers">Layers</string>
+
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+
+    <!-- WakeUp -->
+    <string name="wakeup_title">Wake Up</string>
+
+</resources>
