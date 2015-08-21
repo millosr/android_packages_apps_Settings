@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- uRom -->
+    <string name="urom_category">nAOSProm</string>
+    <string name="urom_display_category">Pantalla &amp; Notificaciones</string>
+    <string name="urom_memory_category">Memoria</string>
+    <string name="urom_buttons_category">Botones</string>
+    <string name="urom_generic_custom">Personalizado</string>
+    <string name="urom_generic_disabled">Deshabilitado</string>
+    <string name="urom_generic_default">Por defecto</string>
+    <string name="urom_generic_reset">Reset</string>
+    <string name="urom_help_summary">(*) requiere reiniciar</string>
+    <string name="urom_screen_adaptive">Adaptivo</string>
+    <string name="urom_settings_title">Más</string>
+ 
+    <!-- Ram minfree -->
+    <string name="ram_minfree_title">Umbral maximo de memoria libre (*)</string>
+    <string name="ram_minfree_automatic">Automatico</string>
+ 
+    <!-- zram -->
+    <string name="zram_size_title">Tamaño de Swap en memoria (*)</string>
+ 
+    <!-- lightbar -->
+    <string name="lightbar_mode_title">Iliminación de la barra de botones (*)</string>
+    <string name="lightbar_mode_entries_off">Siempre apagado</string>
+    <string name="lightbar_mode_entries_5s">Encendido durante 5s</string>
+    <string name="lightbar_mode_entries_on">Encendido/Apagado con la panatalla</string>
+    <string name="lightbar_flash_title">Notificación con luz en botonera (*)</string>
+    <string name="lightbar_flash_summary">Parpadeo con notificaciones entrantes</string>
+
+    <!-- hw keys layout -->
+    <string name="mainkeys_layout_title">Configuración de Botones Físicas (*)</string>
+    <string name="mainkeys_layout_entries_deprecated">Obsoleto (Android 2.3)</string>
+    <string name="mainkeys_layout_entries_modern">Moderno (Android 4.4+)</string>
+ 
+    <!-- hw keys music -->
+    <string name="mainkeys_music_title">Botones físicos - Música (*)</string>
+    <string name="mainkeys_music_summary">Control de Música con la pantalla apagada</string>
+ 
+    <!-- doze -->
+    <string name="doze_brightness_title">Nivel de brillo ambiente (*)</string>
+    <string name="doze_invert_title">Invertir color ambiente</string>
+    <string name="doze_invert_summary">Deshabilitar solo para temas con notificaciones oscuras</string>
+ 
+    <!-- color calibration -->
+    <string name="color_calibration_title">Calibración del color</string>
+    <string name="color_calibration_summary">Ajustar colores de la pantalla</string>
+    <string name="color_red_title">Rojo</string>
+    <string name="color_green_title">Verde</string>
+    <string name="color_blue_title">Azul</string>
+ 
+    <!-- fast charge -->
+    <string name="fast_charge">Carga rápida por USB (Fast Charge)</string>
+ 
+    <!-- BitSyko Layers -->
+    <string name="bitsyko_layers">Temas por capas (Layers)</string>
+
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+
+    <!-- WakeUp -->
+    <string name="wakeup_title">Despertar con gestos (Wake up)</string>
+
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- uRom -->
+    <string name="urom_category">nAOSProm</string>
+    <string name="urom_display_category">Екран та сповіщення</string>
+    <string name="urom_memory_category">Пам\'ять</string>
+    <string name="urom_buttons_category">Кнопки керування</string>
+    <string name="urom_generic_custom">Задати вручну</string>
+    <string name="urom_generic_disabled">Disabled</string>
+    <string name="urom_generic_default">За умовчуванням</string>
+    <string name="urom_generic_reset">Збити</string>
+    <string name="urom_help_summary">(*) потребує перезавантаження</string>
+    <string name="urom_screen_adaptive">Адаптивно</string>
+    <string name="urom_settings_title">Більше</string>
+ 
+    <!-- Ram minfree -->
+    <string name="ram_minfree_title">Очищувати пам\'ять при заповненні (*)</string>
+    <string name="ram_minfree_automatic">Автоматично</string>
+ 
+    <!-- zram -->
+    <string name="zram_size_title">Підкачка в пам\'яті (*)</string>
+ 
+    <!-- lightbar -->
+    <string name="lightbar_mode_title">Підсвітка прозорої смуги (*)</string>
+    <string name="lightbar_mode_entries_off">Завжди вимкнено</string>
+    <string name="lightbar_mode_entries_5s">Вмикати на 5 секунд</string>
+    <string name="lightbar_mode_entries_on">Вмикати/Вимикати з екраном</string>
+    <string name="lightbar_flash_title">Сповіщення про повідомлення (*)</string>
+    <string name="lightbar_flash_summary">Спалахувати при отриманні повідомлення</string>
+
+    <!-- hw keys layout -->
+    <string name="mainkeys_layout_title">Шаблон кнопок керування(*)</string>
+    <string name="mainkeys_layout_entries_deprecated">Застарілий (Android 2.3)</string>
+    <string name="mainkeys_layout_entries_modern">Сучасний (Android 4.4+)</string>
+ 
+    <!-- hw keys music -->
+    <string name="mainkeys_music_title">Керування музичним плеєром (*)</string>
+    <string name="mainkeys_music_summary">Керувати музикою за допомогою кнопок, коли екран заблоковано</string>
+ 
+    <!-- doze -->
+    <string name="doze_brightness_title">Рівень яскравості (*)</string>
+    <string name="doze_invert_title">Invert ambient color</string>
+    <string name="doze_invert_summary">Disable only with dark notification themes</string>
+ 
+    <!-- color calibration -->
+    <string name="color_calibration_title">Калібровка кольорів</string>
+    <string name="color_calibration_summary">Відкалібрувати кольори на екрані</string>
+    <string name="color_red_title">Червоний</string>
+    <string name="color_green_title">Зелений</string>
+    <string name="color_blue_title">Синій</string>
+ 
+    <!-- fast charge -->
+    <string name="fast_charge">Прискорена зарядка по USB</string>
+ 
+    <!-- BitSyko Layers -->
+    <string name="bitsyko_layers">Layers</string>
+
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+
+    <!-- WakeUp -->
+    <string name="wakeup_title">Wake Up</string>
+
+</resources>

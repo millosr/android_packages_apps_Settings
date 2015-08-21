@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- uRom -->
+    <string name="urom_category">nAOSProm</string>
+    <string name="urom_display_category">Displej a upozornění</string>
+    <string name="urom_memory_category">Paměť</string>
+    <string name="urom_buttons_category">Tlačítka</string>
+    <string name="urom_generic_custom">Přizpůsobení</string>
+    <string name="urom_generic_disabled">Zakázáno</string>
+    <string name="urom_generic_default">Výchozí</string>
+    <string name="urom_generic_reset">Reset</string>
+    <string name="urom_help_summary">(*) vyžaduje reboot</string>
+    <string name="urom_screen_adaptive">Adaptivní</string>
+    <string name="urom_settings_title">Více</string>
+ 
+    <!-- Ram minfree -->
+    <string name="ram_minfree_title">Uvolňovač paměti (LMK) (*)</string>
+    <string name="ram_minfree_automatic">Automaticky</string>
+ 
+    <!-- zram -->
+    <string name="zram_size_title">Swap v paměti (*)</string>
+ 
+    <!-- lightbar -->
+    <string name="lightbar_mode_title">Světelný pás (*)</string>
+    <string name="lightbar_mode_entries_off">Vždy vypnut</string>
+    <string name="lightbar_mode_entries_5s">Zapnut na 5 s</string>
+    <string name="lightbar_mode_entries_on">Zap/vyp s displejem</string>
+    <string name="lightbar_flash_title">Notifikace svět. pásem (*)</string>
+    <string name="lightbar_flash_summary">Blikat při upozornění</string>
+
+    <!-- hw keys layout -->
+    <string name="mainkeys_layout_title">Rozvržení fyzických tlačítek (*)</string>
+    <string name="mainkeys_layout_entries_deprecated">Zastaralé (Android 2.3)</string>
+    <string name="mainkeys_layout_entries_modern">Moderní (Android 4.4+)</string>
+ 
+    <!-- hw keys music -->
+    <string name="mainkeys_music_title">Hudba na fyzických tlačítkách (*)</string>
+    <string name="mainkeys_music_summary">Ovládání hudby při vypnutém displeji</string>
+ 
+    <!-- doze -->
+    <string name="doze_brightness_title">Jas ambientního displeje (*)</string>
+    <string name="doze_invert_title">Inverze barev ambientního displeje</string>
+    <string name="doze_invert_summary">Zakázat jen s tmavými tématy notifikace</string>
+ 
+    <!-- color calibration -->
+    <string name="color_calibration_title">Kalibrace barev</string>
+    <string name="color_calibration_summary">Kalibrace barev na displeji</string>
+    <string name="color_red_title">Červená</string>
+    <string name="color_green_title">Zelená</string>
+    <string name="color_blue_title">Modrá</string>
+ 
+    <!-- fast charge -->
+    <string name="fast_charge">Rychlonabíjení přes USB</string>
+ 
+    <!-- BitSyko Layers -->
+    <string name="bitsyko_layers">Layers</string>
+
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+
+    <!-- WakeUp -->
+    <string name="wakeup_title">Probuzení</string>
+
+</resources>

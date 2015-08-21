@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- uRom -->
+    <string name="urom_category">nAOSProm</string>
+    <string name="urom_display_category">Tela &amp; Notificação</string>
+    <string name="urom_memory_category">Memória</string>
+    <string name="urom_buttons_category">Botões</string>
+    <string name="urom_generic_custom">Personalizado</string>
+    <string name="urom_generic_disabled">Desabilitado</string>
+    <string name="urom_generic_default">Padrão</string>
+    <string name="urom_generic_reset">Reset</string>
+    <string name="urom_help_summary">(*) Necessário reinício</string>
+    <string name="urom_screen_adaptive">Adaptável</string>
+    <string name="urom_settings_title">Mais</string>
+ 
+    <!-- Ram minfree -->
+    <string name="ram_minfree_title">Mínimo de memória livre (*)</string>
+    <string name="ram_minfree_automatic">Automático</string>
+ 
+    <!-- zram -->
+    <string name="zram_size_title">Tamanho de swap na memória (*)</string>
+ 
+    <!-- lightbar -->
+    <string name="lightbar_mode_title">Iluminação da Barra de botões (*)</string>
+    <string name="lightbar_mode_entries_off">Sempre desligado</string>
+    <string name="lightbar_mode_entries_5s">Ligado por 5s</string>
+    <string name="lightbar_mode_entries_on">Ligado/Desligado com a tela</string>
+    <string name="lightbar_flash_title">Notificação da barra de botões  (*)</string>
+    <string name="lightbar_flash_summary">Piscar ao receber notificação</string>
+
+    <!-- hw keys layout -->
+    <string name="mainkeys_layout_title">Layout das teclas físicas (*)</string>
+    <string name="mainkeys_layout_entries_deprecated">Defasado (Android 2.3)</string>
+    <string name="mainkeys_layout_entries_modern">Moderno (Android 4.4+)</string>
+ 
+    <!-- hw keys music -->
+    <string name="mainkeys_music_title">Teclas Físicas - Música (*)</string>
+    <string name="mainkeys_music_summary">Controla música quando a tela esta apagada</string>
+ 
+    <!-- doze -->
+    <string name="doze_brightness_title">Nível de brilho ambiente (*)</string>
+    <string name="doze_invert_title">Inverter ambiente de cores</string>
+    <string name="doze_invert_summary">Desabilitar apenas em notificações de temas escuros</string>
+ 
+    <!-- color calibration -->
+    <string name="color_calibration_title">Calibração de cores</string>
+    <string name="color_calibration_summary">Ajuste as cores da tela</string>
+    <string name="color_red_title">Vermelho</string>
+    <string name="color_green_title">Verde</string>
+    <string name="color_blue_title">Azul</string>
+ 
+    <!-- fast charge -->
+    <string name="fast_charge">Carregamento rápido USB</string>
+ 
+    <!-- BitSyko Layers -->
+    <string name="bitsyko_layers">Camadas</string>
+
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+
+    <!-- WakeUp -->
+    <string name="wakeup_title">Despertar</string>
+
+</resources>
