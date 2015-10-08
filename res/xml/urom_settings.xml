@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+        android:title="@string/urom_category">
+     
+    <Preference
+         android:key="help_urom"
+         android:summary="@string/urom_help_summary"
+         android:selectable="false"/>
+
+    <PreferenceCategory android:key="urom_display_category"
+            android:title="@string/urom_display_category">
+
+        <ListPreference
+            android:key="doze_brightness"
+            android:title="@string/doze_brightness_title"
+            android:persistent="false"
+            android:entries="@array/doze_brightness_entries"
+            android:entryValues="@array/doze_brightness_values" />
+    
+        <ListPreference
+            android:key="lightbar_mode"
+            android:title="@string/lightbar_mode_title"
+            android:persistent="false"
+            android:entries="@array/lightbar_mode_entries"
+            android:entryValues="@array/lightbar_mode_values" />
+    
+        <SwitchPreference
+            android:key="lightbar_flash"
+            android:title="@string/lightbar_flash_title"
+            android:summary="@string/lightbar_flash_summary"/>
+    
+        <com.android.settings.DisplayColor
+            android:key="color_calibration"
+            android:title="@string/color_calibration_title"
+            android:dialogTitle="@string/color_calibration_title"
+            android:summary="@string/color_calibration_summary"
+            android:persistent="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:key="urom_buttons_category"
+            android:title="@string/urom_buttons_category">
+
+        <ListPreference
+            android:key="mainkeys_layout"
+            android:title="@string/mainkeys_layout_title"
+            android:persistent="false"
+            android:entries="@array/mainkeys_layout_entries"
+            android:entryValues="@array/mainkeys_layout_values" />
+    
+        <SwitchPreference
+            android:key="mainkeys_music"
+            android:title="@string/mainkeys_music_title"
+            android:summary="@string/mainkeys_music_summary"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:key="urom_memory_category"
+            android:title="@string/urom_memory_category">
+
+        <ListPreference
+            android:key="ram_minfree"
+            android:title="@string/ram_minfree_title"
+            android:persistent="false"
+            android:entries="@array/ram_minfree_entries"
+            android:entryValues="@array/ram_minfree_values" />
+    
+        <ListPreference
+            android:key="zram_size"
+            android:title="@string/zram_size_title"
+            android:persistent="false"
+            android:entries="@array/zram_size_entries"
+            android:entryValues="@array/zram_size_values" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

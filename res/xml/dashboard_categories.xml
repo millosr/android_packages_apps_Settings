@@ -72,6 +72,53 @@
 
     </dashboard-category>
 
+    <!-- UROM -->
+    <dashboard-category
+            android:id="@+id/urom_section"
+            android:title="@string/urom_category" >
+
+        <!-- Wake Up -->
+        <dashboard-tile
+                android:id="@+id/wakeup_settings"
+                android:icon="@drawable/ic_settings_display_exposed"
+                android:title="@string/wakeup_title">
+                <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="org.pygoscelis.mobile.wakeup"
+                    android:targetClass="org.pygoscelis.mobile.wakeup.WakeGestureSettings" />
+        </dashboard-tile>
+
+        <!-- Layers -->
+        <dashboard-tile
+                android:id="@+id/bitsyko_layers"
+                android:icon="@drawable/ic_bitsyko_layers"
+                android:title="@string/bitsyko_layers">
+                <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.lovejoy777.rroandlayersmanager"
+                    android:targetClass="com.lovejoy777.rroandlayersmanager.menu" />
+        </dashboard-tile>
+
+        <!-- SuperSU -->
+        <dashboard-tile
+                android:id="@+id/supersu_settings"
+                android:icon="@drawable/ic_action_permission"
+                android:title="@string/supersu_title">
+                <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="eu.chainfire.supersu"
+                    android:targetClass="eu.chainfire.supersu.MainActivity" />
+        </dashboard-tile>
+
+        <!-- More -->
+        <dashboard-tile
+                android:id="@+id/urom_settings"
+                android:title="@string/urom_settings_title"
+                android:fragment="com.android.settings.UromSettings"
+                      android:icon="@drawable/ic_settings_more_exposed" />
+
+    </dashboard-category>
+
     <!-- DEVICE -->
     <dashboard-category
             android:id="@+id/device_section"

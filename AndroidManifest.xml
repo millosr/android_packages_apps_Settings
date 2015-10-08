@@ -93,6 +93,9 @@
             android:allowBackup="false"
             android:usesCleartextTraffic="false">
 
+        <!-- Urom Settings -->
+        <activity android:name=".UromSettings" />
+
         <!-- Settings -->
 
         <activity android:name="Settings"

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- uRom -->
+    <string name="urom_category">nAOSProm</string>
+    <string name="urom_display_category">Display &amp; notification</string>
+    <string name="urom_memory_category">Memory</string>
+    <string name="urom_buttons_category">Buttons</string>
+    <string name="urom_generic_custom">Custom</string>
+    <string name="urom_generic_disabled">Disabled</string>
+    <string name="urom_generic_default">Default</string>
+    <string name="urom_generic_reset">Reset</string>
+    <string name="urom_help_summary">(*) need a reboot</string>
+    <string name="urom_screen_adaptive">Adaptive</string>
+    <string name="urom_settings_title">More</string>
+ 
+    <!-- Ram minfree -->
+    <string name="ram_minfree_title">Low memory killer (*)</string>
+    <string name="ram_minfree_automatic">Automatic</string>
+ 
+    <!-- zram -->
+    <string name="zram_size_title">Swap in memory (*)</string>
+ 
+    <!-- lightbar -->
+    <string name="lightbar_mode_title">Light bar (*)</string>
+    <string name="lightbar_flash_title">Light bar notification (*)</string>
+    <string name="lightbar_flash_summary">Flash on incoming notification</string>
+ 
+    <!-- hw keys layout -->
+    <string name="mainkeys_layout_title">Physical Keys Layout (*)</string>
+ 
+    <!-- hw keys music -->
+    <string name="mainkeys_music_title">Physical Keys Music (*)</string>
+    <string name="mainkeys_music_summary">Music controls when screen is off</string>
+ 
+    <!-- doze brightness -->
+    <string name="doze_brightness_title">Ambient brightness level (*)</string>
+ 
+    <!-- color calibration -->
+    <string name="color_calibration_title">Color calibration</string>
+    <string name="color_calibration_summary">Calibrate on-screen colors</string>
+    <string name="color_red_title">Red</string>
+    <string name="color_green_title">Green</string>
+    <string name="color_blue_title">Blue</string>
+ 
+    <!-- fast charge -->
+    <string name="fast_charge">USB Fast Charge</string>
+ 
+    <!-- BitSyko Layers -->
+    <string name="bitsyko_layers">Layers</string>
+
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+
+    <!-- WakeUp -->
+    <string name="wakeup_title">Wake Up</string>
+
+</resources>

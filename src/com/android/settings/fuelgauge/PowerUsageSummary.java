@@ -44,6 +44,7 @@ import com.android.settings.R;
 import com.android.settings.Settings.HighPowerApplicationsActivity;
 import com.android.settings.SettingsActivity;
 import com.android.settings.applications.ManageApplications;
+import com.android.settings.util.FileUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -65,10 +66,13 @@ public class PowerUsageSummary extends PowerUsageBase {
     private static final String KEY_APP_LIST = "app_list";
     private static final String KEY_BATTERY_HISTORY = "battery_history";
 
+    private static final String FAST_CHARGE_FILE = "/sys/kernel/fast_charge/force_fast_charge";
+
     private static final int MENU_STATS_TYPE = Menu.FIRST;
     private static final int MENU_BATTERY_SAVER = Menu.FIRST + 2;
     private static final int MENU_HIGH_POWER_APPS = Menu.FIRST + 3;
     private static final int MENU_HELP = Menu.FIRST + 4;
+    private static final int MENU_FAST_CHARGE = Menu.FIRST + 5;
 
     private BatteryHistoryPreference mHistPref;
     private PreferenceGroup mAppListGroup;
@@ -140,6 +144,14 @@ public class PowerUsageSummary extends PowerUsageBase {
 
         menu.add(0, MENU_HIGH_POWER_APPS, 0, R.string.high_power_apps);
         super.onCreateOptionsMenu(menu, inflater);
+
+        String fastChargeState = FileUtils.readOneLine(FAST_CHARGE_FILE);
+        if (fastChargeState != null) {
+            MenuItem fastCharge = menu.add(0, MENU_FAST_CHARGE, 0, R.string.fast_charge);
+            fastCharge.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+            fastCharge.setCheckable(true);
+            fastCharge.setChecked(fastChargeState.contentEquals("1"));
+        }
     }
 
     @Override
@@ -169,6 +181,11 @@ public class PowerUsageSummary extends PowerUsageBase {
                         HighPowerApplicationsActivity.class.getName());
                 sa.startPreferencePanel(ManageApplications.class.getName(), args,
                         R.string.high_power_apps, null, null, 0);
+                return true;
+            case MENU_FAST_CHARGE:
+                if (FileUtils.writeLine(FAST_CHARGE_FILE, item.isChecked() ? "0" : "1")) {
+                    item.setChecked(!item.isChecked());
+                }
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
