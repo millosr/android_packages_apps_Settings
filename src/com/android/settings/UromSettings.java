@@ -25,6 +25,7 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
+import com.android.internal.logging.MetricsLogger;
 
 /*
  * Displays preferences for urom.
@@ -95,6 +96,11 @@ public class UromSettings extends SettingsPreferenceFragment
         super.onResume();
 
         updateAllOptions();
+    }
+
+    @Override
+    protected int getMetricsCategory() {
+        return MetricsLogger.DEVELOPMENT;
     }
 
     private void updateAllOptions() {       

@@ -80,7 +80,7 @@
         <!-- Wake Up -->
         <dashboard-tile
                 android:id="@+id/wakeup_settings"
-                android:icon="@drawable/ic_settings_display_exposed"
+                android:icon="@drawable/ic_settings_display"
                 android:title="@string/wakeup_title">
                 <intent
                     android:action="android.intent.action.MAIN"
@@ -115,7 +115,7 @@
                 android:id="@+id/urom_settings"
                 android:title="@string/urom_settings_title"
                 android:fragment="com.android.settings.UromSettings"
-                      android:icon="@drawable/ic_settings_more_exposed" />
+                      android:icon="@drawable/ic_settings_more" />
 
     </dashboard-category>
 
