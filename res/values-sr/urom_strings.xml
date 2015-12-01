@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- uRom -->
+    <string name="urom_category">nAOSProm</string>
+    <string name="urom_display_category">Екран и обавештења</string>
+    <string name="urom_memory_category">Меморија</string>
+    <string name="urom_buttons_category">Дугмад</string>
+    <string name="urom_generic_custom">Прилагођено</string>
+    <string name="urom_generic_disabled">Онемогућено</string>
+    <string name="urom_generic_default">Подразумевано</string>
+    <string name="urom_generic_reset">Ресетовање</string>
+    <string name="urom_help_summary">(*) захтева рестартовање</string>
+    <string name="urom_screen_adaptive">Прилагодљивo</string>
+    <string name="urom_settings_title">Још</string>
+ 
+    <!-- Ram minfree -->
+    <string name="ram_minfree_title">Ослобађање при ниској меморији (*)</string>
+    <string name="ram_minfree_automatic">Аутоматско</string>
+ 
+    <!-- zram -->
+    <string name="zram_size_title">Swap у меморији (*)</string>
+ 
+    <!-- lightbar -->
+    <string name="lightbar_mode_title">Светлосна трака (*)</string>
+    <string name="lightbar_mode_entries_off">Увек искључена</string>
+    <string name="lightbar_mode_entries_5s">Укључена у времену од 5s</string>
+    <string name="lightbar_mode_entries_on">Укљ./Искљ. са екраном</string>
+    <string name="lightbar_flash_title">Обавештења на светлосној траци (*)</string>
+    <string name="lightbar_flash_summary">Засветли на долазеће обавештење</string>
+
+    <!-- hw keys layout -->
+    <string name="mainkeys_layout_title">Распоред физичких тастера (*)</string>
+    <string name="mainkeys_layout_entries_deprecated">Застарело (Android 2.3)</string>
+    <string name="mainkeys_layout_entries_modern">Модерно (Android 4.4+)</string>
+ 
+    <!-- hw keys music -->
+    <string name="mainkeys_music_title">Физички тастери за музику (*)</string>
+    <string name="mainkeys_music_summary">Контрола музике када је екран искључен</string>
+ 
+    <!-- doze -->
+    <string name="doze_brightness_title">Ниво амбијенталног осветљења (*)</string>
+    <string name="doze_invert_title">Инвертуј амбијенталну боју</string>
+    <string name="doze_invert_summary">Онемогући само код тамних тема на обавештењима</string>
+ 
+    <!-- color calibration -->
+    <string name="color_calibration_title">Калибрација боја</string>
+    <string name="color_calibration_summary">Калибрација боја на екрану</string>
+    <string name="color_red_title">Црвена</string>
+    <string name="color_green_title">Зелена</string>
+    <string name="color_blue_title">Плава</string>
+ 
+    <!-- fast charge -->
+    <string name="fast_charge">USB брзо пуњење</string>
+ 
+    <!-- BitSyko Layers -->
+    <string name="bitsyko_layers">Layers</string>
+
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+
+    <!-- WakeUp -->
+    <string name="wakeup_title">Wake Up</string>
+
+</resources>
