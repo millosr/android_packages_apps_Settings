@@ -60,6 +60,7 @@ public class UromSettings extends SettingsPreferenceFragment
     //urom
     private ListPreference mRamMinfree;
     private ListPreference mZramSize;
+
     private ListPreference mDozeBrightness;
     private SwitchPreference mDozeInvert;
     private ListPreference mLightbarMode;
@@ -76,12 +77,12 @@ public class UromSettings extends SettingsPreferenceFragment
         //urom
         mRamMinfree = addListPreference(RAM_MINFREE_KEY);
         mZramSize = addListPreference(ZRAM_SIZE_KEY);
-        mDozeBrightness = addListPreference(DOZE_BRIGHTNESS_KEY);
+        /*mDozeBrightness = addListPreference(DOZE_BRIGHTNESS_KEY);
         mDozeInvert = (SwitchPreference) findPreference(DOZE_INVERT_KEY);
         mLightbarMode = addListPreference(LIGHTBAR_MODE_KEY);
         mLightbarFlash = (SwitchPreference) findPreference(LIGHTBAR_FLASH_KEY);
         mMainkeysLayout = addListPreference(MAINKEYS_LAYOUT_KEY);
-        mMainkeysMusic = (SwitchPreference) findPreference(MAINKEYS_MUSIC_KEY);
+        mMainkeysMusic = (SwitchPreference) findPreference(MAINKEYS_MUSIC_KEY);*/
     }
 
     private ListPreference addListPreference(String prefKey) {
@@ -101,12 +102,12 @@ public class UromSettings extends SettingsPreferenceFragment
         //urom
         updateRamMinfreeOptions();
         updateZramSizeOptions();
-        updateDozeBrightnessOptions();
+        /*updateDozeBrightnessOptions();
         updateDozeInvertOptions();
         updateLightbarModeOptions();
         updateLightbarFlashOptions();
         updateMainkeysLayoutOptions();
-        updateMainkeysMusicOptions();
+        updateMainkeysMusicOptions();*/
     }
     
     //urom

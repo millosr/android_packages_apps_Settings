@@ -6,7 +6,7 @@
          android:key="help_urom"
          android:summary="@string/urom_help_summary"
          android:selectable="false"/>
-
+<!--
     <PreferenceCategory android:key="urom_display_category"
             android:title="@string/urom_display_category">
 
@@ -59,7 +59,7 @@
             android:summary="@string/mainkeys_music_summary"/>
 
     </PreferenceCategory>
-
+-->
     <PreferenceCategory android:key="urom_memory_category"
             android:title="@string/urom_memory_category">
 
