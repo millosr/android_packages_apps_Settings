@@ -1221,7 +1221,7 @@ public class SettingsActivity extends Activity
                     try {
                         removeTile = (getPackageManager().getPackageInfo("org.pygoscelis.mobile.wakeup", 0) == null);
                     } catch (NameNotFoundException e) {
-                        removeTile = false;
+                        removeTile = true;
                     }
                 } else if (id == R.id.supersu_settings) {
                     try {
