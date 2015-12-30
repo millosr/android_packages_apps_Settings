@@ -1217,6 +1217,12 @@ public class SettingsActivity extends Activity
                             UserManager.DISALLOW_DEBUGGING_FEATURES)) {
                         removeTile = true;
                     }
+                } else if (id == R.id.wakeup_settings) {
+                    try {
+                        removeTile = (getPackageManager().getPackageInfo("org.pygoscelis.mobile.wakeup", 0) == null);
+                    } catch (NameNotFoundException e) {
+                        removeTile = false;
+                    }
                 } else if (id == R.id.supersu_settings) {
                     try {
                         removeTile = (getPackageManager().getPackageInfo("eu.chainfire.supersu", 0) == null);
