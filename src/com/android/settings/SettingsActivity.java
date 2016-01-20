@@ -834,7 +834,7 @@ public class SettingsActivity extends SettingsDrawerActivity
                 || somethingChanged;
 
         final boolean showDev = mDevelopmentPreferences.getBoolean(
-                DevelopmentSettings.PREF_SHOW, android.os.Build.TYPE.equals("eng"))
+                DevelopmentSettings.PREF_SHOW, true)
                 && !um.hasUserRestriction(UserManager.DISALLOW_DEBUGGING_FEATURES);
         somethingChanged = setTileEnabled(new ComponentName(packageName,
                         Settings.DevelopmentSettingsActivity.class.getName()),
