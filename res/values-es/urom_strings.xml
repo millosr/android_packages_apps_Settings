@@ -14,12 +14,12 @@
     <string name="urom_screen_adaptive">Adaptivo</string>
     <string name="urom_settings_title">Más</string>
     <string name="urom_other_category">Otro</string>
-    <string name="urom_about">Informaciónn</string>
+    <string name="urom_about">Información</string>
     
  
     <!-- Ram minfree -->
-    <string name="ram_minfree_title">Umbral maximo de memoria libre (*)</string>
-    <string name="ram_minfree_automatic">Automatico</string>
+    <string name="ram_minfree_title">Umbral máximo de memoria libre (*)</string>
+    <string name="ram_minfree_automatic">Automático</string>
  
     <!-- zram -->
     <string name="zram_size_title">Tamaño de intercambio en memoria (*)</string>
@@ -75,8 +75,8 @@
 
     <!-- Allow fake signature checkbox in developer settings -->
     <string name="allow_signature_fake">Permitir el cambio de la firma de la aplicación</string>
-    <string name="allow_signature_fake_summary">Permitir a las aplicaciones saltar los sistemas de seguridad simulando ser otra aplicación</string>
-    <string name="allow_signature_fake_warning">¡Permitir a las aplicaciones saltar los sistemas de seguridad puede llevar a serios problemas de seguridad y privacidad! Comprueba que solo las aplicaciones benignas usan los permisos correspondientes cuando esto está activo.</string>
+    <string name="allow_signature_fake_summary">Permitir a las aplicaciones saltarse los sistemas de seguridad simulando ser otra aplicación</string>
+    <string name="allow_signature_fake_warning">¡Permitir a las aplicaciones saltarse los sistemas de seguridad puede llevar a serios problemas de seguridad y privacidad! Comprueba que solo las aplicaciones benignas usan los permisos correspondientes cuando esto está activo.</string>
     
     <!-- Night/Day Mode -->
     <string name="color_mode_day">Día</string>
@@ -84,7 +84,7 @@
     <string name="color_preset_1900">Vela</string>
     <string name="color_preset_2600">40W Tungsteno</string>
     <string name="color_preset_2850">100W Tungsteno</string>
-    <string name="color_preset_3200">Halogeno</string>
+    <string name="color_preset_3200">Halógeno</string>
     <string name="color_preset_5200">Luz de arco eléctrico</string>
     <string name="color_preset_5400">Luz de sol a mediodía</string>
     <string name="color_preset_6000">Luz de sol directa</string>
@@ -99,7 +99,7 @@
     <string name="urom_about_source_summary">Controla y contribuye</string>
     <string name="urom_about_xda_title">XDA</string>
     <string name="urom_about_xda_summary">Hilo de la ROM</string>
-    <string name="urom_about_donation_title">DonaCion</string>
+    <string name="urom_about_donation_title">Donación</string>
     <string name="urom_about_developers">Desarrolladores</string>
     <string name="urom_about_leaddeveloper">Desarrollador principal</string>
     <string name="urom_about_thanks">Gracias</string>
