@@ -24,6 +24,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.Process;
+import android.os.SystemClock;
 import android.os.UserHandle;
 import android.preference.Preference;
 import android.preference.PreferenceGroup;
@@ -310,6 +311,13 @@ public class PowerUsageSummary extends PowerUsageBase {
         TypedValue value = new TypedValue();
         getContext().getTheme().resolveAttribute(android.R.attr.colorControlNormal, value, true);
         int colorControl = getContext().getColor(value.resourceId);
+
+        final long elapsedRealtimeUs = SystemClock.elapsedRealtime() * 1000;
+        long uSecTime = stats.computeBatteryRealtime(elapsedRealtimeUs, BatteryStats.STATS_SINCE_CHARGED);
+        int statsMinutes = (int)(uSecTime / (1000 * 1000 * 60));
+        int statsHours = statsMinutes / 60;
+        statsMinutes = statsMinutes % 60;
+        mAppListGroup.setTitle(getString(R.string.power_usage_list_summary_time, statsHours, statsMinutes));
 
         if (averagePower >= MIN_AVERAGE_POWER_THRESHOLD_MILLI_AMP || USE_FAKE_DATA) {
             final List<BatterySipper> usageList = getCoalescedUsageList(

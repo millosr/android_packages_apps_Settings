@@ -58,6 +58,9 @@
  
     <!-- fast charge -->
     <string name="fast_charge">USB Fast Charge</string>
+
+    <!-- batery stats -->
+    <string name="power_usage_list_summary_time">Use since last full charge (%1$dh %2$dm)</string>
  
     <!-- BitSyko Layers -->
     <string name="bitsyko_layers">Layers</string>
