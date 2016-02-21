@@ -2,48 +2,52 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- uRom -->
-    <string name="urom_category">nAOSProm</string>
-    <string name="urom_display_category">Wyświetlacz i Powiadomienia</string>
+    <string name="urom_category">Ustawienia nAOSP</string>
+    <string name="urom_display_category">Wyświetlacz i powiadomienia</string>
     <string name="urom_memory_category">Pamięć</string>
-    <string name="urom_buttons_category">Przyciski</string>
+    <string name="urom_buttons_category">Przyciski fizyczne</string>
     <string name="urom_generic_custom">Własne</string>
     <string name="urom_generic_disabled">Wyłączone</string>
-    <string name="urom_generic_default">Domyślne</string>
+    <string name="urom_generic_default">Domyślny</string>
     <string name="urom_generic_reset">Resetuj</string>
     <string name="urom_help_summary">(*) wymaga ponownego uruchomienia</string>
-    <string name="urom_screen_adaptive">Dostosowany</string>
-    <string name="urom_settings_title">Więcej</string>
+    <string name="urom_screen_adaptive">Automatyczny</string>
+    <string name="urom_settings_title">Różne ustawienia</string>
     <string name="urom_other_category">Inne</string>
-    <string name="urom_about">Informacje</string>
+    <string name="urom_about">Informacje o ROM'ie</string>
  
     <!-- Ram minfree -->
     <string name="ram_minfree_title">Zarządca Poziomu Pamięci (LMK) (*)</string>
     <string name="ram_minfree_automatic">Automatyczny</string>
  
     <!-- zram -->
-    <string name="zram_size_title">Swap w pamięci (*)</string>
+    <string name="zram_size_title">Ilość Swap'u w pamięci (*)</string>
  
     <!-- lightbar -->
     <string name="lightbar_mode_title">Podświetlenie przycisków (*)</string>
     <string name="lightbar_mode_entries_off">Wyłączone</string>
-    <string name="lightbar_mode_entries_5s">Podświetlenie przez 5 sekund</string>
-    <string name="lightbar_mode_entries_on">Włączone/wyłączone wraz z ekranem</string>
-    <string name="lightbar_flash_title">Powiadamianie przez pasek podświetlenia (*)</string>
+    <string name="lightbar_mode_entries_5s">5 sekund</string>
+    <string name="lightbar_mode_entries_on">Działanie wraz z ekranem</string>
+    <string name="lightbar_flash_title">Powiadamiaj pasek podświetlenia (*)</string>
     <string name="lightbar_flash_summary">Używaj podświetlenia po otrzymaniu powiadomienia</string>
 
     <!-- hw keys layout -->
-    <string name="mainkeys_layout_title">Rozłożenie Fizycznych Przycisków (*)</string>
-    <string name="mainkeys_layout_entries_deprecated">Stary (Android 2.3)</string>
-    <string name="mainkeys_layout_entries_modern">Nowoczesny (Android 4.4+)</string>
+    <string name="mainkeys_layout_title">Rozłożenie fizycznych przycisków (*)</string>
+    <string name="mainkeys_layout_entries_deprecated">Android 2.3</string>
+    <string name="mainkeys_layout_entries_modern">Android 4.4</string>
  
     <!-- hw keys music -->
-    <string name="mainkeys_music_title">Kontrola Muzyki Przyciskami Fizycznymi (*)</string>
-    <string name="mainkeys_music_summary">Kontroluj muzykę gdy ekran jest wyłączony</string>
+    <string name="mainkeys_music_title">Kontrola muzyki (*)</string>
+    <string name="mainkeys_music_summary">Zmieniaj utwory gdy ekran jest wyłączony</string>
+	
+	<!-- Navigation Bar -->
+    <string name="mainkeys_navbar_title">Pasek nawigacyjny (*)</string>
+    <string name="mainkeys_navbar_summary">Przyciski fizyczne na ekranie</string>
  
     <!-- doze -->
     <string name="doze_brightness_title">Poziom jasności Ambient Display (*)</string>
     <string name="doze_invert_title">Odwróć kolory</string>
-    <string name="doze_invert_summary">Wyłącz tylko w przypadku używania ciemnych tematów</string>
+    <string name="doze_invert_summary">Wyłącz tylko w przypadku używania ciemnych motywów</string>
  
     <!-- color calibration -->
     <string name="color_calibration_title">Kalibracja Kolorów</string>
@@ -62,7 +66,7 @@
     <string name="supersu_title">SuperSU</string>
 
     <!-- WakeUp -->
-    <string name="wakeup_title">Opcje Wybudzania</string>
+    <string name="wakeup_title">Wybudzanie ekranu</string>
 
     <!-- Font size sample text. This needs to be a very short string, as it is shown in
     multiple font sizes in a limited amount of space. -->
@@ -89,19 +93,19 @@
     <string name="color_preset_6000">Światło Słoneczne</string>
 
     <!-- AutoPowerModes -->
-    <string name="autopower_title">Automatyczne Oszczędzanie Energii (*)</string>
+    <string name="autopower_title">Oszczędzanie Energii (*)</string>
     <string name="autopower_summary">Stan spoczynku dla Ambient Display i aplikacji</string>
 
     <!-- About -->
     <string name="urom_about_rom">Przydatne linki</string>
     <string name="urom_about_source_title">Github</string>
-    <string name="urom_about_source_summary">Końcówka i pomoc w rozwoju</string>
-    <string name="urom_about_xda_title">XDA</string>
+    <string name="urom_about_source_summary">Pomóż w rozwoju!</string>
+    <string name="urom_about_xda_title">XDA-Developers</string>
     <string name="urom_about_xda_summary">Temat nAOSP na XDA</string>
-    <string name="urom_about_donation_title">Datki</string>
+    <string name="urom_about_donation_title">Postaw mi piwo!</string>
     <string name="urom_about_developers">Twórcy nAOSP</string>
-    <string name="urom_about_leaddeveloper">Główny Deweloper</string>
-    <string name="urom_about_thanks">Dzięki</string>
-    <string name="urom_about_developer">Deweloper</string>
-    <string name="urom_about_soundfx">Sound FX</string>
+    <string name="urom_about_leaddeveloper">Główny Dev</string>
+    <string name="urom_about_thanks">Specjalne podziękowania</string>
+    <string name="urom_about_developer">Dev</string>
+    <string name="urom_about_soundfx">Najlepszy equalizer ever</string>
 </resources>
