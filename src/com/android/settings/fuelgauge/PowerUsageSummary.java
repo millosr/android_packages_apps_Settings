@@ -317,7 +317,8 @@ public class PowerUsageSummary extends PowerUsageBase {
         int statsMinutes = (int)(uSecTime / (1000 * 1000 * 60));
         int statsHours = statsMinutes / 60;
         statsMinutes = statsMinutes % 60;
-        mAppListGroup.setTitle(getString(R.string.power_usage_list_summary_time, statsHours, statsMinutes));
+        mAppListGroup.setTitle(getString(R.string.power_usage_list_summary) + " "
+                + getString(R.string.power_usage_list_summary_time_suffix, statsHours, statsMinutes));
 
         if (averagePower >= MIN_AVERAGE_POWER_THRESHOLD_MILLI_AMP || USE_FAKE_DATA) {
             final List<BatterySipper> usageList = getCoalescedUsageList(

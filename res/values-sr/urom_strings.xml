@@ -39,6 +39,10 @@
     <!-- hw keys music -->
     <string name="mainkeys_music_title">Физички тастери за музику (*)</string>
     <string name="mainkeys_music_summary">Контрола музике када је екран искључен</string>
+
+    <!-- Navigation Bar -->
+    <string name="mainkeys_navbar_title">Трака за навигацију (*)</string>
+    <string name="mainkeys_navbar_summary">Тастери на екрану</string>
  
     <!-- doze -->
     <string name="doze_brightness_title">Ниво амбијенталног осветљења (*)</string>
@@ -54,6 +58,9 @@
  
     <!-- fast charge -->
     <string name="fast_charge">USB брзо пуњење</string>
+
+    <!-- batery stats -->
+    <string name="power_usage_list_summary_time_suffix">(%1$dч %2$dм)</string>
  
     <!-- BitSyko Layers -->
     <string name="bitsyko_layers">Layers</string>
