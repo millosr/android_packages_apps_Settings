@@ -14,14 +14,14 @@
     <string name="urom_screen_adaptive">Automatyczny</string>
     <string name="urom_settings_title">Różne ustawienia</string>
     <string name="urom_other_category">Inne</string>
-    <string name="urom_about">Informacje o ROM'ie</string>
+    <string name="urom_about">Informacje o ROM\'ie</string>
  
     <!-- Ram minfree -->
     <string name="ram_minfree_title">Zarządca Poziomu Pamięci (LMK) (*)</string>
     <string name="ram_minfree_automatic">Automatyczny</string>
  
     <!-- zram -->
-    <string name="zram_size_title">Ilość Swap'u w pamięci (*)</string>
+    <string name="zram_size_title">Ilość Swap\'u w pamięci (*)</string>
  
     <!-- lightbar -->
     <string name="lightbar_mode_title">Podświetlenie przycisków (*)</string>
