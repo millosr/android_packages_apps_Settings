@@ -71,6 +71,12 @@ public class UromSettings extends SettingsPreferenceFragment
     private static final String AUTOPOWER_KEY = "autopower";
     private static final String AUTOPOWER_PROPERTY = "persist.sys.autopower";
     
+    private static final String LOCKSCREEN_PHONE_KEY = "lockscreen_phone";
+    private static final String LOCKSCREEN_PHONE_PROPERTY = "persist.lock.force_phone";
+    
+    private static final String QS_ONEFINGER_KEY = "qs_onefinger";
+    private static final String QS_ONEFINGER_PROPERTY = "persist.sys.qs_onefinger";
+    
     //urom
     private ListPreference mRamMinfree;
     private ListPreference mZramSize;
@@ -84,6 +90,8 @@ public class UromSettings extends SettingsPreferenceFragment
     private SwitchPreference mMainkeysNavBar;
     private SwitchPreference mAllowSignatureFake;
     private SwitchPreference mAutoPower;
+    private SwitchPreference mLockscreenPhone;
+    private SwitchPreference mQsOneFinger;
 
     //Dialog
     private Dialog mAllowSignatureFakeDialog;
@@ -107,6 +115,8 @@ public class UromSettings extends SettingsPreferenceFragment
         mMainkeysNavBar = (SwitchPreference) findPreference(MAINKEYS_NAVBAR_KEY);
         mAllowSignatureFake = (SwitchPreference) findPreference(ALLOW_SIGNATURE_FAKE_KEY);
         mAutoPower = (SwitchPreference) findPreference(AUTOPOWER_KEY);
+        mLockscreenPhone = (SwitchPreference) findPreference(LOCKSCREEN_PHONE_KEY);
+        mQsOneFinger = (SwitchPreference) findPreference(QS_ONEFINGER_KEY);
 
         //Dialog
         mAllowSignatureFakeDialog = null;
@@ -144,6 +154,8 @@ public class UromSettings extends SettingsPreferenceFragment
         updateMainkeysNavBarOptions();
         updateAllowSignatureFakeOptions();
         updateAutoPowerOptions();
+        updateLockscreenPhoneOptions();
+        updateQsOneFingerOptions();
     }
     
     //urom
@@ -315,6 +327,26 @@ public class UromSettings extends SettingsPreferenceFragment
                 mAutoPower.isChecked() ? "true" : "false");
         updateAutoPowerOptions();
     }
+    
+    private void updateLockscreenPhoneOptions() {
+        mLockscreenPhone.setChecked(SystemProperties.getBoolean(LOCKSCREEN_PHONE_PROPERTY, false));
+    }
+    
+    private void writeLockscreenPhoneOptions() {
+        SystemProperties.set(LOCKSCREEN_PHONE_PROPERTY, 
+                mLockscreenPhone.isChecked() ? "true" : "false");
+        updateLockscreenPhoneOptions();
+    }
+    
+    private void updateQsOneFingerOptions() {
+        mQsOneFinger.setChecked(SystemProperties.getBoolean(QS_ONEFINGER_PROPERTY, true));
+    }
+    
+    private void writeQsOneFingerOptions() {
+        SystemProperties.set(QS_ONEFINGER_PROPERTY, 
+                mQsOneFinger.isChecked() ? "true" : "false");
+        updateQsOneFingerOptions();
+    }
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
@@ -346,6 +378,10 @@ public class UromSettings extends SettingsPreferenceFragment
             }
         } else if (preference == mAutoPower) {
             writeAutoPowerOptions();
+        } else if (preference == mLockscreenPhone) {
+            writeLockscreenPhoneOptions();
+        } else if (preference == mQsOneFinger) {
+            writeQsOneFingerOptions();
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }

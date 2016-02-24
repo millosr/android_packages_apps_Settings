@@ -19,6 +19,11 @@
             android:key="urom_xda"
             android:title="@string/urom_about_xda_title"
             android:summary="@string/urom_about_xda_summary" />
+        
+        <!-- Translation -->
+        <Preference
+            android:key="urom_translation"
+            android:title="@string/urom_about_translation_title" />
 
         <!-- Donation -->
         <Preference

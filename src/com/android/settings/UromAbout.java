@@ -23,6 +23,7 @@ public class UromAbout extends SettingsPreferenceFragment {
 
     Preference mSourceUrl;
     Preference mXdaUrl;
+    Preference mTranslationUrl;
     Preference mDonationUrl;
     Preference mDevs1Url;
     Preference mMentions1Url;
@@ -38,6 +39,7 @@ public class UromAbout extends SettingsPreferenceFragment {
 
         mSourceUrl = findPreference("urom_source");
         mXdaUrl = findPreference("urom_xda");
+        mTranslationUrl = findPreference("urom_translation");
         mDonationUrl = findPreference("urom_donation");
         mDevs1Url = findPreference("urom_devs_field1");
         mMentions1Url = findPreference("urom_mentions_field1");
@@ -54,6 +56,8 @@ public class UromAbout extends SettingsPreferenceFragment {
             launchUrl("https://github.com/mickybart");
         } else if (preference == mXdaUrl) {
             launchUrl("http://forum.xda-developers.com/xperia-s/s-development/rom-naosprom-xperia-s-t2958516");
+        } else if (preference == mTranslationUrl) {
+            launchUrl("http://forum.xda-developers.com/showpost.php?p=65159347&postcount=3644");
         } else if (preference == mDonationUrl) {
             launchUrl("http://forum.xda-developers.com/donatetome.php?u=6043081");
         } else if (preference == mDevs1Url) {

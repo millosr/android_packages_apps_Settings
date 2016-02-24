@@ -106,6 +106,16 @@
             android:key="autopower"
             android:title="@string/autopower_title"
             android:summary="@string/autopower_summary"/>
+        
+        <SwitchPreference
+            android:key="lockscreen_phone"
+            android:title="@string/lockscreen_phone_title"
+            android:summary="@string/lockscreen_phone_summary"/>
+        
+        <SwitchPreference
+            android:key="qs_onefinger"
+            android:title="@string/qs_onefinger_title"
+            android:summary="@string/qs_onefinger_summary"/>
 
     </PreferenceCategory>
 

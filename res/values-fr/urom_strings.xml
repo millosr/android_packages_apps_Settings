@@ -80,6 +80,14 @@
     <!-- AutoPowerModes -->
     <string name="autopower_title">Ecomomie d\'énergie (*)</string>
     <string name="autopower_summary">Mise en veille des applications</string>
+    
+    <!-- Lockscreen -->
+    <string name="lockscreen_phone_title">Raccourci de l\'écran de vérouillage</string>
+    <string name="lockscreen_phone_summary">Forcer l\'affichage du téléphone à la place de l\'assistant vocal</string>
+    
+    <!-- Quick Settings -->
+    <string name="qs_onefinger_title">Accès rapide aux paramètres (*)</string>
+    <string name="qs_onefinger_summary">Ouverture en déplacant un doigt vers le bas</string>
 
     <!-- About -->
     <string name="urom_about_rom">Liens utiles</string>
@@ -87,6 +95,7 @@
     <string name="urom_about_source_summary">Synchronize et contribue</string>
     <string name="urom_about_xda_title">XDA</string>
     <string name="urom_about_xda_summary">Fil de discussion</string>
+    <string name="urom_about_translation_title">Traduction</string>
     <string name="urom_about_donation_title">Donation</string>
     <string name="urom_about_developers">Développeurs</string>
     <string name="urom_about_leaddeveloper">Développeur principal</string>
