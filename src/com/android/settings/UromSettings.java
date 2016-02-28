@@ -25,6 +25,7 @@ import android.os.SystemProperties;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
@@ -120,6 +121,14 @@ public class UromSettings extends SettingsPreferenceFragment
 
         //Dialog
         mAllowSignatureFakeDialog = null;
+
+        //Hide not supported features
+        if (! SystemProperties.get("ro.product.device","").equals("nozomi")) {
+            PreferenceCategory mCategory = (PreferenceCategory) findPreference("urom_display_category");
+
+            mCategory.removePreference(mLightbarMode);
+            mCategory.removePreference(mLightbarFlash);
+        }
     }
 
     private ListPreference addListPreference(String prefKey) {
