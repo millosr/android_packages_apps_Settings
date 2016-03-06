@@ -115,6 +115,7 @@
                 />
 
         <!-- Wake Up -->
+        <!--
         <dashboard-tile
                 android:id="@+id/wakeup_settings"
                 android:icon="@drawable/ic_settings_display"
@@ -124,7 +125,7 @@
                     android:targetPackage="org.pygoscelis.mobile.wakeup"
                     android:targetClass="org.pygoscelis.mobile.wakeup.WakeGestureSettings" />
         </dashboard-tile>
-
+        -->
         <!-- More -->
         <dashboard-tile
                 android:id="@+id/urom_settings"

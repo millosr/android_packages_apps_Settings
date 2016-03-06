@@ -1317,6 +1317,9 @@ public class SettingsActivity extends Activity
                     } catch (NameNotFoundException e) {
                         removeTile = true;
                     }
+                } else if (id == R.id.urom_settings) {
+                    //TODO remove this and define more settings
+                    removeTile = true;
                 }
 
                 if (UserHandle.MU_ENABLED && UserHandle.myUserId() != 0
