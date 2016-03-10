@@ -26,19 +26,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-class WifiDialog extends AlertDialog implements WifiConfigUiBase, DialogInterface.OnClickListener {
-
-    public interface WifiDialogListener {
-        void onForget(WifiDialog dialog);
-        void onSubmit(WifiDialog dialog);
-    }
-
-    private static final int BUTTON_SUBMIT = DialogInterface.BUTTON_POSITIVE;
-    private static final int BUTTON_FORGET = DialogInterface.BUTTON_NEUTRAL;
+class WifiDialog extends AlertDialog implements WifiConfigUiBase {
+    static final int BUTTON_SUBMIT = DialogInterface.BUTTON_POSITIVE;
+    static final int BUTTON_FORGET = DialogInterface.BUTTON_NEUTRAL;
 
     private final boolean mEdit;
     private final boolean mModify;
-    private final WifiDialogListener mListener;
+    private final DialogInterface.OnClickListener mListener;
     private final AccessPoint mAccessPoint;
 
     private View mView;
@@ -46,7 +40,7 @@ class WifiDialog extends AlertDialog implements WifiConfigUiBase, DialogInterfac
     private boolean mHideSubmitButton;
     private boolean mHideForgetButton;
 
-    public WifiDialog(Context context, WifiDialogListener listener,
+    public WifiDialog(Context context, DialogInterface.OnClickListener listener,
             AccessPoint accessPoint, boolean edit, boolean modify,
             boolean hideSubmitButton, boolean hideForgetButton) {
         this(context, listener, accessPoint, edit, modify);
@@ -54,7 +48,7 @@ class WifiDialog extends AlertDialog implements WifiConfigUiBase, DialogInterfac
         mHideForgetButton = hideForgetButton;
     }
 
-    public WifiDialog(Context context, WifiDialogListener listener,
+    public WifiDialog(Context context, DialogInterface.OnClickListener listener,
             AccessPoint accessPoint, boolean edit, boolean modify) {
         super(context);
         mEdit = edit;
@@ -97,28 +91,6 @@ class WifiDialog extends AlertDialog implements WifiConfigUiBase, DialogInterfac
     }
 
     @Override
-    public void dispatchSubmit() {
-        if (mListener != null) {
-            mListener.onSubmit(this);
-        }
-        dismiss();
-    }
-
-    @Override
-    public void onClick(DialogInterface dialogInterface, int id) {
-        if (mListener != null) {
-            switch (id) {
-                case BUTTON_SUBMIT:
-                    mListener.onSubmit(this);
-                    break;
-                case BUTTON_FORGET:
-                    mListener.onForget(this);
-                    break;
-            }
-        }
-    }
-
-    @Override
     public boolean isEdit() {
         return mEdit;
     }
@@ -140,16 +112,16 @@ class WifiDialog extends AlertDialog implements WifiConfigUiBase, DialogInterfac
 
     @Override
     public void setSubmitButton(CharSequence text) {
-        setButton(BUTTON_SUBMIT, text, this);
+        setButton(BUTTON_SUBMIT, text, mListener);
     }
 
     @Override
     public void setForgetButton(CharSequence text) {
-        setButton(BUTTON_FORGET, text, this);
+        setButton(BUTTON_FORGET, text, mListener);
     }
 
     @Override
     public void setCancelButton(CharSequence text) {
-        setButton(BUTTON_NEGATIVE, text, this);
+        setButton(BUTTON_NEGATIVE, text, mListener);
     }
 }
