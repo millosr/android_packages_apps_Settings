@@ -39,6 +39,10 @@
     <!-- hw keys music -->
     <string name="mainkeys_music_title">Physical Keys Music (*)</string>
     <string name="mainkeys_music_summary">Music controls when screen is off</string>
+    
+    <!-- Camera Key -->
+    <string name="camerakey_title">Camera Key (*)</string>
+    <string name="camerakey_longpress_only">Long press only</string>
 
     <!-- Navigation Bar -->
     <string name="mainkeys_navbar_title">NavBar (*)</string>

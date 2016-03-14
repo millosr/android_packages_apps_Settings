@@ -126,5 +126,18 @@
         <item>255 255 251</item>
         <item>255 255 255</item>
     </string-array>
+    
+    <!-- Camera key -->
+    <string-array name="camerakey_entries">
+        <item>@string/urom_generic_disabled</item>
+        <item>@string/urom_generic_default</item>
+        <item>@string/camerakey_longpress_only</item>
+    </string-array>
+    
+    <string-array name="camerakey_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
 
 </resources>

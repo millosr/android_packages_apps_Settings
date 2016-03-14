@@ -57,6 +57,13 @@
             android:key="mainkeys_music"
             android:title="@string/mainkeys_music_title"
             android:summary="@string/mainkeys_music_summary"/>
+        
+        <ListPreference
+            android:key="camerakey"
+            android:title="@string/camerakey_title"
+            android:persistent="false"
+            android:entries="@array/camerakey_entries"
+            android:entryValues="@array/camerakey_values" />
 
         <SwitchPreference
             android:key="mainkeys_navbar"

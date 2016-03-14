@@ -39,6 +39,10 @@
     <!-- hw keys music -->
     <string name="mainkeys_music_title">Touches de volume (*)</string>
     <string name="mainkeys_music_summary">Contrôle de la musique écran éteint</string>
+    
+    <!-- Camera Key -->
+    <string name="camerakey_title">Touche de la camera (*)</string>
+    <string name="camerakey_longpress_only">Pression longue uniquement</string>
 
     <!-- Navigation Bar -->
     <string name="mainkeys_navbar_title">NavBar (*)</string>

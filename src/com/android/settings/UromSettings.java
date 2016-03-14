@@ -63,6 +63,8 @@ public class UromSettings extends SettingsPreferenceFragment
     private static final String MAINKEYS_LAYOUT_PROPERTY = "persist.qemu.hw.mainkeys_layout";
     private static final String MAINKEYS_MUSIC_KEY = "mainkeys_music";
     private static final String MAINKEYS_MUSIC_PROPERTY = "persist.qemu.hw.mainkeys_music";
+    private static final String CAMERAKEY_KEY = "camerakey";
+    private static final String CAMERAKEY_PROPERTY = "persist.qemu.hw.camerakey";
     private static final String MAINKEYS_NAVBAR_KEY = "mainkeys_navbar";
     private static final String MAINKEYS_NAVBAR_PROPERTY = "persist.qemu.hw.mainkeys";
 
@@ -88,6 +90,7 @@ public class UromSettings extends SettingsPreferenceFragment
     private SwitchPreference mLightbarFlash;
     private ListPreference mMainkeysLayout;
     private SwitchPreference mMainkeysMusic;
+    private ListPreference mCamerakey;
     private SwitchPreference mMainkeysNavBar;
     private SwitchPreference mAllowSignatureFake;
     private SwitchPreference mAutoPower;
@@ -113,6 +116,7 @@ public class UromSettings extends SettingsPreferenceFragment
         mLightbarFlash = (SwitchPreference) findPreference(LIGHTBAR_FLASH_KEY);
         mMainkeysLayout = addListPreference(MAINKEYS_LAYOUT_KEY);
         mMainkeysMusic = (SwitchPreference) findPreference(MAINKEYS_MUSIC_KEY);
+        mCamerakey = addListPreference(CAMERAKEY_KEY);
         mMainkeysNavBar = (SwitchPreference) findPreference(MAINKEYS_NAVBAR_KEY);
         mAllowSignatureFake = (SwitchPreference) findPreference(ALLOW_SIGNATURE_FAKE_KEY);
         mAutoPower = (SwitchPreference) findPreference(AUTOPOWER_KEY);
@@ -160,6 +164,7 @@ public class UromSettings extends SettingsPreferenceFragment
         updateLightbarFlashOptions();
         updateMainkeysLayoutOptions();
         updateMainkeysMusicOptions();
+        updateCamerakeyOptions();
         updateMainkeysNavBarOptions();
         updateAllowSignatureFakeOptions();
         updateAutoPowerOptions();
@@ -306,6 +311,21 @@ public class UromSettings extends SettingsPreferenceFragment
                 mMainkeysMusic.isChecked() ? "1" : "0");
         updateMainkeysMusicOptions();
     }
+    
+    private void updateCamerakeyOptions() {
+        String value = SystemProperties.get(CAMERAKEY_PROPERTY, "1");
+        int index = mCamerakey.findIndexOfValue(value);
+        if (index == -1) {
+            index = 1;
+        }
+        mCamerakey.setValueIndex(index);
+        mCamerakey.setSummary(mCamerakey.getEntries()[index]);
+    }
+    
+    private void writeCamerakeyOptions(Object newValue) {
+        SystemProperties.set(CAMERAKEY_PROPERTY, newValue.toString());
+        updateCamerakeyOptions();
+    }
 
     private void updateMainkeysNavBarOptions() {
         mMainkeysNavBar.setChecked(!SystemProperties.get(MAINKEYS_NAVBAR_PROPERTY, "1").contentEquals("1"));
@@ -414,6 +434,9 @@ public class UromSettings extends SettingsPreferenceFragment
             return true;
         } else if (preference == mMainkeysLayout) {
             writeMainkeysLayoutOptions(newValue);
+            return true;
+        } else if (preference == mCamerakey) {
+            writeCamerakeyOptions(newValue);
             return true;
         }
         return false;
