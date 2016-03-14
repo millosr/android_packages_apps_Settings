@@ -40,6 +40,10 @@
     <string name="mainkeys_music_title">Teclas físicas - Música (*)</string>
     <string name="mainkeys_music_summary">Controla música quando a tela esta desligada</string>
  
+    <!-- Navigation Bar -->
+    <string name="mainkeys_navbar_title">Barra de navegação (*)</string>
+    <string name="mainkeys_navbar_summary">Teclas de navegação na tela</string>
+
     <!-- doze -->
     <string name="doze_brightness_title">Nível de brilho (*)</string>
     <string name="doze_invert_title">Inverter cores</string>
@@ -91,6 +95,14 @@
     <!-- AutoPowerModes -->
     <string name="autopower_title">Economia de energia automática (*)</string>
     <string name="autopower_summary">Iluminação e aplicativos em standby</string>
+
+    <!-- Lockscreen -->
+    <string name="lockscreen_phone_title">Atalho da tela de bloqueio</string>
+    <string name="lockscreen_phone_summary">Forcar o atalho do discador ao invés do assistente de voz</string>
+
+    <!-- Quick Settings -->
+    <string name="qs_onefinger_title">Expandir ajustes rápidos (*)</string>
+    <string name="qs_onefinger_summary">Puxar rapidamente para baixo com um dedo</string>
 
     <!-- About -->
     <string name="urom_about_rom">Links úteis</string>
