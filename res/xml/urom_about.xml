@@ -74,11 +74,19 @@
             <intent android:action="android.intent.action.VIEW"
                     android:data="http://forum.xda-developers.com/member.php?u=3326402" />
         </Preference>
+        <!--
         <Preference
             android:title="vocoderism"
             android:summary="@string/urom_about_developer">
             <intent android:action="android.intent.action.VIEW"
                     android:data="http://forum.xda-developers.com/member.php?u=4831205" />
+        </Preference>
+        -->
+        <Preference
+            android:title="daniel_hk"
+            android:summary="@string/urom_about_developer">
+            <intent android:action="android.intent.action.VIEW"
+                    android:data="http://forum.xda-developers.com/member.php?u=4948627" />
         </Preference>
         <Preference
             android:title="ViPER4Android Team"
