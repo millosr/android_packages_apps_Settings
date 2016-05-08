@@ -78,6 +78,14 @@ public class UromSettings extends SettingsPreferenceFragment
     private static final String QS_ONEFINGER_KEY = "qs_onefinger";
     private static final String QS_ONEFINGER_PROPERTY = "persist.sys.qs_onefinger";
     
+    private static final String STATUSBAR_DOUBLETAP_KEY = "statusbar_doubletap";
+    private static final String STATUSBAR_DOUBLETAP_PROPERTY = "persist.sys.statusbar.dt2s";
+
+    private static final String UROM_DISPLAY_CATEGORY = "urom_display_category";
+    private static final String UROM_BUTTONS_CATEGORY = "urom_buttons_category";
+    private static final String UROM_MEMORY_CATEGORY = "urom_memory_category";
+    private static final String UROM_OTHER_CATEGORY = "urom_other_category";
+
     //urom
     private ListPreference mRamMinfree;
     private ListPreference mZramSize;
@@ -93,6 +101,7 @@ public class UromSettings extends SettingsPreferenceFragment
     private SwitchPreference mAutoPower;
     private SwitchPreference mLockscreenPhone;
     private SwitchPreference mQsOneFinger;
+    private SwitchPreference mStatusbarDt2s;
 
     //Dialog
     private Dialog mAllowSignatureFakeDialog;
@@ -118,16 +127,23 @@ public class UromSettings extends SettingsPreferenceFragment
         mAutoPower = (SwitchPreference) findPreference(AUTOPOWER_KEY);
         mLockscreenPhone = (SwitchPreference) findPreference(LOCKSCREEN_PHONE_KEY);
         mQsOneFinger = (SwitchPreference) findPreference(QS_ONEFINGER_KEY);
+        mStatusbarDt2s = (SwitchPreference) findPreference(STATUSBAR_DOUBLETAP_KEY);
 
         //Dialog
         mAllowSignatureFakeDialog = null;
 
         //Hide not supported features
         if (! SystemProperties.get("ro.product.device","").equals("nozomi")) {
-            PreferenceCategory mCategory = (PreferenceCategory) findPreference("urom_display_category");
+            PreferenceScreen preferenceScreen = getPreferenceScreen();
+            preferenceScreen.removePreference(findPreference(UROM_DISPLAY_CATEGORY));
+            preferenceScreen.removePreference(findPreference(UROM_BUTTONS_CATEGORY));
 
-            mCategory.removePreference(mLightbarMode);
-            mCategory.removePreference(mLightbarFlash);
+            PreferenceCategory memoryCategory = (PreferenceCategory) findPreference(UROM_MEMORY_CATEGORY);
+            memoryCategory.removePreference(mKsm);
+
+            PreferenceCategory otherCategory = (PreferenceCategory) findPreference(UROM_OTHER_CATEGORY);
+            otherCategory.removePreference(mAutoPower);
+            otherCategory.removePreference(mLockscreenPhone);
         }
     }
 
@@ -165,6 +181,7 @@ public class UromSettings extends SettingsPreferenceFragment
         updateAutoPowerOptions();
         updateLockscreenPhoneOptions();
         updateQsOneFingerOptions();
+        updateStatusbarDt2sOptions();
     }
     
     //urom
@@ -357,6 +374,16 @@ public class UromSettings extends SettingsPreferenceFragment
         updateQsOneFingerOptions();
     }
 
+    private void updateStatusbarDt2sOptions() {
+        mStatusbarDt2s.setChecked(SystemProperties.getBoolean(STATUSBAR_DOUBLETAP_PROPERTY, true));
+    }
+
+    private void writeStatusbarDt2sOptions() {
+        SystemProperties.set(STATUSBAR_DOUBLETAP_PROPERTY,
+                mStatusbarDt2s.isChecked() ? "true" : "false");
+        updateStatusbarDt2sOptions();
+    }
+
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if (preference == mMainkeysMusic) {
@@ -391,6 +418,8 @@ public class UromSettings extends SettingsPreferenceFragment
             writeLockscreenPhoneOptions();
         } else if (preference == mQsOneFinger) {
             writeQsOneFingerOptions();
+        } else if (preference == mStatusbarDt2s) {
+            writeStatusbarDt2sOptions();
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
