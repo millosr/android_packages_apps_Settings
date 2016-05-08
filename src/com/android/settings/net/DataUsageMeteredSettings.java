@@ -40,7 +40,6 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 import com.android.settings.search.SearchIndexableRaw;
-import com.android.settingslib.NetworkPolicyEditor;
 
 import java.util.ArrayList;
 import java.util.List;
