@@ -111,6 +111,10 @@
     <string name="qs_onefinger_title">Quick Settings Expand (*)</string>
     <string name="qs_onefinger_summary">Quick pull down with one finger</string>
 
+    <!-- Status Bar Double Tap to Sleep -->
+    <string name="statusbar_doubletap_title">Double Tap To Sleep (*)</string>
+    <string name="statusbar_doubletap_summary">Double tap on status bar to turn off screen</string>
+
     <!-- About -->
     <string name="urom_about_rom">Useful links</string>
     <string name="urom_about_source_title">Github</string>
