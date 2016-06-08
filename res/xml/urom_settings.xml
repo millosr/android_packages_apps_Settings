@@ -7,6 +7,7 @@
          android:summary="@string/urom_help_summary"
          android:selectable="false"/>
 
+
     <PreferenceCategory android:key="urom_display_category"
             android:title="@string/urom_display_category">
 
@@ -123,6 +124,11 @@
             android:key="qs_onefinger"
             android:title="@string/qs_onefinger_title"
             android:summary="@string/qs_onefinger_summary"/>
+
+        <SwitchPreference
+            android:key="statusbar_doubletap"
+            android:title="@string/statusbar_doubletap_title"
+            android:summary="@string/statusbar_doubletap_summary"/>
 
     </PreferenceCategory>
 
