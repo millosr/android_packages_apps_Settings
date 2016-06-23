@@ -45,7 +45,7 @@ import java.lang.CharSequence;
  */
 public class DisplayColor extends DialogPreference {
     private static final String TAG = "ColorCalibration";
-    private static final String COLOR_FILE = "/sys/devices/platform/mdp.458753/kcal";
+    private static final String COLOR_FILE = "/sys/devices/platform/kcal_ctrl.0/kcal";
     private static final String COLOR_MODE_PROPERTY = "screen.color_isday";
     private static final String COLOR_MODE_DAY_PROPERTY = "persist.screen.color_day";
     private static final String COLOR_MODE_NIGHT_PROPERTY = "persist.screen.color_night";
