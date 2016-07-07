@@ -115,6 +115,14 @@
     <string name="statusbar_doubletap_title">Double Tap To Sleep (*)</string>
     <string name="statusbar_doubletap_summary">Double tap on status bar to turn off screen</string>
 
+    <!-- Sensors -->
+    <string name="sensors_pickup_title">Pickup sensor (*)</string>
+    <string name="sensors_pickup_summary">Detect a device pickup from a table (BETA)</string>
+    <string name="sensors_significant_title">Significant Motion sensor (*)</string>
+    <string name="sensors_significant_summary">Detect a moving phone (BETA)</string>
+    <string name="sensors_accelerometer_title">Accelerometer sensor (*)</string>
+    <string name="sensors_accelerometer_summary">Report gravity force on 3 axes</string>
+
     <!-- About -->
     <string name="urom_about_rom">Useful links</string>
     <string name="urom_about_source_title">Github</string>

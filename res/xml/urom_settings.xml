@@ -107,13 +107,33 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:key="urom_other_category"
-            android:title="@string/urom_other_category">
+    <PreferenceCategory android:key="urom_system_category"
+            android:title="@string/header_category_system">
+
+        <SwitchPreference
+            android:key="sensors_pickup"
+            android:title="@string/sensors_pickup_title"
+            android:summary="@string/sensors_pickup_summary"/>
+
+        <SwitchPreference
+            android:key="sensors_significant"
+            android:title="@string/sensors_significant_title"
+            android:summary="@string/sensors_significant_summary"/>
 
         <SwitchPreference
             android:key="autopower"
             android:title="@string/autopower_title"
             android:summary="@string/autopower_summary"/>
+
+        <SwitchPreference
+            android:key="sensors_accelerometer"
+            android:title="@string/sensors_accelerometer_title"
+            android:summary="@string/sensors_accelerometer_summary"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:key="urom_other_category"
+            android:title="@string/urom_other_category">
         
         <SwitchPreference
             android:key="lockscreen_phone"

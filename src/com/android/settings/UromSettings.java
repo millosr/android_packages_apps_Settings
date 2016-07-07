@@ -83,6 +83,13 @@ public class UromSettings extends SettingsPreferenceFragment
     private static final String STATUSBAR_DOUBLETAP_KEY = "statusbar_doubletap";
     private static final String STATUSBAR_DOUBLETAP_PROPERTY = "persist.sys.statusbar.dt2s";
 
+    private static final String SENSORS_PICKUP_KEY = "sensors_pickup";
+    private static final String SENSORS_PICKUP_PROPERTY = "persist.sensors.pickup";
+    private static final String SENSORS_SIGNIFICANT_KEY = "sensors_significant";
+    private static final String SENSORS_SIGNIFICANT_PROPERTY = "persist.sensors.significant";
+    private static final String SENSORS_ACCEL_KEY = "sensors_accelerometer";
+    private static final String SENSORS_ACCEL_PROPERTY = "persist.sensors.accelerometer";
+
     //urom
     private ListPreference mRamMinfree;
     private ListPreference mZramSize;
@@ -100,6 +107,9 @@ public class UromSettings extends SettingsPreferenceFragment
     private SwitchPreference mLockscreenPhone;
     private SwitchPreference mQsOneFinger;
     private SwitchPreference mStatusbarDt2s;
+    private SwitchPreference mSensorsPickup;
+    private SwitchPreference mSensorsSignificant;
+    private SwitchPreference mSensorsAccel;
 
     //Dialog
     private Dialog mAllowSignatureFakeDialog;
@@ -127,6 +137,9 @@ public class UromSettings extends SettingsPreferenceFragment
         mLockscreenPhone = (SwitchPreference) findPreference(LOCKSCREEN_PHONE_KEY);
         mQsOneFinger = (SwitchPreference) findPreference(QS_ONEFINGER_KEY);
         mStatusbarDt2s = (SwitchPreference) findPreference(STATUSBAR_DOUBLETAP_KEY);
+        mSensorsPickup = (SwitchPreference) findPreference(SENSORS_PICKUP_KEY);
+        mSensorsSignificant = (SwitchPreference) findPreference(SENSORS_SIGNIFICANT_KEY);
+        mSensorsAccel = (SwitchPreference) findPreference(SENSORS_ACCEL_KEY);
 
         //Dialog
         mAllowSignatureFakeDialog = null;
@@ -176,6 +189,9 @@ public class UromSettings extends SettingsPreferenceFragment
         updateLockscreenPhoneOptions();
         updateQsOneFingerOptions();
         updateStatusbarDt2sOptions();
+        updateSensorsPickupOptions();
+        updateSensorsSignificantOptions();
+        updateSensorsAccelOptions();
     }
     
     //urom
@@ -393,6 +409,51 @@ public class UromSettings extends SettingsPreferenceFragment
         updateStatusbarDt2sOptions();
     }
 
+    private void updateSensorsPickupOptions() {
+        mSensorsPickup.setChecked(!SystemProperties.get(SENSORS_PICKUP_PROPERTY, "0").contentEquals("0"));
+    }
+
+    private void writeSensorsPickupOptions() {
+        SystemProperties.set(SENSORS_PICKUP_PROPERTY,
+                mSensorsPickup.isChecked() ? "1" : "0");
+        updateSensorsPickupOptions();
+    }
+
+    private void updateSensorsSignificantOptions() {
+        mSensorsSignificant.setChecked(!SystemProperties.get(SENSORS_SIGNIFICANT_PROPERTY, "0").contentEquals("0"));
+
+        mAutoPower.setEnabled(mSensorsSignificant.isChecked());
+        if (mAutoPower.isChecked() && !mSensorsSignificant.isChecked()) {
+            /* this is an invalid configuration so we need to set mAutoPower to disable */
+            mAutoPower.setChecked(false);
+            writeAutoPowerOptions();
+        }
+    }
+
+    private void writeSensorsSignificantOptions() {
+        SystemProperties.set(SENSORS_SIGNIFICANT_PROPERTY,
+                mSensorsSignificant.isChecked() ? "1" : "0");
+        updateSensorsSignificantOptions();
+
+        /* mAutoPower depends on Significant Motion Sensor
+         * We set it to true by default if the significant motion sensor is enabled
+         */
+        if (mSensorsSignificant.isChecked()) {
+            mAutoPower.setChecked(true);
+            writeAutoPowerOptions();
+        }
+    }
+
+    private void updateSensorsAccelOptions() {
+        mSensorsAccel.setChecked(!SystemProperties.get(SENSORS_ACCEL_PROPERTY, "1").contentEquals("0"));
+    }
+
+    private void writeSensorsAccelOptions() {
+        SystemProperties.set(SENSORS_ACCEL_PROPERTY,
+                mSensorsAccel.isChecked() ? "1" : "0");
+        updateSensorsAccelOptions();
+    }
+
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if (preference == mMainkeysMusic) {
@@ -429,6 +490,12 @@ public class UromSettings extends SettingsPreferenceFragment
             writeQsOneFingerOptions();
         } else if (preference == mStatusbarDt2s) {
             writeStatusbarDt2sOptions();
+        } else if (preference == mSensorsPickup) {
+            writeSensorsPickupOptions();
+        } else if (preference == mSensorsSignificant) {
+            writeSensorsSignificantOptions();
+        } else if (preference == mSensorsAccel) {
+            writeSensorsAccelOptions();
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }

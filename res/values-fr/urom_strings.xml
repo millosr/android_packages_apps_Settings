@@ -94,8 +94,16 @@
     <string name="qs_onefinger_summary">Ouverture en déplacant un doigt vers le bas</string>
 
     <!-- Status Bar Double Tap to Sleep -->
-    <string name="statusbar_doubletap_title">Eteindre l'\écran... (*)</string>
+    <string name="statusbar_doubletap_title">Eteindre l\'écran... (*)</string>
     <string name="statusbar_doubletap_summary">...en appuyant deux coups brefs sur la barre de notification</string>
+
+    <!-- Sensors -->
+    <string name="sensors_pickup_title">Pickup capteur (*)</string>
+    <string name="sensors_pickup_summary">Détecte la prise en main du téléphone depuis une table (BETA)</string>
+    <string name="sensors_significant_title">Significant Motion capteur (*)</string>
+    <string name="sensors_significant_summary">Détecte le déplacement du téléphone (BETA)</string>
+    <string name="sensors_accelerometer_title">Accelerometer capteur (*)</string>
+    <string name="sensors_accelerometer_summary">Retourne la force de gravité sur 3 axes</string>
 
     <!-- About -->
     <string name="urom_about_rom">Liens utiles</string>
