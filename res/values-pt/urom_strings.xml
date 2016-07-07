@@ -13,6 +13,7 @@
     <string name="urom_help_summary">(*) reinício necessário</string>
     <string name="urom_screen_adaptive">Adaptável</string>
     <string name="urom_settings_title">Mais</string>
+    <string name="urom_status_bar_category">Barra de status</string>
     <string name="urom_other_category">Outro</string>
     <string name="urom_about">Informação</string>
  
@@ -91,6 +92,20 @@
     <!-- AutoPowerModes -->
     <string name="autopower_title">Economia de energia automática (*)</string>
     <string name="autopower_summary">Iluminação e aplicativos em standby</string>
+
+    <!-- Lockscreen -->
+    <string name="lockscreen_phone_title">Atalho da tela de bloqueio</string>
+    <string name="lockscreen_phone_summary">Forcar o atalho do discador ao invés do assistente de voz</string>
+
+    <!-- Quick Settings -->
+    <string name="qs_onefinger_title">Expandir ajustes rápidos (*)</string>
+    <string name="qs_onefinger_summary">Puxar rapidamente para baixo com um dedo</string>
+
+    <!-- Status bar - Battery percentage -->
+    <string name="status_bar_battery_percentage_title">Porcentagem da bateria</string>
+    <string name="status_bar_battery_percentage_default">Oculto</string>
+    <string name="status_bar_battery_percentage_text_inside">Dentro do ícone</string>
+    <string name="status_bar_battery_percentage_text_next">Ao lado do ícone</string>
 
     <!-- About -->
     <string name="urom_about_rom">Links úteis</string>

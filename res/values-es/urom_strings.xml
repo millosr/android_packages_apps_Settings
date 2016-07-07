@@ -13,6 +13,7 @@
     <string name="urom_help_summary">(*) requiere reiniciar</string>
     <string name="urom_screen_adaptive">Adaptivo</string>
     <string name="urom_settings_title">Más</string>
+    <string name="urom_status_bar_category">Barra de estado</string>
     <string name="urom_other_category">Otro</string>
     <string name="urom_about">Información</string>
     
@@ -92,6 +93,12 @@
     <!-- AutoPowerModes -->
     <string name="autopower_title">Ahorro de energía automático (*)</string>
     <string name="autopower_summary">Ambiente y aplicaciones en reposo</string>
+
+    <!-- Status bar - Battery percentage -->
+    <string name="status_bar_battery_percentage_title">Porcentaje de batería</string>
+    <string name="status_bar_battery_percentage_text_next">Junto al icono</string>
+    <string name="status_bar_battery_percentage_default">Oculto</string>
+    <string name="status_bar_battery_percentage_text_inside">Dentro del icono</string>
 
     <!-- About -->
     <string name="urom_about_rom">Enlaces útiles</string>

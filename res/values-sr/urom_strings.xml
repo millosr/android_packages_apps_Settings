@@ -13,6 +13,7 @@
     <string name="urom_help_summary">(*) захтева рестартовање</string>
     <string name="urom_screen_adaptive">Прилагодљивo</string>
     <string name="urom_settings_title">Још</string>
+    <string name="urom_status_bar_category">Статусна трака</string>
     <string name="urom_other_category">Остало</string>
     <string name="urom_about">Информације</string>
  
@@ -98,6 +99,12 @@
     <!-- AutoPowerModes -->
     <string name="autopower_title">Аутоматска уштеда енергије (*)</string>
     <string name="autopower_summary">Амбијентални екран и суспендовање апликација</string>
+
+    <!-- Status bar - Battery percentage -->
+    <string name="status_bar_battery_percentage_title">Проценти батерије</string>
+    <string name="status_bar_battery_percentage_default">Сакривено</string>
+    <string name="status_bar_battery_percentage_text_inside">У икони</string>
+    <string name="status_bar_battery_percentage_text_next">Поред иконе</string>
 
     <!-- About -->
     <string name="urom_about_rom">Корисни линкови</string>

@@ -13,6 +13,7 @@
     <string name="urom_help_summary">(*) need a reboot</string>
     <string name="urom_screen_adaptive">Adaptive</string>
     <string name="urom_settings_title">More</string>
+    <string name="urom_status_bar_category">Status bar</string>
     <string name="urom_other_category">Other</string>
     <string name="urom_about">Information</string>
  
@@ -109,7 +110,13 @@
 
     <!-- Status Bar Double Tap to Sleep -->
     <string name="statusbar_doubletap_title">Double Tap To Sleep (*)</string>
-    <string name="statusbar_doubletap_summary">Double tap on status bar to turn off screen</string>
+    <string name="statusbar_doubletap_summary">Double tap on the status bar to turn off the screen</string>
+
+    <!-- Status bar - Battery percentage -->
+    <string name="status_bar_battery_percentage_title">Battery percentage</string>
+    <string name="status_bar_battery_percentage_default">Hidden</string>
+    <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
+    <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
 
     <!-- About -->
     <string name="urom_about_rom">Useful links</string>

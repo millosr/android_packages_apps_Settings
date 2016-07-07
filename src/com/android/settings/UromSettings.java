@@ -29,6 +29,7 @@ import android.preference.PreferenceCategory;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
+import android.provider.Settings;
 import com.android.internal.logging.MetricsLogger;
 
 /*
@@ -80,6 +81,7 @@ public class UromSettings extends SettingsPreferenceFragment
     
     private static final String STATUSBAR_DOUBLETAP_KEY = "statusbar_doubletap";
     private static final String STATUSBAR_DOUBLETAP_PROPERTY = "persist.sys.statusbar.dt2s";
+    private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
 
     private static final String UROM_DISPLAY_CATEGORY = "urom_display_category";
     private static final String UROM_BUTTONS_CATEGORY = "urom_buttons_category";
@@ -102,6 +104,7 @@ public class UromSettings extends SettingsPreferenceFragment
     private SwitchPreference mLockscreenPhone;
     private SwitchPreference mQsOneFinger;
     private SwitchPreference mStatusbarDt2s;
+    private ListPreference mStatusBarBatteryShowPercent;
 
     //Dialog
     private Dialog mAllowSignatureFakeDialog;
@@ -128,6 +131,7 @@ public class UromSettings extends SettingsPreferenceFragment
         mLockscreenPhone = (SwitchPreference) findPreference(LOCKSCREEN_PHONE_KEY);
         mQsOneFinger = (SwitchPreference) findPreference(QS_ONEFINGER_KEY);
         mStatusbarDt2s = (SwitchPreference) findPreference(STATUSBAR_DOUBLETAP_KEY);
+        mStatusBarBatteryShowPercent = addListPreference(STATUS_BAR_SHOW_BATTERY_PERCENT);
 
         //Dialog
         mAllowSignatureFakeDialog = null;
@@ -137,13 +141,10 @@ public class UromSettings extends SettingsPreferenceFragment
             PreferenceScreen preferenceScreen = getPreferenceScreen();
             preferenceScreen.removePreference(findPreference(UROM_DISPLAY_CATEGORY));
             preferenceScreen.removePreference(findPreference(UROM_BUTTONS_CATEGORY));
+            preferenceScreen.removePreference(findPreference(UROM_OTHER_CATEGORY));
 
             PreferenceCategory memoryCategory = (PreferenceCategory) findPreference(UROM_MEMORY_CATEGORY);
             memoryCategory.removePreference(mKsm);
-
-            PreferenceCategory otherCategory = (PreferenceCategory) findPreference(UROM_OTHER_CATEGORY);
-            otherCategory.removePreference(mAutoPower);
-            otherCategory.removePreference(mLockscreenPhone);
         }
     }
 
@@ -382,6 +383,22 @@ public class UromSettings extends SettingsPreferenceFragment
         SystemProperties.set(STATUSBAR_DOUBLETAP_PROPERTY,
                 mStatusbarDt2s.isChecked() ? "true" : "false");
         updateStatusbarDt2sOptions();
+        updateStatusBarBatteryShowPercent();
+    }
+
+    private void updateStatusBarBatteryShowPercent() {
+        int batteryShowPercent = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT, 0);
+        mStatusBarBatteryShowPercent.setValue(String.valueOf(batteryShowPercent));
+        mStatusBarBatteryShowPercent.setSummary(mStatusBarBatteryShowPercent.getEntry());
+    }
+
+    private void writeStatusBarBatteryShowPercent(Object newValue) {
+        int batteryShowPercent = Integer.valueOf((String) newValue);
+        int index = mStatusBarBatteryShowPercent.findIndexOfValue((String) newValue);
+        Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT, batteryShowPercent);
+        mStatusBarBatteryShowPercent.setSummary(mStatusBarBatteryShowPercent.getEntries()[index]);
     }
 
     @Override
@@ -443,6 +460,9 @@ public class UromSettings extends SettingsPreferenceFragment
             return true;
         } else if (preference == mMainkeysLayout) {
             writeMainkeysLayoutOptions(newValue);
+            return true;
+        } else if (preference == mStatusBarBatteryShowPercent) {
+            writeStatusBarBatteryShowPercent(newValue);
             return true;
         }
         return false;
