@@ -93,6 +93,10 @@
     <string name="qs_onefinger_title">Accès rapide aux paramètres (*)</string>
     <string name="qs_onefinger_summary">Ouverture en déplacant un doigt vers le bas</string>
 
+    <!-- Status Bar Double Tap to Sleep -->
+    <string name="statusbar_doubletap_title">Eteindre l'\écran... (*)</string>
+    <string name="statusbar_doubletap_summary">...en appuyant deux coups brefs sur la barre de notification</string>
+
     <!-- About -->
     <string name="urom_about_rom">Liens utiles</string>
     <string name="urom_about_source_title">Github</string>
