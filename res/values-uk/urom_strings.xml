@@ -13,6 +13,7 @@
     <string name="urom_help_summary">(*) потрібно перезавантаження</string>
     <string name="urom_screen_adaptive">Адаптивний</string>
     <string name="urom_settings_title">Більше</string>
+    <string name="urom_status_bar_category">Рядок стану</string>
     <string name="urom_other_category">Інше</string>
     <string name="urom_about">Інформація</string>
  
@@ -114,6 +115,12 @@
     <!-- Status Bar Double Tap to Sleep -->
     <string name="statusbar_doubletap_title">Подвійний дотик, щоб заснути (*)</string>
     <string name="statusbar_doubletap_summary">Торкніться двічі статусбару, щоб вимкнути дисплей</string>
+
+    <!-- Status bar - Battery percentage -->
+    <string name="status_bar_battery_percentage_title">Відсоток заряду</string>
+    <string name="status_bar_battery_percentage_default">Схований</string>
+    <string name="status_bar_battery_percentage_text_inside">Всередині значка</string>
+    <string name="status_bar_battery_percentage_text_next">Поруч зі значком</string>
 
     <!-- About -->
     <string name="urom_about_rom">Корисні посилання</string>

@@ -13,6 +13,7 @@
     <string name="urom_help_summary">(*) vyžaduje reboot</string>
     <string name="urom_screen_adaptive">Adaptivní</string>
     <string name="urom_settings_title">Více</string>
+    <string name="urom_status_bar_category">Stavová lišta</string>
  
     <!-- Ram minfree -->
     <string name="ram_minfree_title">Uvolňovač paměti (LMK) (*)</string>
@@ -61,5 +62,11 @@
 
     <!-- WakeUp -->
     <string name="wakeup_title">Probuzení</string>
+
+    <!-- Status bar - Battery percentage -->
+    <string name="status_bar_battery_percentage_title">Procenta baterie</string>
+    <string name="status_bar_battery_percentage_default">Skrytý</string>
+    <string name="status_bar_battery_percentage_text_inside">Uvnitř ikony</string>
+    <string name="status_bar_battery_percentage_text_next">Vedle ikony</string>
 
 </resources>

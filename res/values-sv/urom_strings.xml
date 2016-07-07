@@ -13,7 +13,8 @@
     <string name="urom_help_summary">(*) behöver omstart</string>
     <string name="urom_screen_adaptive">Adaptiv</string>
     <string name="urom_settings_title">Mer</string>
- 
+    <string name="urom_status_bar_category">Statusfält</string>
+
     <!-- Ram minfree -->
     <string name="ram_minfree_title">Minnesbrists-dödare (*)</string>
     <string name="ram_minfree_automatic">Automatisk</string>
@@ -61,5 +62,11 @@
 
     <!-- WakeUp -->
     <string name="wakeup_title">Väckning</string>
+
+    <!-- Status bar - Battery percentage -->
+    <string name="status_bar_battery_percentage_title">Batteriprocent</string>
+    <string name="status_bar_battery_percentage_default">Dold</string>
+    <string name="status_bar_battery_percentage_text_inside">Inuti ikonen</string>
+    <string name="status_bar_battery_percentage_text_next">Bredvid ikonen</string>
 
 </resources>
