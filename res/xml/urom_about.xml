@@ -45,8 +45,15 @@
         android:title="@string/urom_about_developers">
 
         <Preference
-            android:title="millosr"
+            android:title="mickybart"
             android:summary="@string/urom_about_leaddeveloper">
+            <intent android:action="android.intent.action.VIEW"
+                    android:data="http://forum.xda-developers.com/member.php?u=6043081" />
+        </Preference>
+
+        <Preference
+            android:title="millosr"
+            android:summary="@string/urom_about_developer">
             <intent android:action="android.intent.action.VIEW"
                     android:data="http://forum.xda-developers.com/member.php?u=6754437" />
         </Preference>
@@ -61,12 +68,6 @@
             android:title="billchen1977"
             android:summary="@string/urom_about_developer" />
         -->
-        <Preference
-            android:title="mickybart"
-            android:summary="@string/urom_about_developer">
-            <intent android:action="android.intent.action.VIEW"
-                    android:data="http://forum.xda-developers.com/member.php?u=6043081" />
-        </Preference>
 
         <Preference
             android:title="dmitrygr"
