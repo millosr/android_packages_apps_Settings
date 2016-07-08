@@ -41,6 +41,11 @@
             android:title="mickybart"
             android:summary="@string/urom_about_leaddeveloper"/>
 
+        <Preference
+            android:key="urom_devs_field2"
+            android:title="millosr"
+            android:summary="@string/urom_about_developer"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory
