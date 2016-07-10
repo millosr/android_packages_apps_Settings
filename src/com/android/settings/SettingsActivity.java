@@ -1317,6 +1317,12 @@ public class SettingsActivity extends Activity
                     } catch (NameNotFoundException e) {
                         removeTile = true;
                     }
+                } else if (id == R.id.substratum) {
+                    try {
+                        removeTile = (getPackageManager().getPackageInfo("projekt.substratum", 0) == null);
+                    } catch (NameNotFoundException e) {
+                        removeTile = true;
+                    }
                 }
 
                 if (UserHandle.MU_ENABLED && UserHandle.myUserId() != 0

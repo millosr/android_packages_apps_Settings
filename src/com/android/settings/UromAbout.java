@@ -26,6 +26,7 @@ public class UromAbout extends SettingsPreferenceFragment {
     Preference mTranslationUrl;
     Preference mDonationUrl;
     Preference mDevs1Url;
+    Preference mDevs2Url;
     Preference mMentions1Url;
     Preference mMentions2Url;
     Preference mMentions3Url;
@@ -42,6 +43,7 @@ public class UromAbout extends SettingsPreferenceFragment {
         mTranslationUrl = findPreference("urom_translation");
         mDonationUrl = findPreference("urom_donation");
         mDevs1Url = findPreference("urom_devs_field1");
+        mDevs2Url = findPreference("urom_devs_field2");
         mMentions1Url = findPreference("urom_mentions_field1");
         mMentions2Url = findPreference("urom_mentions_field2");
         mMentions3Url = findPreference("urom_mentions_field3");
@@ -62,6 +64,8 @@ public class UromAbout extends SettingsPreferenceFragment {
             launchUrl("http://forum.xda-developers.com/donatetome.php?u=6043081");
         } else if (preference == mDevs1Url) {
             launchUrl("http://forum.xda-developers.com/member.php?u=6043081");
+        } else if (preference == mDevs2Url) {
+            launchUrl("http://forum.xda-developers.com/member.php?u=6754437");
         } else if (preference == mMentions1Url) {
             launchUrl("http://forum.xda-developers.com/member.php?u=5064452");
         } else if (preference == mMentions2Url) {
