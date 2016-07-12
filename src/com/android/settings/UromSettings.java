@@ -81,12 +81,17 @@ public class UromSettings extends SettingsPreferenceFragment
     
     private static final String STATUSBAR_DOUBLETAP_KEY = "statusbar_doubletap";
     private static final String STATUSBAR_DOUBLETAP_PROPERTY = "persist.sys.statusbar.dt2s";
+
     private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
+    private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
 
     private static final String UROM_DISPLAY_CATEGORY = "urom_display_category";
     private static final String UROM_BUTTONS_CATEGORY = "urom_buttons_category";
     private static final String UROM_MEMORY_CATEGORY = "urom_memory_category";
     private static final String UROM_OTHER_CATEGORY = "urom_other_category";
+
+    private static final int STATUS_BAR_BATTERY_STYLE_HIDDEN = 4;
+    private static final int STATUS_BAR_BATTERY_STYLE_TEXT = 6;
 
     //urom
     private ListPreference mRamMinfree;
@@ -105,6 +110,7 @@ public class UromSettings extends SettingsPreferenceFragment
     private SwitchPreference mQsOneFinger;
     private SwitchPreference mStatusbarDt2s;
     private ListPreference mStatusBarBatteryShowPercent;
+    private ListPreference mStatusBarBatteryStyle;
 
     //Dialog
     private Dialog mAllowSignatureFakeDialog;
@@ -131,6 +137,7 @@ public class UromSettings extends SettingsPreferenceFragment
         mLockscreenPhone = (SwitchPreference) findPreference(LOCKSCREEN_PHONE_KEY);
         mQsOneFinger = (SwitchPreference) findPreference(QS_ONEFINGER_KEY);
         mStatusbarDt2s = (SwitchPreference) findPreference(STATUSBAR_DOUBLETAP_KEY);
+        mStatusBarBatteryStyle = addListPreference(STATUS_BAR_BATTERY_STYLE);
         mStatusBarBatteryShowPercent = addListPreference(STATUS_BAR_SHOW_BATTERY_PERCENT);
 
         //Dialog
@@ -183,6 +190,8 @@ public class UromSettings extends SettingsPreferenceFragment
         updateLockscreenPhoneOptions();
         updateQsOneFingerOptions();
         updateStatusbarDt2sOptions();
+        updateStatusBarBatteryStyle();
+        updateStatusBarBatteryShowPercent();
     }
     
     //urom
@@ -386,6 +395,23 @@ public class UromSettings extends SettingsPreferenceFragment
         updateStatusBarBatteryShowPercent();
     }
 
+    private void updateStatusBarBatteryStyle() {
+        int batteryStyle = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.STATUS_BAR_BATTERY_STYLE, 0);
+        mStatusBarBatteryStyle.setValue(String.valueOf(batteryStyle));
+        mStatusBarBatteryStyle.setSummary(mStatusBarBatteryStyle.getEntry());
+        enableStatusBarBatteryDependents(batteryStyle);
+    }
+
+    private void writeStatusBarBatteryStyle(Object newValue) {
+        int batteryStyle = Integer.valueOf((String) newValue);
+        int index = mStatusBarBatteryStyle.findIndexOfValue((String) newValue);
+        Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.STATUS_BAR_BATTERY_STYLE, batteryStyle);
+        mStatusBarBatteryStyle.setSummary(mStatusBarBatteryStyle.getEntries()[index]);
+        enableStatusBarBatteryDependents(batteryStyle);
+    }
+
     private void updateStatusBarBatteryShowPercent() {
         int batteryShowPercent = Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT, 0);
@@ -399,6 +425,15 @@ public class UromSettings extends SettingsPreferenceFragment
         Settings.System.putInt(getActivity().getContentResolver(),
                 Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT, batteryShowPercent);
         mStatusBarBatteryShowPercent.setSummary(mStatusBarBatteryShowPercent.getEntries()[index]);
+    }
+
+    private void enableStatusBarBatteryDependents(int batteryIconStyle) {
+        if (batteryIconStyle == STATUS_BAR_BATTERY_STYLE_HIDDEN ||
+                batteryIconStyle == STATUS_BAR_BATTERY_STYLE_TEXT) {
+            mStatusBarBatteryShowPercent.setEnabled(false);
+        } else {
+            mStatusBarBatteryShowPercent.setEnabled(true);
+        }
     }
 
     @Override
@@ -463,6 +498,9 @@ public class UromSettings extends SettingsPreferenceFragment
             return true;
         } else if (preference == mStatusBarBatteryShowPercent) {
             writeStatusBarBatteryShowPercent(newValue);
+            return true;
+        } else if (preference == mStatusBarBatteryStyle) {
+            writeStatusBarBatteryStyle(newValue);
             return true;
         }
         return false;
