@@ -63,6 +63,15 @@
     <!-- WakeUp -->
     <string name="wakeup_title">Väckning</string>
 
+    <!-- Status bar - Battery icon options -->
+    <string name="status_bar_battery_style_title">Stil på batteristatus</string>
+    <string name="status_bar_battery_style_icon_portrait">Ikon i porträttläge</string>
+    <string name="status_bar_battery_style_icon_landscape">Ikon i landskapsläge</string>
+    <string name="status_bar_battery_style_circle">Cirkel</string>
+    <string name="status_bar_battery_style_dotted_circle">Punktad cirkel</string>
+    <string name="status_bar_battery_style_text">Text</string>
+    <string name="status_bar_battery_style_hidden">Dold</string>
+
     <!-- Status bar - Battery percentage -->
     <string name="status_bar_battery_percentage_title">Batteriprocent</string>
     <string name="status_bar_battery_percentage_default">Dold</string>

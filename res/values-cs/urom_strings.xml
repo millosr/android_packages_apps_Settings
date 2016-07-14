@@ -63,6 +63,15 @@
     <!-- WakeUp -->
     <string name="wakeup_title">Probuzení</string>
 
+    <!-- Status bar - Battery icon options -->
+    <string name="status_bar_battery_style_title">Indikátor stavu baterie</string>
+    <string name="status_bar_battery_style_icon_portrait">Ikona na výšku</string>
+    <string name="status_bar_battery_style_icon_landscape">Ikona na šířku</string>
+    <string name="status_bar_battery_style_circle">Kruh</string>
+    <string name="status_bar_battery_style_dotted_circle">Tečkovaný kruh</string>
+    <string name="status_bar_battery_style_text">Text</string>
+    <string name="status_bar_battery_style_hidden">Skrytý</string>
+
     <!-- Status bar - Battery percentage -->
     <string name="status_bar_battery_percentage_title">Procenta baterie</string>
     <string name="status_bar_battery_percentage_default">Skrytý</string>

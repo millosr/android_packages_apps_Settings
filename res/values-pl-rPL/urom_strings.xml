@@ -97,6 +97,15 @@
     <string name="autopower_title">Oszczędzanie Energii (*)</string>
     <string name="autopower_summary">Stan spoczynku dla Ambient Display i aplikacji</string>
 
+    <!-- Status bar - Battery icon options -->
+    <string name="status_bar_battery_style_title">Styl wskaźnika baterii</string>
+    <string name="status_bar_battery_style_icon_portrait">Pionowa ikona</string>
+    <string name="status_bar_battery_style_icon_landscape">Pozioma ikona</string>
+    <string name="status_bar_battery_style_circle">Okrąg</string>
+    <string name="status_bar_battery_style_dotted_circle">Przerywany okrąg</string>
+    <string name="status_bar_battery_style_text">Tekst</string>
+    <string name="status_bar_battery_style_hidden">Ukryte</string>
+
     <!-- Status bar - Battery percentage -->
     <string name="status_bar_battery_percentage_title">Procent baterii</string>
     <string name="status_bar_battery_percentage_default">Ukryte</string>

@@ -105,6 +105,15 @@
     <string name="statusbar_doubletap_title">Подвійний дотик, щоб заснути (*)</string>
     <string name="statusbar_doubletap_summary">Торкніться двічі статусбару, щоб вимкнути дисплей</string>
 
+    <!-- Status bar - Battery icon options -->
+    <string name="status_bar_battery_style_title">Стиль індикатора батареї</string>
+    <string name="status_bar_battery_style_icon_portrait">Вертикальний значок</string>
+    <string name="status_bar_battery_style_icon_landscape">Горизонтальний значок</string>
+    <string name="status_bar_battery_style_circle">Кolo</string>
+    <string name="status_bar_battery_style_dotted_circle">Пунктирний коло</string>
+    <string name="status_bar_battery_style_text">Текст</string>
+    <string name="status_bar_battery_style_hidden">Схований</string>
+
     <!-- Status bar - Battery percentage -->
     <string name="status_bar_battery_percentage_title">Відсоток заряду</string>
     <string name="status_bar_battery_percentage_default">Схований</string>
