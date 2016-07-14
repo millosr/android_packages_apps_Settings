@@ -100,6 +100,15 @@
     <string name="autopower_title">Аутоматска уштеда енергије (*)</string>
     <string name="autopower_summary">Амбијентални екран и суспендовање апликација</string>
 
+    <!-- Status bar - Battery icon options -->
+    <string name="status_bar_battery_style_title">Стил статуса батерије</string>
+    <string name="status_bar_battery_style_icon_portrait">Усправна икона</string>
+    <string name="status_bar_battery_style_icon_landscape">Положена икона</string>
+    <string name="status_bar_battery_style_circle">Круг</string>
+    <string name="status_bar_battery_style_circle">Тачкасти круг</string>
+    <string name="status_bar_battery_style_text">Текст</string>
+    <string name="status_bar_battery_style_hidden">Сакривено</string>
+
     <!-- Status bar - Battery percentage -->
     <string name="status_bar_battery_percentage_title">Проценти батерије</string>
     <string name="status_bar_battery_percentage_default">Сакривено</string>

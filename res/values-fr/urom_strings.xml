@@ -106,6 +106,15 @@
     <string name="sensors_accelerometer_title">Accelerometer capteur (*)</string>
     <string name="sensors_accelerometer_summary">Retourne la force de gravité sur 3 axes</string>
 
+    <!-- Status bar - Battery icon options -->
+    <string name="status_bar_battery_style_title">Style du niveau de batterie</string>
+    <string name="status_bar_battery_style_icon_portrait">Portrait</string>
+    <string name="status_bar_battery_style_icon_landscape">Paysage</string>
+    <string name="status_bar_battery_style_circle">Cercle</string>
+    <string name="status_bar_battery_style_dotted_circle">Cercle en pointillés</string>
+    <string name="status_bar_battery_style_text">Texte</string>
+    <string name="status_bar_battery_style_hidden">Masqué</string>
+
     <!-- Status bar - Battery percentage -->
     <string name="status_bar_battery_percentage_title">Pourcentage de batterie</string>
     <string name="status_bar_battery_percentage_default">Masqué</string>
