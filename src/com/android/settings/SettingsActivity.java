@@ -1305,12 +1305,6 @@ public class SettingsActivity extends Activity
                     } catch (NameNotFoundException e) {
                         removeTile = true;
                     }
-                } else if (id == R.id.superuser_settings) {
-                    try {
-                        removeTile = (getPackageManager().getPackageInfo("eu.chainfire.supersu", 0) != null);
-                    } catch (NameNotFoundException e) {
-                        removeTile = false;
-                    }
                 } else if (id == R.id.bitsyko_layers) {
                     try {
                         removeTile = (getPackageManager().getPackageInfo("com.lovejoy777.rroandlayersmanager", 0) == null);

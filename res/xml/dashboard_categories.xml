@@ -117,14 +117,6 @@
                     android:targetClass="eu.chainfire.supersu.MainActivity" />
         </dashboard-tile>
 
-        <!-- Superuser -->
-        <dashboard-tile
-                android:id="@+id/superuser_settings"
-                android:icon="@drawable/ic_settings_supersu"
-                android:title="@string/superuser"
-                android:fragment="com.koushikdutta.superuser.PolicyNativeFragment"
-                />
-
         <!-- Wake Up -->
         <!--
         <dashboard-tile
