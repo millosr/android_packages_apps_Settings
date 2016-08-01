@@ -130,6 +130,9 @@
     <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
     <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
 
+    <!-- App Ops -->
+    <string name="app_ops_user_enable_su">Turn on superuser</string>
+
     <!-- About -->
     <string name="urom_about_rom">Useful links</string>
     <string name="urom_about_source_title">Github</string>

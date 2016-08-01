@@ -46,6 +46,7 @@ public class UserDetailsSettings extends SettingsPreferenceFragment
     private static final String TAG = UserDetailsSettings.class.getSimpleName();
 
     private static final String KEY_ENABLE_TELEPHONY = "enable_calling";
+    private static final String KEY_ENABLE_SU = "enable_su";
     private static final String KEY_REMOVE_USER = "remove_user";
 
     /** Integer extra containing the userId to manage */
@@ -59,6 +60,7 @@ public class UserDetailsSettings extends SettingsPreferenceFragment
 
     private UserManager mUserManager;
     private SwitchPreference mPhonePref;
+    private SwitchPreference mSuPref;
     private Preference mRemoveUserPref;
 
     private UserInfo mUserInfo;
@@ -79,6 +81,7 @@ public class UserDetailsSettings extends SettingsPreferenceFragment
 
         addPreferencesFromResource(R.xml.user_details_settings);
         mPhonePref = (SwitchPreference) findPreference(KEY_ENABLE_TELEPHONY);
+        mSuPref = (SwitchPreference) findPreference(KEY_ENABLE_SU);
         mRemoveUserPref = findPreference(KEY_REMOVE_USER);
 
         mGuestUser = getArguments().getBoolean(EXTRA_USER_GUEST, false);
@@ -92,6 +95,8 @@ public class UserDetailsSettings extends SettingsPreferenceFragment
             mUserInfo = mUserManager.getUserInfo(userId);
             mPhonePref.setChecked(!mUserManager.hasUserRestriction(
                     UserManager.DISALLOW_OUTGOING_CALLS, new UserHandle(userId)));
+            mSuPref.setChecked(!mUserManager.hasUserRestriction(
+                    UserManager.DISALLOW_SU, new UserHandle(userId)));
             mRemoveUserPref.setOnPreferenceClickListener(this);
         } else {
             // These are not for an existing user, just general Guest settings.
@@ -101,11 +106,17 @@ public class UserDetailsSettings extends SettingsPreferenceFragment
             mDefaultGuestRestrictions = mUserManager.getDefaultGuestRestrictions();
             mPhonePref.setChecked(
                     !mDefaultGuestRestrictions.getBoolean(UserManager.DISALLOW_OUTGOING_CALLS));
+            mSuPref.setChecked(
+                    !mDefaultGuestRestrictions.getBoolean(UserManager.DISALLOW_SU));
+        }
+        if (mUserManager.hasUserRestriction(UserManager.DISALLOW_SU)) {
+            removePreference(KEY_ENABLE_SU);
         }
         if (mUserManager.hasUserRestriction(UserManager.DISALLOW_REMOVE_USER)) {
             removePreference(KEY_REMOVE_USER);
         }
         mPhonePref.setOnPreferenceChangeListener(this);
+        mSuPref.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -122,11 +133,15 @@ public class UserDetailsSettings extends SettingsPreferenceFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (Boolean.TRUE.equals(newValue)) {
-            showDialog(mGuestUser? DIALOG_CONFIRM_ENABLE_CALLING : DIALOG_CONFIRM_ENABLE_CALLING_AND_SMS);
-            return false;
+        if (preference == mPhonePref) {
+            if (Boolean.TRUE.equals(newValue)) {
+                showDialog(mGuestUser? DIALOG_CONFIRM_ENABLE_CALLING : DIALOG_CONFIRM_ENABLE_CALLING_AND_SMS);
+                return false;
+            }
+            enableCallsAndSms(false);
+        } else if (preference == mSuPref) {
+            enableSu(Boolean.TRUE.equals(newValue));
         }
-        enableCallsAndSms(false);
         return true;
     }
 
@@ -152,6 +167,15 @@ public class UserDetailsSettings extends SettingsPreferenceFragment
             mUserManager.setUserRestriction(UserManager.DISALLOW_OUTGOING_CALLS, !enabled,
                     userHandle);
             mUserManager.setUserRestriction(UserManager.DISALLOW_SMS, !enabled, userHandle);
+        }
+    }
+
+    void enableSu(boolean enabled) {
+        if (!mGuestUser) {
+            mSuPref.setChecked(enabled);
+            UserHandle userHandle = new UserHandle(mUserInfo.id);
+            mUserManager.setUserRestriction(UserManager.DISALLOW_SU, !enabled,
+                    userHandle);
         }
     }
 
