@@ -278,7 +278,11 @@ public class SettingsActivity extends Activity
             R.id.print_settings,
             R.id.nfc_payment_settings,
             R.id.home_settings,
-            R.id.dashboard
+            R.id.dashboard,
+            R.id.urom_about,
+            R.id.supersu_settings,
+            R.id.bitsyko_layers,
+            R.id.substratum
     };
 
     private static final String[] ENTRY_FRAGMENTS = {
@@ -1301,19 +1305,22 @@ public class SettingsActivity extends Activity
                     }
                 } else if (id == R.id.supersu_settings) {
                     try {
-                        removeTile = (getPackageManager().getPackageInfo("eu.chainfire.supersu", 0) == null);
+                        removeTile = ((getPackageManager().getPackageInfo("eu.chainfire.supersu", 0) == null) ||
+                                     um.hasUserRestriction(UserManager.DISALLOW_SU));
                     } catch (NameNotFoundException e) {
                         removeTile = true;
                     }
                 } else if (id == R.id.bitsyko_layers) {
                     try {
-                        removeTile = (getPackageManager().getPackageInfo("com.lovejoy777.rroandlayersmanager", 0) == null);
+                        removeTile = ((getPackageManager().getPackageInfo("com.lovejoy777.rroandlayersmanager", 0) == null) ||
+                                     um.hasUserRestriction(UserManager.DISALLOW_SU));
                     } catch (NameNotFoundException e) {
                         removeTile = true;
                     }
                 } else if (id == R.id.substratum) {
                     try {
-                        removeTile = (getPackageManager().getPackageInfo("projekt.substratum", 0) == null);
+                        removeTile = ((getPackageManager().getPackageInfo("projekt.substratum", 0) == null) ||
+                                     um.hasUserRestriction(UserManager.DISALLOW_SU));
                     } catch (NameNotFoundException e) {
                         removeTile = true;
                     }
