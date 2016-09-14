@@ -16,7 +16,185 @@
  * limitations under the License.
  */
 -->
+
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- uRom -->
+    <string name="urom_category">nAOSProm</string>
+    <string name="urom_display_category">Affichage &amp; notification</string>
+    <string name="urom_memory_category">Mémoire</string>
+    <string name="urom_buttons_category">Boutons</string>
+    <string name="urom_generic_custom">Autre</string>
+    <string name="urom_generic_disabled">Désactivé</string>
+    <string name="urom_generic_default">Défaut</string>
+    <string name="urom_generic_reset">Réinitialiser</string>
+    <string name="urom_math_less">-</string>
+    <string name="urom_math_more">+</string>
+    <string name="urom_math_zero">0</string>
+    <string name="urom_math_percentage">%1$d%%</string>
+    <string name="urom_screen_adaptive">Adaptation</string>
+    <string name="urom_settings_title">Plus</string>
+    <string name="urom_status_bar_category">Barre d\'état</string>
+    <string name="urom_other_category">Divers</string>
+    <string name="urom_about">Informations</string>
+
+    <!-- Settings -->
+    <string name="urom_settings_reboot_summary">Merci de redémarrer votre téléphone pour appliquer les changements</string>
+ 
+    <!-- Ram minfree -->
+    <string name="ram_minfree_title">Low memory killer</string>
+    <string name="ram_minfree_automatic">Automatique</string>
+    <string name="ram_minfree_summary">%1$d Mio</string>
+ 
+    <!-- zram -->
+    <string name="zram_size_title">Swap en mémoire</string>
+    <string name="zram_size_summary">%1$d Mio</string>
+ 
+    <!-- lightbar -->
+    <string name="lightbar_mode_title">Barre lumineuse</string>
+    <string name="lightbar_mode_entries_off">Toujours éteinte</string>
+    <string name="lightbar_mode_entries_5s">Allumée pendant 5s</string>
+    <string name="lightbar_mode_entries_on">Allumée avec l\'écran</string>
+    <string name="lightbar_flash_summary">Clignote lors des notifications entrantes</string>
+    <string name="lightbar_summary_with_flash">%1$s | Notification</string>
+    <string name="lightbar_screen_on">Ecran allumé</string>
+    <string name="lightbar_screen_off">Ecran éteint</string>
+
+    <!-- hw keys layout -->
+    <string name="mainkeys_layout_title">Agencement principal</string>
+    <string name="mainkeys_layout_entries_deprecated">Natif</string>
+    <string name="mainkeys_layout_entries_modern">Menu assigné aux applications récentes</string>
+ 
+    <!-- hw keys music -->
+    <string name="mainkeys_music_title">Volumes</string>
+    <string name="mainkeys_music_summary">Contrôle de la musique écran éteint</string>
+    
+    <!-- Camera Key -->
+    <string name="camerakey_title">Caméra</string>
+    <string name="camerakey_dialog_title">Lancer l\'application caméra</string>
+    <string name="camerakey_never">Jamais</string>
+    <string name="camerakey_longshortpress">Suivant l\'état de l\'écran</string>
+    <string name="camerakey_longpress_only">Avec une pression longue uniquement</string>
+
+    <!-- Navigation Bar -->
+    <string name="mainkeys_navbar_title">NavBar</string>
+    <string name="mainkeys_navbar_summary">Touches sur l\'écran</string>
+ 
+    <!-- doze -->
+    <string name="doze_brightness_title">Luminosité en mode veille</string>
+ 
+    <!-- color calibration -->
+    <string name="color_calibration_title">Calibration de la couleur</string>
+    <string name="color_calibration_summary">Calibre les couleurs de l\'écran</string>
+    <string name="color_red_title">Rouge</string>
+    <string name="color_green_title">Vert</string>
+    <string name="color_blue_title">Bleu</string>
+    <string name="color_profiles">Présélection : </string>
+    <string name="color_minimum_rgb">RVB minimum</string>
+ 
+    <!-- fast charge -->
+    <string name="fast_charge">USB Charge rapide</string>
+ 
+    <!-- BitSyko Layers -->
+    <string name="bitsyko_layers">Layers</string>
+
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+
+    <!-- WakeUp -->
+    <string name="wakeup_title">Wake Up</string>
+
+    <!-- Substratum -->
+    <string name="substratum_title">Substratum</string>
+
+    <!-- Font size sample text. This needs to be a very short string, as it is shown in
+    multiple font sizes in a limited amount of space. -->
+    <string name="font_size_sample">Exemple</string>
+
+    <!-- Allow fake signature checkbox in developer settings -->
+    <string name="allow_signature_fake">Signature spoofing</string>
+    <string name="allow_signature_fake_summary">Autoriser une application à se faire passer pour une autre</string>
+    <string name="allow_signature_fake_warning">Contourner le système de sécurité peut entrainer de serieux problèmes pour votre vie privée et votre sécurité! Verifiez que seulement les applications légitimes utilisent cette autorisation.</string>
+    
+    <!-- Night/Day Mode -->
+    <string name="color_mode_day">Jour</string>
+    <string name="color_mode_night">Nuit</string>
+
+    <!-- AutoPowerModes -->
+    <string name="autopower_title">Ecomomie d\'énergie</string>
+    <string name="autopower_summary">Mise en veille des applications</string>
+    
+    <!-- Lockscreen -->
+    <string name="lockscreen_phone_title">Raccourci de l\'écran de vérouillage</string>
+    <string name="lockscreen_phone_summary">Forcer l\'affichage du téléphone à la place de l\'assistant vocal</string>
+    
+    <!-- Quick Settings -->
+    <string name="qs_onefinger_title">Accès rapide aux paramètres</string>
+    <string name="qs_onefinger_summary">Ouverture en déplacant un doigt vers le bas</string>
+
+    <!-- Status Bar Double Tap to Sleep -->
+    <string name="statusbar_doubletap_title">Eteindre l\'écran...</string>
+    <string name="statusbar_doubletap_summary">...en appuyant deux coups brefs sur la barre de notification</string>
+
+    <!-- Status bar - Battery -->
+    <string name="status_bar_battery_title">Batterie</string>
+
+    <!-- Status bar - Battery icon options -->
+    <string name="status_bar_battery_style_title">Style du niveau de batterie</string>
+    <string name="status_bar_battery_style_icon_portrait">Portrait</string>
+    <string name="status_bar_battery_style_icon_landscape">Paysage</string>
+    <string name="status_bar_battery_style_circle">Cercle</string>
+    <string name="status_bar_battery_style_dotted_circle">Cercle en pointillés</string>
+    <string name="status_bar_battery_style_text">Texte</string>
+    <string name="status_bar_battery_style_hidden">Masqué</string>
+
+    <!-- Status bar - Battery percentage -->
+    <string name="status_bar_battery_percentage_title">Pourcentage de batterie</string>
+    <string name="status_bar_battery_percentage_default">Masqué</string>
+    <string name="status_bar_battery_percentage_text_inside">Dans l\'icône</string>
+    <string name="status_bar_battery_percentage_text_next">À côté de l\'icône</string>
+
+    <!-- Sensors -->
+    <string name="sensors_title">Capteurs</string>
+    <string name="sensors_summary">Contrôle des capteurs</string>
+    <string name="sensors_experimental_warning">Ce capteur est expérimental et peut être responsable dans certain cas, d\'instabilité ou de redémarrage.\nMerci de l\'utiliser avec précaution.</string>
+    <string name="sensors_pickup_title">Pickup</string>
+    <string name="sensors_pickup_summary">Détecte la prise en main du téléphone depuis une table</string>
+    <string name="sensors_pickup_enable">Activer pickup</string>
+    <string name="sensors_significant_title">Significant Motion</string>
+    <string name="sensors_significant_summary">Détecte le déplacement du téléphone</string>
+    <string name="sensors_significant_enable">Activer significant motion</string>
+    <string name="sensors_significant_disable">Désactiver significant motion</string>
+    <string name="sensors_significant_disable_warning">L\'écomomie d\'énergie va être désactivée car elle dépends de ce capteur.</string>
+    <string name="sensors_accelerometer_title">Accelerometer</string>
+    <string name="sensors_accelerometer_summary">Retourne la force de gravité sur 3 axes</string>
+
     <!-- App Ops -->
     <string name="app_ops_user_enable_su">Activer les droits root</string>
+
+    <!-- Proximity speaker -->
+    <string name="dialer_title">Haut-parleur durant les appels</string>
+    <string name="prox_auto_speaker_manual_title">Bascule manuelle</string>
+    <string name="prox_auto_speaker_title">Haut-parleur automatique</string>
+    <string name="prox_auto_speaker_summary">Activer le haut-parleur automatiquement quand le téléphone n\'est plus en contact avec votre oreille</string>
+    <string name="prox_auto_speaker_delay_title">Délai du haut-parleur</string>
+    <string name="prox_auto_speaker_delay_dialog_title">Délai du haut-parleur en (ms)</string>
+    <string name="prox_auto_speaker_delay_summary">Le haut-parleur sera activé après <xliff:g id="number">%d</xliff:g> ms</string>
+    <string name="prox_auto_speaker_incall_only_title">Seulement durant un appel</string>
+    <string name="prox_auto_speaker_incall_only_summary_on">Sur appel sortant, la bascule automatique sera uniquement active après que votre interlocuteur soit en ligne</string>
+    <string name="prox_auto_speaker_incall_only_summary_off">La bascule automatique sera active quelque soit l\'état de l\'appel</string>
+
+    <!-- About -->
+    <string name="urom_about_rom">Liens utiles</string>
+    <string name="urom_about_source_title">Github</string>
+    <string name="urom_about_source_summary">Synchronize et contribue</string>
+    <string name="urom_about_xda_title">XDA</string>
+    <string name="urom_about_xda_summary">Fil de discussion</string>
+    <string name="urom_about_translation_title">Traduction</string>
+    <string name="urom_about_donation_title">Donation</string>
+    <string name="urom_about_developers">Développeurs</string>
+    <string name="urom_about_leaddeveloper">Développeur principal</string>
+    <string name="urom_about_thanks">Merci</string>
+    <string name="urom_about_developer">Développeur</string>
+    <string name="urom_about_soundfx">Effets sonores</string>
 </resources>
