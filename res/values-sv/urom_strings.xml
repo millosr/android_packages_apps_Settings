@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- uRom -->
+    <string name="urom_category">nAOSProm</string>
+    <string name="urom_display_category">Display &amp; notification</string>
+    <string name="urom_memory_category">Minne</string>
+    <string name="urom_buttons_category">Knappar</string>
+    <string name="urom_generic_custom">Anpassad</string>
+    <string name="urom_generic_disabled">Inaktiverad</string>
+    <string name="urom_generic_default">Standard</string>
+    <string name="urom_generic_reset">Nollställ</string>
+    <string name="urom_screen_adaptive">Adaptiv</string>
+    <string name="urom_settings_title">Mer</string>
+    <string name="urom_status_bar_category">Statusfält</string>
+
+    <!-- Ram minfree -->
+    <string name="ram_minfree_title">Minnesbrists-dödare</string>
+    <string name="ram_minfree_automatic">Automatisk</string>
+ 
+    <!-- zram -->
+    <string name="zram_size_title">Swap i minne</string>
+ 
+    <!-- lightbar -->
+    <string name="lightbar_mode_title">Ljusfält</string>
+    <string name="lightbar_mode_entries_off">Alltid av</string>
+    <string name="lightbar_mode_entries_5s">På med 5s tidsgräns</string>
+    <string name="lightbar_mode_entries_on">På/Av med skärmen</string>
+    <string name="lightbar_flash_summary">Blinka på inkommande meddelanden</string>
+
+    <!-- hw keys layout -->
+    <!--
+    <string name="mainkeys_layout_title">Layout av fysiska knappar (*)</string>
+    <string name="mainkeys_layout_entries_deprecated">Utfasad (Android 2.3)</string>
+    <string name="mainkeys_layout_entries_modern">Modern (Android 4.4+)</string>
+    -->
+ 
+    <!-- hw keys music -->
+    <!--<string name="mainkeys_music_title">Musik med fysiska knappar (*)</string>-->
+    <string name="mainkeys_music_summary">Musikkontroll när skärmen är av</string>
+ 
+    <!-- doze -->
+    <string name="doze_brightness_title">Omgivningens ljusnivå</string>
+ 
+    <!-- color calibration -->
+    <string name="color_calibration_title">Färgkalibrering</string>
+    <string name="color_calibration_summary">Kalibrera skärmfärger</string>
+    <string name="color_red_title">Röd</string>
+    <string name="color_green_title">Grön</string>
+    <string name="color_blue_title">Blå</string>
+ 
+    <!-- fast charge -->
+    <string name="fast_charge">USB Snabbladdning</string>
+ 
+    <!-- BitSyko Layers -->
+    <string name="bitsyko_layers">Lager</string>
+
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+
+    <!-- WakeUp -->
+    <string name="wakeup_title">Väckning</string>
+
+    <!-- Status bar - Battery icon options -->
+    <string name="status_bar_battery_style_title">Stil på batteristatus</string>
+    <string name="status_bar_battery_style_icon_portrait">Ikon i porträttläge</string>
+    <string name="status_bar_battery_style_icon_landscape">Ikon i landskapsläge</string>
+    <string name="status_bar_battery_style_circle">Cirkel</string>
+    <string name="status_bar_battery_style_dotted_circle">Punktad cirkel</string>
+    <string name="status_bar_battery_style_text">Text</string>
+    <string name="status_bar_battery_style_hidden">Dold</string>
+
+    <!-- Status bar - Battery percentage -->
+    <string name="status_bar_battery_percentage_title">Batteriprocent</string>
+    <string name="status_bar_battery_percentage_default">Dold</string>
+    <string name="status_bar_battery_percentage_text_inside">Inuti ikonen</string>
+    <string name="status_bar_battery_percentage_text_next">Bredvid ikonen</string>
+
+</resources>

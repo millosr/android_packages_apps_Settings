@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- uRom -->
+    <string name="urom_category">nAOSProm</string>
+    <string name="urom_display_category">Дисплей та сповіщення</string>
+    <string name="urom_memory_category">Пам\'ять</string>
+    <string name="urom_buttons_category">Клавіші</string>
+    <string name="urom_generic_custom">Custom</string>
+    <string name="urom_generic_disabled">Вимкнено</string>
+    <string name="urom_generic_default">За замовчуванням</string>
+    <string name="urom_generic_reset">Скинути</string>
+    <string name="urom_screen_adaptive">Адаптивний</string>
+    <string name="urom_settings_title">Більше</string>
+    <string name="urom_status_bar_category">Рядок стану</string>
+    <string name="urom_other_category">Інше</string>
+    <string name="urom_about">Інформація</string>
+ 
+    <!-- Ram minfree -->
+    <string name="ram_minfree_title">Закриття додатків, при нестачі оперативної пам\'яті</string>
+    <string name="ram_minfree_automatic">Автоматично</string>
+ 
+    <!-- zram -->
+    <string name="zram_size_title">Файл підкачки в пам\'яті</string>
+ 
+    <!-- lightbar -->
+    <string name="lightbar_mode_title">Смуга підсвічування клавіш</string>
+    <string name="lightbar_mode_entries_off">Завжди вимкнена</string>
+    <string name="lightbar_mode_entries_5s">Вмикати на 5 секунд</string>
+    <string name="lightbar_mode_entries_on">Вмикається та вимикати з дисплеєм</string>
+    <string name="lightbar_flash_summary">Спалахувати при сповіщеннях</string>
+
+    <!-- hw keys layout -->
+    <!--
+    <string name="mainkeys_layout_title">Шаблон клавіш керування (*)</string>
+    <string name="mainkeys_layout_entries_deprecated">Застарілий (Android 2.3)</string>
+    <string name="mainkeys_layout_entries_modern">Сучасний (Android 4.4+)</string>
+    -->
+ 
+    <!-- hw keys music -->
+    <!--<string name="mainkeys_music_title">Керування плеєром клавішами гучності (*)</string>-->
+    <string name="mainkeys_music_summary">Керувати плеєром за допомогою клавіш гучності, коли дисплей вимкнено</string>
+    
+    <!-- Camera Key -->
+    <string name="camerakey_title">Клавіша запуску камери</string>
+    <!--<string name="camerakey_longpress_only">Тільки довгий натиск</string>-->
+
+    <!-- Navigation Bar -->
+    <string name="mainkeys_navbar_title">Панель навігації</string>
+    <string name="mainkeys_navbar_summary">Увімкнути наекранні клавіші</string>
+ 
+    <!-- doze -->
+    <string name="doze_brightness_title">Рівень яскравості Ambient Display</string>
+ 
+    <!-- color calibration -->
+    <string name="color_calibration_title">Калібрування кольору</string>
+    <string name="color_calibration_summary">Калібрувати кольори дисплею</string>
+    <string name="color_red_title">Червоний</string>
+    <string name="color_green_title">Зелений</string>
+    <string name="color_blue_title">Синій</string>
+ 
+    <!-- fast charge -->
+    <string name="fast_charge">Швидке заряджання через USB</string>
+
+    <!-- batery stats -->
+    <string name="power_usage_list_summary_time_suffix">(%1$dh %2$dm)</string>
+ 
+    <!-- BitSyko Layers -->
+    <string name="bitsyko_layers">Теми</string>
+
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+
+    <!-- WakeUp -->
+    <string name="wakeup_title">Wake Up</string>
+
+    <!-- Substratum -->
+    <string name="substratum_title">Теми</string>
+
+    <!-- Font size sample text. This needs to be a very short string, as it is shown in
+    multiple font sizes in a limited amount of space. -->
+    <string name="font_size_sample">Зразок</string>
+
+    <!-- KSM -->
+    <string name="ksm_title">KSM</string>
+    <string name="ksm_summary">Об\'єднувати однакові сторінки пам\'яті між різними процесами або віртуальними гостьовими системами в одну для спільного використання; реалізація дедуплікаціі даних для оперативної пам\'яті.</string>
+
+    <!-- Allow fake signature checkbox in developer settings -->
+    <string name="allow_signature_fake">Дозволити підміну підпису</string>
+    <string name="allow_signature_fake_summary">Дозволити додаткам обходити систему безпеки, вдаючи, що це інший додаток</string>
+    <string name="allow_signature_fake_warning">Дозвіл обходити систему безпеки додаткам може призвести до серйозних проблем безпеки і конфіденційності! Переконайтеся, що тільки нешкідливі додатки використовують відповідний дозвіл, коли він активний.</string>
+    
+    <!-- Night/Day Mode -->
+    <string name="color_mode_day">День</string>
+    <string name="color_mode_night">Ніч</string>
+    <string name="color_preset_1900">Свічка</string>
+    <string name="color_preset_2600">40W Вольфрам</string>
+    <string name="color_preset_2850">100W Вольфрам</string>
+    <string name="color_preset_3200">Галоген</string>
+    <string name="color_preset_5200">Вугільна дуга</string>
+    <string name="color_preset_5400">Сонце опівдні</string>
+    <string name="color_preset_6000">Прямі сонячні промені</string>
+
+    <!-- AutoPowerModes -->
+    <string name="autopower_title">Автоматичне заощадження зарядку акумулятора</string>
+    <string name="autopower_summary">Ambient та додатки в режимі очікування</string>
+    
+    <!-- Lockscreen -->
+    <string name="lockscreen_phone_title">Ярлики екрану блокування</string>
+    <string name="lockscreen_phone_summary">Примусово використовувати телефон, замість голосового пошуку</string>
+    
+    <!-- Quick Settings -->
+    <string name="qs_onefinger_title">Розгортання швидких налаштувань</string>
+    <string name="qs_onefinger_summary">Швидке розгортання одним пальцем</string>
+
+    <!-- Status Bar Double Tap to Sleep -->
+    <string name="statusbar_doubletap_title">Подвійний дотик, щоб заснути</string>
+    <string name="statusbar_doubletap_summary">Торкніться двічі статусбару, щоб вимкнути дисплей</string>
+
+    <!-- Sensors -->
+    <string name="sensors_pickup_title">пробудження</string>
+    <string name="sensors_pickup_summary">Виявляти, коли пристрій піднято</string>
+    <string name="sensors_significant_title">Pуху</string>
+    <string name="sensors_significant_summary">Виявляти рух пристрою</string>
+    <string name="sensors_accelerometer_title">Aкселерометру</string>
+    <string name="sensors_accelerometer_summary">Звітувати силу тяжіння по 3 осях</string>
+
+    <!-- Status bar - Battery icon options -->
+    <string name="status_bar_battery_style_title">Стиль індикатора батареї</string>
+    <string name="status_bar_battery_style_icon_portrait">Вертикальний значок</string>
+    <string name="status_bar_battery_style_icon_landscape">Горизонтальний значок</string>
+    <string name="status_bar_battery_style_circle">Кolo</string>
+    <string name="status_bar_battery_style_dotted_circle">Пунктирний коло</string>
+    <string name="status_bar_battery_style_text">Текст</string>
+    <string name="status_bar_battery_style_hidden">Схований</string>
+
+    <!-- Status bar - Battery percentage -->
+    <string name="status_bar_battery_percentage_title">Відсоток заряду</string>
+    <string name="status_bar_battery_percentage_default">Схований</string>
+    <string name="status_bar_battery_percentage_text_inside">Всередині значка</string>
+    <string name="status_bar_battery_percentage_text_next">Поруч зі значком</string>
+
+    <!-- About -->
+    <string name="urom_about_rom">Корисні посилання</string>
+    <string name="urom_about_source_title">Github</string>
+    <string name="urom_about_source_summary">Оформити замовлення та внести свій вкладe</string>
+    <string name="urom_about_xda_title">XDA</string>
+    <string name="urom_about_xda_summary">Тема збірки на форумі</string>
+    <string name="urom_about_translation_title">Переклад</string>
+    <string name="urom_about_donation_title">Пожертви</string>
+    <string name="urom_about_developers">Розробники</string>
+    <string name="urom_about_leaddeveloper">Ведучий розробник</string>
+    <string name="urom_about_thanks">Подяки</string>
+    <string name="urom_about_developer">Розробник</string>
+    <string name="urom_about_soundfx">Звукові ефекти</string>
+</resources>

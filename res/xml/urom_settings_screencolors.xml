@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/urom_category">
+
+    <com.android.settings.urom.widgets.UromScreenColorsDay
+        android:key="screen_color_day"
+        android:title="@string/color_mode_day"
+        android:dialogTitle="@string/color_mode_day"
+        android:persistent="false" />
+
+    <com.android.settings.urom.widgets.UromScreenColorsNight
+        android:key="screen_color_night"
+        android:title="@string/color_mode_night"
+        android:dialogTitle="@string/color_mode_night"
+        android:persistent="false" />
+
+    <com.android.settings.urom.widgets.UromScreenColorsMinimumRGB
+        android:key="screen_color_minimum_rgb"
+        android:title="@string/color_minimum_rgb"
+        android:dialogTitle="@string/color_minimum_rgb"
+        android:persistent="false" />
+
+</PreferenceScreen>

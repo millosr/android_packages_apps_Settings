@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/urom_about"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <PreferenceCategory
+        android:key="urom_rom"
+        android:title="@string/urom_about_rom">
+
+        <!-- Github -->
+        <Preference
+            android:key="urom_source"
+            android:title="@string/urom_about_source_title"
+            android:summary="@string/urom_about_source_summary" />
+
+        <!-- ROM XDA Thread -->
+        <Preference
+            android:key="urom_xda"
+            android:title="@string/urom_about_xda_title"
+            android:summary="@string/urom_about_xda_summary" />
+        
+        <!-- Translation -->
+        <Preference
+            android:key="urom_translation"
+            android:title="@string/urom_about_translation_title" />
+
+        <!-- Donation -->
+        <Preference
+            android:key="urom_donation"
+            android:title="@string/urom_about_donation_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="category_urom_developers"
+        android:title="@string/urom_about_developers">
+
+        <Preference
+            android:key="urom_devs_field1"
+            android:title="mickybart"
+            android:summary="@string/urom_about_leaddeveloper"/>
+
+        <Preference
+            android:key="urom_devs_field2"
+            android:title="millosr"
+            android:summary="@string/urom_about_developer"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="category_urom_mentions"
+        android:title="@string/urom_about_thanks" >
+        <Preference
+            android:key="urom_mentions_field1"
+            android:title="billchen1977"
+            android:summary="@string/urom_about_developer" />
+        <Preference
+            android:key="urom_mentions_field2"
+            android:title="ViPER4Android Team"
+            android:summary="@string/urom_about_soundfx" />
+        <Preference
+            android:key="urom_mentions_field3"
+            android:title="CyanogenMod Team"
+            android:summary="ROM" />
+        <Preference
+            android:key="urom_mentions_field4"
+            android:title="TWRP Team" 
+            android:summary="FOTA Recovery" />
+        <Preference
+            android:key="urom_mentions_field5"
+            android:title="Google" 
+            android:summary="Android Open Source Project" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
+
