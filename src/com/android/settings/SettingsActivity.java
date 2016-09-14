@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2014 The Android Open Source Project
+ * Copyright (C) 2016 nAOSProm
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -120,6 +121,9 @@ import com.android.settings.search.DynamicIndexableContentMonitor;
 import com.android.settings.search.Index;
 import com.android.settings.sim.SimSettings;
 import com.android.settings.tts.TextToSpeechSettings;
+import com.android.settings.urom.widgets.UromRebootBar;
+import com.android.settings.urom.UromSettings;
+import com.android.settings.urom.UromSettingsAbout;
 import com.android.settings.users.UserSettings;
 import com.android.settings.vpn2.VpnSettings;
 import com.android.settings.wfd.WifiDisplaySettings;
@@ -239,6 +243,8 @@ public class SettingsActivity extends SettingsDrawerActivity
             Settings.DataUsageSummaryActivity.class.getName(),
             Settings.SimSettingsActivity.class.getName(),
             Settings.WirelessSettingsActivity.class.getName(),
+	    //urom_section
+	    Settings.UromSettingsAboutActivity.class.getName(),
             //device_section
             Settings.HomeSettingsActivity.class.getName(),
             Settings.SoundSettingsActivity.class.getName(),
@@ -357,7 +363,9 @@ public class SettingsActivity extends SettingsDrawerActivity
             MasterClear.class.getName(),
             NightDisplaySettings.class.getName(),
             ManageDomainUrls.class.getName(),
-            AutomaticStorageManagerSettings.class.getName()
+            AutomaticStorageManagerSettings.class.getName(),
+	    UromSettingsAbout.class.getName(),
+	    UromSettings.class.getName(),
     };
 
 
@@ -400,6 +408,7 @@ public class SettingsActivity extends SettingsDrawerActivity
 
     private ActionBar mActionBar;
     private SwitchBar mSwitchBar;
+    private UromRebootBar mRebootBar;
 
     private Button mNextButton;
 
@@ -429,6 +438,10 @@ public class SettingsActivity extends SettingsDrawerActivity
 
     public SwitchBar getSwitchBar() {
         return mSwitchBar;
+    }
+
+    public UromRebootBar getRebootBar() {
+	return mRebootBar;
     }
 
     @Override
@@ -648,6 +661,7 @@ public class SettingsActivity extends SettingsDrawerActivity
         if (mSwitchBar != null) {
             mSwitchBar.setMetricsTag(getMetricsTag());
         }
+	mRebootBar = (UromRebootBar) findViewById(R.id.reboot_bar);
 
         // see if we should show Back/Next buttons
         if (intent.getBooleanExtra(EXTRA_PREFS_SHOW_BUTTON_BAR, false)) {

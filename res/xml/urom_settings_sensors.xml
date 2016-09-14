@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        android:key="sensors_pickup"
+        android:title="@string/sensors_pickup_title"
+        android:summary="@string/sensors_pickup_summary"/>
+
+    <SwitchPreference
+        android:key="sensors_significant"
+        android:title="@string/sensors_significant_title"
+        android:summary="@string/sensors_significant_summary"/>
+
+    <SwitchPreference
+        android:key="sensors_accelerometer"
+        android:title="@string/sensors_accelerometer_title"
+        android:summary="@string/sensors_accelerometer_summary"/>
+</PreferenceScreen>

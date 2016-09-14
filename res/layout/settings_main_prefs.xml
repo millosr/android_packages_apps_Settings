@@ -35,6 +35,14 @@
                   android:theme="?attr/switchBarTheme"
                 />
 
+        <com.android.settings.urom.widgets.UromRebootBar
+            android:id="@+id/reboot_bar"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_width="match_parent"
+                android:background="@drawable/switchbar_background"
+                android:theme="?attr/switchBarTheme"
+                />
+
         <FrameLayout
                 android:id="@+id/main_content"
                 android:layout_width="match_parent"
