@@ -2,6 +2,55 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/urom_category">
 
+    <PreferenceCategory android:key="urom_shortcut_category"
+            android:title="@string/settings_shortcut">
+
+        <!-- Layers -->
+        <PreferenceScreen
+                android:key="urom_shortcut_bitsyko_layers"
+                android:icon="@drawable/ic_bitsyko_layers"
+                android:title="@string/bitsyko_layers">
+                <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.lovejoy777.rroandlayersmanager"
+                    android:targetClass="com.lovejoy777.rroandlayersmanager.menu" />
+        </PreferenceScreen>
+
+        <!-- Substratum -->
+        <PreferenceScreen
+                android:key="urom_shortcut_substratum"
+                android:icon="@drawable/ic_settings_substratum"
+                android:title="@string/substratum_title">
+                <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="projekt.substratum"
+                    android:targetClass="projekt.substratum.LaunchActivity" />
+        </PreferenceScreen>
+
+        <!-- SuperSU -->
+        <PreferenceScreen
+                android:key="urom_shortcut_supersu_settings"
+                android:icon="@drawable/ic_settings_supersu"
+                android:title="@string/supersu_title">
+                <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="eu.chainfire.supersu"
+                    android:targetClass="eu.chainfire.supersu.MainActivity" />
+        </PreferenceScreen>
+
+        <!-- Wake Up -->
+        <PreferenceScreen
+                android:key="urom_shortcut_wakeup_settings"
+                android:icon="@drawable/ic_settings_display"
+                android:title="@string/wakeup_title">
+                <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="org.pygoscelis.mobile.wakeup"
+                    android:targetClass="org.pygoscelis.mobile.wakeup.WakeGestureSettings" />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
     <PreferenceCategory android:key="urom_display_category"
             android:title="@string/urom_display_category">
 
