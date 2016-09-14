@@ -35,6 +35,14 @@
         <intent android:action="android.settings.BACKUP_AND_RESET_SETTINGS" />
     </Preference>
 
+    <!-- nAOSProm settings -->
+    <Preference
+        android:key="urom_settings"
+        android:title="@string/urom_settings_title"
+        android:icon="@drawable/ic_android"
+        android:order="-55"
+        android:fragment="com.android.settings.urom.UromSettings" />
+
     <!-- System updates -->
     <Preference
         android:key="system_update_settings"

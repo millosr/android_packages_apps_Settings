@@ -16,7 +16,196 @@
  * limitations under the License.
  */
 -->
+
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- uRom -->
+    <string name="urom_category">nAOSProm</string>
+    <string name="urom_display_category">Display &amp; notification</string>
+    <string name="urom_memory_category">Memory</string>
+    <string name="urom_buttons_category">Buttons</string>
+    <string name="urom_generic_custom">Custom</string>
+    <string name="urom_generic_disabled">Disabled</string>
+    <string name="urom_generic_default">Default</string>
+    <string name="urom_generic_reset">Reset</string>
+    <string name="urom_math_less">-</string>
+    <string name="urom_math_more">+</string>
+    <string name="urom_math_zero">0</string>
+    <string name="urom_math_percentage">%1$d%%</string>
+    <string name="urom_screen_adaptive">Adaptive</string>
+    <string name="urom_settings_title">More</string>
+    <string name="urom_status_bar_category">Status bar</string>
+    <string name="urom_other_category">Other</string>
+    <string name="urom_about">Information</string>
+
+    <!-- Settings -->
+    <string name="urom_settings_reboot_summary">Please reboot your device to apply changes</string>
+ 
+    <!-- Ram minfree -->
+    <string name="ram_minfree_title">Low memory killer</string>
+    <string name="ram_minfree_automatic">Automatic</string>
+    <string name="ram_minfree_summary">%1$d MiB</string>
+ 
+    <!-- zram -->
+    <string name="zram_size_title">Swap in memory</string>
+    <string name="zram_size_summary">%1$d MiB</string>
+ 
+    <!-- lightbar -->
+    <string name="lightbar_mode_title">Light bar</string>
+    <string name="lightbar_mode_entries_off">Always off</string>
+    <string name="lightbar_mode_entries_5s">On with 5s timeout</string>
+    <string name="lightbar_mode_entries_on">On/Off with the screen</string>
+    <string name="lightbar_flash_summary">Flash on incoming notification</string>
+    <string name="lightbar_summary_with_flash">%1$s | Notification</string>
+    <string name="lightbar_screen_on">Screen on</string>
+    <string name="lightbar_screen_off">Screen off</string>
+
+    <!-- hw keys layout -->
+    <string name="mainkeys_layout_title">Main layout</string>
+    <string name="mainkeys_layout_entries_deprecated">Native</string>
+    <string name="mainkeys_layout_entries_modern">Menu mapped to recent applications</string>
+ 
+    <!-- hw keys music -->
+    <string name="mainkeys_music_title">Volumes</string>
+    <string name="mainkeys_music_summary">Music controls when screen is off</string>
+    
+    <!-- Camera Key -->
+    <string name="camerakey_title">Camera</string>
+    <string name="camerakey_dialog_title">Run camera application</string>
+    <string name="camerakey_never">Never</string>
+    <string name="camerakey_longshortpress">Based on screen state</string>
+    <string name="camerakey_longpress_only">With long press only</string>
+
+    <!-- Navigation Bar -->
+    <string name="mainkeys_navbar_title">NavBar</string>
+    <string name="mainkeys_navbar_summary">On-screen keys</string>
+ 
+    <!-- doze brightness -->
+    <string name="doze_brightness_title">Ambient brightness</string>
+ 
+    <!-- color calibration -->
+    <string name="color_calibration_title">Color calibration</string>
+    <string name="color_calibration_summary">Calibrate on-screen colors</string>
+    <string name="color_red_title">Red</string>
+    <string name="color_green_title">Green</string>
+    <string name="color_blue_title">Blue</string>
+    <string name="color_profiles">Preset : </string>
+    <string name="color_minimum_rgb">Minimum RGB</string>
+ 
+    <!-- fast charge -->
+    <string name="fast_charge">USB Fast Charge</string>
+
+    <!-- batery stats -->
+    <string name="power_usage_list_summary_time_suffix">(%1$dh %2$dm)</string>
+ 
+    <!-- BitSyko Layers -->
+    <string name="bitsyko_layers">Layers</string>
+
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+
+    <!-- WakeUp -->
+    <string name="wakeup_title">Wake Up</string>
+
+    <!-- Substratum -->
+    <string name="substratum_title">Substratum</string>
+
+    <!-- KSM -->
+    <string name="ksm_title">KSM</string>
+    <string name="ksm_summary">Kernel same-page merging</string>
+
+    <!-- Allow fake signature checkbox in developer settings -->
+    <string name="allow_signature_fake">Allow signature spoofing</string>
+    <string name="allow_signature_fake_summary">Allow apps to bypass security systems by pretending to be a different app</string>
+    <string name="allow_signature_fake_warning">Allowing apps to bypass security systems can lead to serious security and privacy problems! Check that only benign apps use the corresponding permission when this is active.</string>
+    
+    <!-- Night/Day Mode -->
+    <string name="color_mode_day">Day</string>
+    <string name="color_mode_night">Night</string>
+    <string name="color_preset_1900">Candle</string>
+    <string name="color_preset_2600">40W Tungsten</string>
+    <string name="color_preset_2850">100W Tungsten</string>
+    <string name="color_preset_3200">Halogen</string>
+    <string name="color_preset_5200">Carbon Arc</string>
+    <string name="color_preset_5400">High Noon Sun</string>
+    <string name="color_preset_6000">Direct Sunlight</string>
+
+    <!-- AutoPowerModes -->
+    <string name="autopower_title">Auto Power Save</string>
+    <string name="autopower_summary">Ambient and applications standby</string>
+    
+    <!-- Lockscreen -->
+    <string name="lockscreen_phone_title">Lockscreen shortcut</string>
+    <string name="lockscreen_phone_summary">Force the dialer instead of the voice assistant</string>
+    
+    <!-- Quick Settings -->
+    <string name="qs_onefinger_title">Quick Settings Expand</string>
+    <string name="qs_onefinger_summary">Quick pull down with one finger</string>
+
+    <!-- Status Bar Double Tap to Sleep -->
+    <string name="statusbar_doubletap_title">Double Tap To Sleep</string>
+    <string name="statusbar_doubletap_summary">Double tap on the status bar to turn off the screen</string>
+
+    <!-- Status bar - Battery -->
+    <string name="status_bar_battery_title">Battery</string>
+    <string name="status_bar_battery_summary">%1$s | %2$s</string>
+
+    <!-- Status bar - Battery icon options -->
+    <string name="status_bar_battery_style_title">Battery status style</string>
+    <string name="status_bar_battery_style_icon_portrait">Icon portrait</string>
+    <string name="status_bar_battery_style_icon_landscape">Icon landscape</string>
+    <string name="status_bar_battery_style_circle">Circle</string>
+    <string name="status_bar_battery_style_dotted_circle">Dotted circle</string>
+    <string name="status_bar_battery_style_text">Text</string>
+    <string name="status_bar_battery_style_hidden">Hidden</string>
+
+    <!-- Status bar - Battery percentage -->
+    <string name="status_bar_battery_percentage_title">Battery percentage</string>
+    <string name="status_bar_battery_percentage_default">Hidden</string>
+    <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
+    <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
+
+    <!-- Sensors -->
+    <string name="sensors_title">Sensors</string>
+    <string name="sensors_summary">Manage sensors</string>
+    <string name="sensors_experimental_warning">This sensor is experimental and can be responsible in some cases, of instability or reboot.\nPlease use it with precaution.</string>
+    <string name="sensors_pickup_title">Pickup</string>
+    <string name="sensors_pickup_summary">Detect a device pickup from a table</string>
+    <string name="sensors_pickup_enable">Allow pickup</string>
+    <string name="sensors_significant_title">Significant Motion</string>
+    <string name="sensors_significant_summary">Detect a moving phone</string>
+    <string name="sensors_significant_enable">Allow significant motion</string>
+    <string name="sensors_significant_disable">Disable significant motion</string>
+    <string name="sensors_significant_disable_warning">Power saving mode will be disabled as this sensor is a dependency for it.</string>
+    <string name="sensors_accelerometer_title">Accelerometer</string>
+    <string name="sensors_accelerometer_summary">Report gravity force on 3 axes</string>
+
     <!-- App Ops -->
     <string name="app_ops_user_enable_su">Turn on superuser</string>
+
+    <!-- Proximity speaker -->
+    <string name="dialer_title">Speakerphone during calls</string>
+    <string name="prox_auto_speaker_manual_title">Manual</string>
+    <string name="prox_auto_speaker_title">Automatic proximity speakerphone</string>
+    <string name="prox_auto_speaker_summary">Enable speakerphone automatically when your phone is removed from your ear</string>
+    <string name="prox_auto_speaker_delay_title">Speakerphone delay</string>
+    <string name="prox_auto_speaker_delay_dialog_title">Speakerphone delay in (ms)</string>
+    <string name="prox_auto_speaker_delay_summary">Speakerphone will be activated in <xliff:g id="number">%d</xliff:g> ms</string>
+    <string name="prox_auto_speaker_incall_only_title">Only while in call</string>
+    <string name="prox_auto_speaker_incall_only_summary_on">On outgoing calls, listener will only become active after the receiving party answers</string>
+    <string name="prox_auto_speaker_incall_only_summary_off">Listener will be active during all offhook call states</string>
+
+    <!-- About -->
+    <string name="urom_about_rom">Useful links</string>
+    <string name="urom_about_source_title">Github</string>
+    <string name="urom_about_source_summary">Checkout and contribute</string>
+    <string name="urom_about_xda_title">XDA</string>
+    <string name="urom_about_xda_summary">Thread of the ROM</string>
+    <string name="urom_about_translation_title">Translation</string>
+    <string name="urom_about_donation_title">Donation</string>
+    <string name="urom_about_developers">Developers</string>
+    <string name="urom_about_leaddeveloper">Lead Developer</string>
+    <string name="urom_about_thanks">Thanks</string>
+    <string name="urom_about_developer">Developer</string>
+    <string name="urom_about_soundfx">Sound FX</string>
 </resources>

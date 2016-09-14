@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2014 The Android Open Source Project
+ * Copyright (C) 2016 nAOSProm
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -60,6 +61,7 @@ import com.android.settings.dashboard.DashboardSummary;
 import com.android.settings.development.DevelopmentSettings;
 import com.android.settings.overlay.FeatureFactory;
 import com.android.settings.search.SearchActivity;
+import com.android.settings.urom.widgets.UromRebootBar;
 import com.android.settings.wfd.WifiDisplaySettings;
 import com.android.settings.widget.SwitchBar;
 import com.android.settingslib.drawer.DashboardCategory;
@@ -181,6 +183,7 @@ public class SettingsActivity extends SettingsDrawerActivity
     };
 
     private SwitchBar mSwitchBar;
+    private UromRebootBar mRebootBar;
 
     private Button mNextButton;
 
@@ -202,6 +205,10 @@ public class SettingsActivity extends SettingsDrawerActivity
 
     public SwitchBar getSwitchBar() {
         return mSwitchBar;
+    }
+
+    public UromRebootBar getRebootBar() {
+        return mRebootBar;
     }
 
     @Override
@@ -346,6 +353,7 @@ public class SettingsActivity extends SettingsDrawerActivity
         if (mSwitchBar != null) {
             mSwitchBar.setMetricsTag(getMetricsTag());
         }
+        mRebootBar = (UromRebootBar) findViewById(R.id.reboot_bar);
 
         // see if we should show Back/Next buttons
         if (intent.getBooleanExtra(EXTRA_PREFS_SHOW_BUTTON_BAR, false)) {

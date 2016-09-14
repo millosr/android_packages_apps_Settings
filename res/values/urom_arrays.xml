@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (C) 2016 nAOSProm
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+            
+    <!-- urom -->
+
+    <!-- Array for lightbar -->
+    <string-array name="lightbar_mode_entries">
+        <item>@string/lightbar_mode_entries_off</item>
+        <item>@string/lightbar_mode_entries_5s</item>
+        <item>@string/lightbar_mode_entries_on</item>
+    </string-array>
+
+    <!-- Array for doze brightness -->
+    <string-array name="doze_brightness_entries">
+        <item>@string/urom_generic_default</item>
+        <item>@string/urom_screen_adaptive</item>
+    </string-array>
+
+    <!-- Array for mainkeys layout -->
+    <string-array name="mainkeys_layout_entries">
+        <item>@string/mainkeys_layout_entries_deprecated</item>
+        <item>@string/mainkeys_layout_entries_modern</item>
+    </string-array>
+
+    <string-array name="mainkeys_layout_values" translatable="false" >
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    
+    <string-array name="color_preset_entries">
+        <item>@string/urom_generic_custom</item>
+        <item>@string/color_preset_1900</item>
+        <item>@string/color_preset_2600</item>
+        <item>@string/color_preset_2850</item>
+        <item>@string/color_preset_3200</item>
+        <item>@string/color_preset_5200</item>
+        <item>@string/color_preset_5400</item>
+        <item>@string/color_preset_6000</item>
+    </string-array>
+    
+    <string-array name="color_preset_values">
+        <item>custom</item>
+        <item>255 147 41</item>
+        <item>255 197 143</item>
+        <item>255 214 170</item>
+        <item>255 241 224</item>
+        <item>255 250 244</item>
+        <item>255 255 251</item>
+        <item>255 255 255</item>
+    </string-array>
+    
+    <!-- Camera key -->
+    <string-array name="camerakey_entries">
+        <item>@string/camerakey_never</item>
+        <item>@string/camerakey_longshortpress</item>
+        <item>@string/camerakey_longpress_only</item>
+    </string-array>
+    
+    <string-array name="camerakey_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- Proximity speaker delay entries. -->
+    <string-array name="proximity_delay_entries" translatable="false">
+        <item>100</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>1500</item>
+        <item>2000</item>
+        <item>2500</item>
+        <item>3000</item>
+    </string-array>
+
+    <!-- Proximity speaker delay values. -->
+    <string-array name="proximity_delay_values" translatable="false">
+        <item>100</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>1500</item>
+        <item>2000</item>
+        <item>2500</item>
+        <item>3000</item>
+    </string-array>
+
+</resources>

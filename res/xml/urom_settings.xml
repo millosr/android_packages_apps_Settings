@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+        android:title="@string/urom_category">
+
+    <PreferenceCategory android:key="urom_display_category"
+            android:title="@string/urom_display_category">
+
+        <com.android.settings.urom.widgets.UromAmbient
+            android:key="doze_brightness"
+            android:title="@string/doze_brightness_title"
+            android:persistent="false" />
+
+        <com.android.settings.urom.widgets.UromLightbar
+            android:key="lightbar_mode"
+            android:title="@string/lightbar_mode_title"
+            android:persistent="false" />
+
+        <PreferenceScreen
+            android:key="color_calibration"
+            android:title="@string/color_calibration_title"
+            android:summary="@string/color_calibration_summary"
+            android:fragment="com.android.settings.urom.UromSettingsScreenColors" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:key="urom_buttons_category"
+            android:title="@string/urom_buttons_category">
+
+        <SwitchPreference
+            android:key="mainkeys_music"
+            android:title="@string/mainkeys_music_title"
+            android:summary="@string/mainkeys_music_summary"/>
+        
+        <ListPreference
+            android:key="camerakey"
+            android:title="@string/camerakey_title"
+            android:dialogTitle="@string/camerakey_dialog_title"
+            android:persistent="false"
+            android:entries="@array/camerakey_entries"
+            android:entryValues="@array/camerakey_values" />
+
+        <SwitchPreference
+            android:key="mainkeys_navbar"
+            android:title="@string/mainkeys_navbar_title"
+            android:summary="@string/mainkeys_navbar_summary"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:key="urom_memory_category"
+            android:title="@string/urom_memory_category">
+
+        <com.android.settings.urom.widgets.UromLowMemoryKiller
+            android:key="ram_minfree"
+            android:title="@string/ram_minfree_title"
+            android:persistent="false" />
+
+        <com.android.settings.urom.widgets.UromZram
+            android:key="zram_size"
+            android:title="@string/zram_size_title"
+            android:persistent="false" />
+
+        <SwitchPreference
+            android:key="ksm"
+            android:title="@string/ksm_title"
+            android:summary="@string/ksm_summary" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:key="urom_security_category"
+            android:title="@string/security_settings_title">
+
+        <SwitchPreference
+            android:key="allow_signature_fake"
+            android:title="@string/allow_signature_fake"
+            android:summary="@string/allow_signature_fake_summary"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:key="urom_system_category"
+            android:title="@string/header_category_system">
+
+        <PreferenceScreen
+            android:key="sensors"
+            android:title="@string/sensors_title"
+            android:summary="@string/sensors_summary"
+            android:fragment="com.android.settings.urom.UromSettingsSensors" />
+
+        <SwitchPreference
+            android:key="autopower"
+            android:title="@string/autopower_title"
+            android:summary="@string/autopower_summary"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:key="urom_status_bar_category"
+            android:title="@string/urom_status_bar_category">
+
+        <SwitchPreference
+            android:key="qs_onefinger"
+            android:title="@string/qs_onefinger_title"
+            android:summary="@string/qs_onefinger_summary"/>
+
+        <SwitchPreference
+            android:key="statusbar_doubletap"
+            android:title="@string/statusbar_doubletap_title"
+            android:summary="@string/statusbar_doubletap_summary"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:key="urom_other_category"
+            android:title="@string/urom_other_category">
+
+        <SwitchPreference
+            android:key="lockscreen_phone"
+            android:title="@string/lockscreen_phone_title"
+            android:summary="@string/lockscreen_phone_summary"/>
+
+        <PreferenceScreen
+            android:key="dialer"
+            android:title="@string/dialer_title"
+            android:summary="@string/urom_generic_disabled"
+            android:fragment="com.android.settings.urom.UromSettingsDialer" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
