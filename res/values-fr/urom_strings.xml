@@ -33,7 +33,7 @@
     <string name="urom_math_zero">0</string>
     <string name="urom_math_percentage">%1$d%%</string>
     <string name="urom_screen_adaptive">Adaptation</string>
-    <string name="urom_settings_title">Plus</string>
+    <string name="urom_settings_title">Options pour nAOSProm</string>
     <string name="urom_status_bar_category">Barre d\'état</string>
     <string name="urom_other_category">Divers</string>
     <string name="urom_about">Informations</string>
