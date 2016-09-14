@@ -21,6 +21,8 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
 import android.os.SystemProperties;
 import android.support.v7.preference.ListPreference;
@@ -121,6 +123,16 @@ public class UromSettings extends SettingsPreferenceFragment
         //Hide not supported features
         PreferenceCategory mCategory = null;
 
+	mCategory = (PreferenceCategory) findPreference("urom_shortcut_category");
+	if (removePref("eu.chainfire.supersu"))
+	    mCategory.removePreference(findPreference("urom_shortcut_supersu_settings"));
+	if (removePref("com.lovejoy777.rroandlayersmanager"))
+	    mCategory.removePreference(findPreference("urom_shortcut_bitsyko_layers"));
+	if (removePref("projekt.substratum"))
+	    mCategory.removePreference(findPreference("urom_shortcut_substratum"));
+	if (removePref("org.pygoscelis.mobile.wakeup"))
+	    mCategory.removePreference(findPreference("urom_shortcut_wakeup_settings"));
+
 	mCategory = (PreferenceCategory) findPreference("urom_display_category");
 	if (!getResources().getBoolean(R.bool.config_urom_lightbar)) {
             mCategory.removePreference(findPreference(LIGHTBAR_MODE_KEY));
@@ -156,6 +168,14 @@ public class UromSettings extends SettingsPreferenceFragment
 	if (!getResources().getBoolean(R.bool.config_urom_speakerprox)) {
             mCategory = (PreferenceCategory) findPreference("urom_other_category");
 	    mCategory.removePreference(mDialer);
+	}
+    }
+
+    private boolean removePref(String pkg) {
+	try {
+	    return (getPackageManager().getPackageInfo(pkg, 0) == null);
+	} catch (NameNotFoundException e) {
+	    return true;
 	}
     }
 
