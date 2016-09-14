@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- uRom -->
+    <string name="urom_category">nAOSProm</string>
+    <string name="urom_display_category">Displej a upozornění</string>
+    <string name="urom_memory_category">Paměť</string>
+    <string name="urom_buttons_category">Tlačítka</string>
+    <string name="urom_generic_custom">Přizpůsobení</string>
+    <string name="urom_generic_disabled">Zakázáno</string>
+    <string name="urom_generic_default">Výchozí</string>
+    <string name="urom_generic_reset">Reset</string>
+    <string name="urom_screen_adaptive">Adaptivní</string>
+    <string name="urom_settings_title">Více</string>
+    <string name="urom_status_bar_category">Stavová lišta</string>
+ 
+    <!-- Ram minfree -->
+    <string name="ram_minfree_title">Uvolňovač paměti (LMK)</string>
+    <string name="ram_minfree_automatic">Automaticky</string>
+ 
+    <!-- zram -->
+    <string name="zram_size_title">Swap v paměti</string>
+ 
+    <!-- lightbar -->
+    <string name="lightbar_mode_title">Světelný pás</string>
+    <string name="lightbar_mode_entries_off">Vždy vypnut</string>
+    <string name="lightbar_mode_entries_5s">Zapnut na 5 s</string>
+    <string name="lightbar_mode_entries_on">Zap/vyp s displejem</string>
+    <string name="lightbar_flash_summary">Blikat při upozornění</string>
+
+    <!-- hw keys layout -->
+    <!--
+    <string name="mainkeys_layout_title">Rozvržení fyzických tlačítek (*)</string>
+    <string name="mainkeys_layout_entries_deprecated">Zastaralé (Android 2.3)</string>
+    <string name="mainkeys_layout_entries_modern">Moderní (Android 4.4+)</string>
+    -->
+ 
+    <!-- hw keys music -->
+    <!-- <string name="mainkeys_music_title">Hudba na fyzických tlačítkách</string> -->
+    <string name="mainkeys_music_summary">Ovládání hudby při vypnutém displeji</string>
+ 
+    <!-- doze -->
+    <string name="doze_brightness_title">Jas ambientního displeje</string>
+ 
+    <!-- color calibration -->
+    <string name="color_calibration_title">Kalibrace barev</string>
+    <string name="color_calibration_summary">Kalibrace barev na displeji</string>
+    <string name="color_red_title">Červená</string>
+    <string name="color_green_title">Zelená</string>
+    <string name="color_blue_title">Modrá</string>
+ 
+    <!-- fast charge -->
+    <string name="fast_charge">Rychlonabíjení přes USB</string>
+ 
+    <!-- BitSyko Layers -->
+    <string name="bitsyko_layers">Layers</string>
+
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+
+    <!-- WakeUp -->
+    <string name="wakeup_title">Probuzení</string>
+
+    <!-- Status bar - Battery icon options -->
+    <string name="status_bar_battery_style_title">Indikátor stavu baterie</string>
+    <string name="status_bar_battery_style_icon_portrait">Ikona na výšku</string>
+    <string name="status_bar_battery_style_icon_landscape">Ikona na šířku</string>
+    <string name="status_bar_battery_style_circle">Kruh</string>
+    <string name="status_bar_battery_style_dotted_circle">Tečkovaný kruh</string>
+    <string name="status_bar_battery_style_text">Text</string>
+    <string name="status_bar_battery_style_hidden">Skrytý</string>
+
+    <!-- Status bar - Battery percentage -->
+    <string name="status_bar_battery_percentage_title">Procenta baterie</string>
+    <string name="status_bar_battery_percentage_default">Skrytý</string>
+    <string name="status_bar_battery_percentage_text_inside">Uvnitř ikony</string>
+    <string name="status_bar_battery_percentage_text_next">Vedle ikony</string>
+
+</resources>
