@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- uRom -->
+    <string name="urom_category">Ustawienia nAOSP</string>
+    <string name="urom_display_category">Wyświetlacz i powiadomienia</string>
+    <string name="urom_memory_category">Pamięć</string>
+    <string name="urom_buttons_category">Przyciski fizyczne</string>
+    <string name="urom_generic_custom">Własne</string>
+    <string name="urom_generic_disabled">Wyłączone</string>
+    <string name="urom_generic_default">Domyślny</string>
+    <string name="urom_generic_reset">Resetuj</string>
+    <string name="urom_screen_adaptive">Automatyczny</string>
+    <string name="urom_settings_title">Różne ustawienia</string>
+    <string name="urom_status_bar_category">Pasek stanu</string>
+    <string name="urom_other_category">Inne</string>
+    <string name="urom_about">Informacje o ROM\'ie</string>
+ 
+    <!-- Ram minfree -->
+    <string name="ram_minfree_title">Zarządca Poziomu Pamięci (LMK)</string>
+    <string name="ram_minfree_automatic">Automatyczny</string>
+ 
+    <!-- zram -->
+    <string name="zram_size_title">Ilość Swap\'u w pamięci</string>
+ 
+    <!-- lightbar -->
+    <string name="lightbar_mode_title">Podświetlenie przycisków</string>
+    <string name="lightbar_mode_entries_off">Wyłączone</string>
+    <string name="lightbar_mode_entries_5s">5 sekund</string>
+    <string name="lightbar_mode_entries_on">Działanie wraz z ekranem</string>
+    <string name="lightbar_flash_summary">Używaj podświetlenia po otrzymaniu powiadomienia</string>
+
+    <!-- hw keys layout -->
+    <!--
+    <string name="mainkeys_layout_title">Rozłożenie fizycznych przycisków (*)</string>
+    <string name="mainkeys_layout_entries_deprecated">Android 2.3</string>
+    <string name="mainkeys_layout_entries_modern">Android 4.4</string>
+    -->
+ 
+    <!-- hw keys music -->
+    <!-- <string name="mainkeys_music_title">Kontrola muzyki</string> -->
+    <string name="mainkeys_music_summary">Zmieniaj utwory gdy ekran jest wyłączony</string>
+	
+	<!-- Navigation Bar -->
+    <string name="mainkeys_navbar_title">Pasek nawigacyjny</string>
+    <string name="mainkeys_navbar_summary">Przyciski fizyczne na ekranie</string>
+ 
+    <!-- doze -->
+    <string name="doze_brightness_title">Poziom jasności Ambient Display</string>
+ 
+    <!-- color calibration -->
+    <string name="color_calibration_title">Kalibracja Kolorów</string>
+    <string name="color_calibration_summary">Ustaw kolory wyświetlane na ekranie</string>
+    <string name="color_red_title">Czerwony</string>
+    <string name="color_green_title">Zielony</string>
+    <string name="color_blue_title">Niebieski</string>
+ 
+    <!-- fast charge -->
+    <string name="fast_charge">USB Fast Charge</string>
+ 
+    <!-- BitSyko Layers -->
+    <string name="bitsyko_layers">Layers</string>
+
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+
+    <!-- WakeUp -->
+    <string name="wakeup_title">Wybudzanie ekranu</string>
+
+    <!-- Font size sample text. This needs to be a very short string, as it is shown in
+    multiple font sizes in a limited amount of space. -->
+    <string name="font_size_sample">Przykład</string>
+
+    <!-- KSM -->
+    <string name="ksm_title">KSM</string>
+    <string name="ksm_summary">Łączenie stron kernela (KSM)</string>
+
+    <!-- Allow fake signature checkbox in developer settings -->
+    <string name="allow_signature_fake">Pozwól oszukać podpisy aplikacji</string>
+    <string name="allow_signature_fake_summary">Pozwól na omijanie zabezpieczeń systemu poprzez podszywanie się pod inną aplikację</string>
+    <string name="allow_signature_fake_warning">Pozwalanie aplikacjom na omijanie zabezpieczeń może wiązać się z poważnymi problemami z bezpieczeństwem i prywatnością! Używaj tylko dla nieszkodzliwych aplikacji.</string>
+    
+    <!-- Night/Day Mode -->
+    <string name="color_mode_day">Dzień</string>
+    <string name="color_mode_night">Noc</string>
+    <string name="color_preset_1900">Świeca</string>
+    <string name="color_preset_2600">Wolfram 40W</string>
+    <string name="color_preset_2850">Wolfram 100W</string>
+    <string name="color_preset_3200">Halogen</string>
+    <string name="color_preset_5200">Żeliwny Łuk</string>
+    <string name="color_preset_5400">Słońce w samo południe</string>
+    <string name="color_preset_6000">Światło Słoneczne</string>
+
+    <!-- AutoPowerModes -->
+    <string name="autopower_title">Oszczędzanie Energii</string>
+    <string name="autopower_summary">Stan spoczynku dla Ambient Display i aplikacji</string>
+
+    <!-- Status bar - Battery icon options -->
+    <string name="status_bar_battery_style_title">Styl wskaźnika baterii</string>
+    <string name="status_bar_battery_style_icon_portrait">Pionowa ikona</string>
+    <string name="status_bar_battery_style_icon_landscape">Pozioma ikona</string>
+    <string name="status_bar_battery_style_circle">Okrąg</string>
+    <string name="status_bar_battery_style_dotted_circle">Przerywany okrąg</string>
+    <string name="status_bar_battery_style_text">Tekst</string>
+    <string name="status_bar_battery_style_hidden">Ukryte</string>
+
+    <!-- Status bar - Battery percentage -->
+    <string name="status_bar_battery_percentage_title">Procent baterii</string>
+    <string name="status_bar_battery_percentage_default">Ukryte</string>
+    <string name="status_bar_battery_percentage_text_inside">Wewnątrz ikony</string>
+    <string name="status_bar_battery_percentage_text_next">Obok ikony</string>
+
+    <!-- About -->
+    <string name="urom_about_rom">Przydatne linki</string>
+    <string name="urom_about_source_title">Github</string>
+    <string name="urom_about_source_summary">Pomóż w rozwoju!</string>
+    <string name="urom_about_xda_title">XDA-Developers</string>
+    <string name="urom_about_xda_summary">Temat nAOSP na XDA</string>
+    <string name="urom_about_donation_title">Postaw mi piwo!</string>
+    <string name="urom_about_developers">Twórcy nAOSP</string>
+    <string name="urom_about_leaddeveloper">Główny Dev</string>
+    <string name="urom_about_thanks">Specjalne podziękowania</string>
+    <string name="urom_about_developer">Dev</string>
+    <string name="urom_about_soundfx">Najlepszy equalizer ever</string>
+</resources>
