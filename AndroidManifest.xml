@@ -966,7 +966,7 @@
 
         <activity android:name="Settings$UromSettingsActivity"
                 android:label="@string/urom_settings_title"
-		android:icon="@drawable/ic_settings_more"
+		android:icon="@drawable/ic_settings_development"
                 android:taskAffinity="">
             <intent-filter android:priority="1">
                 <action android:name="com.android.settings.urom.UromSettings" />
