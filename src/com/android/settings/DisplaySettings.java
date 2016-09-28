@@ -405,9 +405,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         final Resources res = context.getResources();
         final String[] entries = res.getStringArray(R.array.entries_font_size);
         final String[] strEntryValues = res.getStringArray(R.array.entryvalues_font_size);
-        final int index = ToggleFontSizePreferenceFragment.fontSizeValueToIndex(currentScale,
-                strEntryValues);
-        mFontSizePref.setSummary(entries[index]);
+        final String summary = ToggleFontSizePreferenceFragment.getFontSizeLabel(res, currentScale,
+                entries, strEntryValues);
+        mFontSizePref.setSummary(summary);
     }
 
     @Override

@@ -102,4 +102,17 @@
         <item>3000</item>
     </string-array>
 
+    <string-array name="entryvalues_font_size_granular" translatable="false">
+        <item>0.85</item>
+        <item>0.90</item>
+        <item>0.95</item>
+        <item>1.0</item>
+        <item>1.05</item>
+        <item>1.10</item>
+        <item>1.15</item>
+        <item>1.20</item>
+        <item>1.25</item>
+        <item>1.30</item>
+    </string-array>
+
 </resources>

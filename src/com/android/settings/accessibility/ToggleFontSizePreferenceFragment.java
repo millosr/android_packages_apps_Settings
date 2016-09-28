@@ -25,11 +25,16 @@ import android.provider.Settings;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.PreviewSeekBarPreferenceFragment;
 import com.android.settings.R;
+import java.text.DecimalFormat;
 
 /**
  * Preference fragment used to control font size.
  */
 public class ToggleFontSizePreferenceFragment extends PreviewSeekBarPreferenceFragment {
+    private static final int DEFAULT_NUM_VALUES = 4;
+    private static final float MEDIUM_SIZE_TRESHOLD = 0.075f;
+    private static final float DEFAULT_SIZE = 1.0f;
+    private static final DecimalFormat PERCENT_FORMAT = new DecimalFormat("#0.##");
 
     private float[] mValues;
 
@@ -44,14 +49,38 @@ public class ToggleFontSizePreferenceFragment extends PreviewSeekBarPreferenceFr
         final ContentResolver resolver = getContext().getContentResolver();
         // Mark the appropriate item in the preferences list.
         mEntries = res.getStringArray(R.array.entries_font_size);
-        final String[] strEntryValues = res.getStringArray(R.array.entryvalues_font_size);
+        String[] strEntryValues = null;
+        if (mEntries.length == DEFAULT_NUM_VALUES) {
+            strEntryValues = res.getStringArray(R.array.entryvalues_font_size_granular);
+            if (strEntryValues.length > DEFAULT_NUM_VALUES) {
+                populateValues(strEntryValues);
+                createGranularEntries(strEntryValues);
+            }
+        }
+        if (mValues == null) {
+            strEntryValues = res.getStringArray(R.array.entryvalues_font_size);
+            populateValues(strEntryValues);
+        }
+
         final float currentScale =
                 Settings.System.getFloat(resolver, Settings.System.FONT_SCALE, 1.0f);
         mInitialIndex = fontSizeValueToIndex(currentScale, strEntryValues);
+    }
+
+    private void populateValues(String[] strEntryValues) {
         mValues = new float[strEntryValues.length];
-        for (int i = 0; i < strEntryValues.length; ++i) {
+        for (int i = 0; i < strEntryValues.length; i++) {
             mValues[i] = Float.parseFloat(strEntryValues[i]);
         }
+    }
+
+    private void createGranularEntries(String[] strEntryValues) {
+        final Resources res = getContext().getResources();
+        final String[] strEntriesGranular = new String[mValues.length];
+        for (int i = 0; i < mValues.length; i++) {
+            strEntriesGranular[i] = getFontSizeLabel(res, mValues[i], mEntries, strEntryValues);
+        }
+        mEntries = strEntriesGranular;
     }
 
     @Override
@@ -93,4 +122,25 @@ public class ToggleFontSizePreferenceFragment extends PreviewSeekBarPreferenceFr
         return indices.length-1;
     }
 
+    public static String getFontSizeLabel(Resources res, float value, String[] strEntries, String[] indices) {
+        if (strEntries.length == DEFAULT_NUM_VALUES) {
+            String label = null;
+            final float lastValue = Float.parseFloat(indices[indices.length - 1]);
+            if (value < DEFAULT_SIZE - MEDIUM_SIZE_TRESHOLD) {
+                label = strEntries[0];
+            } else if (value == DEFAULT_SIZE) {
+                label = strEntries[1];
+            } else if (value <= DEFAULT_SIZE + MEDIUM_SIZE_TRESHOLD) {
+                label = res.getString(R.string.medium_font);
+            } else if (value < lastValue) {
+                label = strEntries[2];
+            } else {
+                label = strEntries[3];
+            }
+            return label +  " (" + PERCENT_FORMAT.format(value * 100.0) + "%)";
+        } else {
+            return strEntries[fontSizeValueToIndex(value, indices)];
+        }
+    }
 }
+
