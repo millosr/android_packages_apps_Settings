@@ -195,6 +195,10 @@
     <string name="prox_auto_speaker_incall_only_summary_on">On outgoing calls, listener will only become active after the receiving party answers</string>
     <string name="prox_auto_speaker_incall_only_summary_off">Listener will be active during all offhook call states</string>
 
+    <!-- Jack broken detection -->
+    <string name="jack_broken_title">Jack detection</string>
+    <string name="jack_broken_summary">Manual plug/unplug for broken jack detection</string>
+
     <!-- About -->
     <string name="urom_about_rom">Useful links</string>
     <string name="urom_about_source_title">Github</string>
