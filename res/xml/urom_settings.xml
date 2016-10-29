@@ -170,6 +170,10 @@
             android:summary="@string/urom_generic_disabled"
             android:fragment="com.android.settings.urom.UromSettingsDialer" />
 
+        <SwitchPreference
+            android:key="jack_broken"
+            android:title="@string/jack_broken_title"
+            android:summary="@string/jack_broken_summary"/>
     </PreferenceCategory>
 
 </PreferenceScreen>
