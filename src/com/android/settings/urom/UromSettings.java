@@ -73,6 +73,9 @@ public class UromSettings extends SettingsPreferenceFragment
     private static final String LOCKSCREEN_PHONE_PROPERTY = "persist.lock.force_phone";
     private static final String DIALER_KEY = "dialer";
 
+    private static final String JACK_BROKEN_KEY = "jack_broken";
+    private static final String JACK_BROKEN_PROPERTY = "persist.sys.jack_broken";
+
     //urom
     private SwitchPreference mKsm;
     private SwitchPreference mMainkeysMusic;
@@ -85,6 +88,7 @@ public class UromSettings extends SettingsPreferenceFragment
     private SwitchPreference mQsOneFinger;
     private SwitchPreference mStatusbarDt2s;
     private PreferenceScreen mDialer;
+    private SwitchPreference mJackBroken;
 
     //Dialog
     private Dialog mAllowSignatureFakeDialog;
@@ -116,6 +120,7 @@ public class UromSettings extends SettingsPreferenceFragment
         mQsOneFinger = (SwitchPreference) findPreference(QS_ONEFINGER_KEY);
         mStatusbarDt2s = (SwitchPreference) findPreference(STATUSBAR_DOUBLETAP_KEY);
         mDialer = (PreferenceScreen) findPreference(DIALER_KEY);
+        mJackBroken = (SwitchPreference) findPreference(JACK_BROKEN_KEY);
 
         //Dialog
         mAllowSignatureFakeDialog = null;
@@ -165,9 +170,12 @@ public class UromSettings extends SettingsPreferenceFragment
 	    mCategory.removePreference(mSensors);
 	}
 
+        mCategory = (PreferenceCategory) findPreference("urom_other_category");
 	if (!getResources().getBoolean(R.bool.config_urom_speakerprox)) {
-            mCategory = (PreferenceCategory) findPreference("urom_other_category");
 	    mCategory.removePreference(mDialer);
+	}
+	if (!getResources().getBoolean(R.bool.config_urom_jack_broken)) {
+	    mCategory.removePreference(mJackBroken);
 	}
     }
 
@@ -210,6 +218,7 @@ public class UromSettings extends SettingsPreferenceFragment
         updateQsOneFingerOptions();
         updateStatusbarDt2sOptions();
 	updateDialerOptions();
+	updateJackBrokenOptions();
     }
     
     //urom
@@ -322,6 +331,16 @@ public class UromSettings extends SettingsPreferenceFragment
         mDialer.setSummary(UromSettingsDialer.getSummaryPreference(getContext()));
     }
 
+    private void updateJackBrokenOptions() {
+        mJackBroken.setChecked(SystemProperties.getBoolean(JACK_BROKEN_PROPERTY, false));
+    }
+    
+    private void writeJackBrokenOptions() {
+        SystemProperties.set(JACK_BROKEN_PROPERTY, 
+                mJackBroken.isChecked() ? "true" : "false");
+        updateJackBrokenOptions();
+    }
+
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         if (preference == mMainkeysMusic) {
@@ -354,6 +373,8 @@ public class UromSettings extends SettingsPreferenceFragment
             writeQsOneFingerOptions();
         } else if (preference == mStatusbarDt2s) {
             writeStatusbarDt2sOptions();
+        } else if (preference == mJackBroken) {
+            writeJackBrokenOptions();
         } else {
             return super.onPreferenceTreeClick(preference);
         }
