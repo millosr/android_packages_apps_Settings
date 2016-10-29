@@ -184,6 +184,10 @@
     <string name="prox_auto_speaker_incall_only_summary_on">Sur appel sortant, la bascule automatique sera uniquement active après que votre interlocuteur soit en ligne</string>
     <string name="prox_auto_speaker_incall_only_summary_off">La bascule automatique sera active quelque soit l\'état de l\'appel</string>
 
+    <!-- Jack broken detection -->
+    <string name="jack_broken_title">Jack détection</string>
+    <string name="jack_broken_summary">Contrôle manuel si la détection de la prise jack est défaillante</string>
+
     <!-- About -->
     <string name="urom_about_rom">Liens utiles</string>
     <string name="urom_about_source_title">Github</string>
