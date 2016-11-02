@@ -16,6 +16,7 @@
 
 package com.android.settings.urom;
 
+import android.app.ActivityManager;
 import android.content.Context;
 import android.os.SystemProperties;
 import android.util.AttributeSet;
@@ -24,13 +25,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import com.android.internal.app.NightDisplayController;
 import com.android.settings.R;
 import com.android.settings.urom.helpers.UromDialogPreference;
 import com.android.settings.urom.helpers.UromSeekBar;
 import com.android.settings.urom.utils.HwScreenColors;
 
 public class UromScreenColors extends UromDialogPreference implements UromSeekBar.Values {
-    private static final String COLOR_MODE_PROPERTY = "screen.color_isday";
     private static final String COLOR_MODE_DAY_PROPERTY = "persist.screen.color_day";
     private static final String COLOR_MODE_NIGHT_PROPERTY = "persist.screen.color_night";
 
@@ -55,6 +56,8 @@ public class UromScreenColors extends UromDialogPreference implements UromSeekBa
 
     private boolean mLockUpdateUI;
 
+    private NightDisplayController mController;
+
     public UromScreenColors(Context context, AttributeSet attrs, boolean day) {
         super(context, attrs, R.layout.urom_settings_colorcalibration);
 
@@ -62,12 +65,13 @@ public class UromScreenColors extends UromDialogPreference implements UromSeekBa
         mLockUpdateUI = false;
         mOriginalRGB = day ? getDayColors() : getNightColors();
         mCurrentColors = HwScreenColors.convertRGBtoInt(mOriginalRGB);
+	mController = new NightDisplayController(context, ActivityManager.getCurrentUser());
 
         updateSummary();
     }
 
     private boolean isDayMode() {
-        return SystemProperties.getBoolean(COLOR_MODE_PROPERTY, true);
+        return !mController.isActivated();
     }
 
     private static String getDayColors() {
