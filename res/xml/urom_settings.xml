@@ -154,6 +154,11 @@
             android:title="@string/statusbar_doubletap_title"
             android:summary="@string/statusbar_doubletap_summary"/>
 
+        <com.android.settings.urom.widgets.UromBattery
+            android:key="status_bar_battery"
+            android:title="@string/status_bar_battery_title"
+            android:persistent="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory android:key="urom_other_category"
