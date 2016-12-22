@@ -141,6 +141,9 @@
     <!-- Quick Settings -->
     <string name="qs_onefinger_title">Quick Settings Expand</string>
     <string name="qs_onefinger_summary">Quick pull down with one finger</string>
+    <!-- Quicks settings columns -->
+    <string name="qs_columns_title">Quick Settings Layout</string>
+    <string name="qs_columns_summary">%1$d columns</string>
 
     <!-- Status Bar Double Tap to Sleep -->
     <string name="statusbar_doubletap_title">Double Tap To Sleep</string>
