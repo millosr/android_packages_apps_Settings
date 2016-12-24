@@ -171,11 +171,13 @@ public class UromBattery extends UromDialogPreference implements RadioGroup.OnCh
     private void writeCheckedStyleAndPercentage() {
         int style = mValuesStyle[findIndexOfValue(
                 mStyleRadioGroup.getCheckedRadioButtonId(), mResIdStyle)];
-        int percentage = mValuesPercentage[findIndexOfValue(
-                mPercentageRadioGroup.getCheckedRadioButtonId(), mResIdPercentage)];
-
         writeStyle(style);
-        writePercentage(percentage);
+
+        if (style != BATTERY_STYLE_HIDDEN && style != BATTERY_STYLE_TEXT) {
+            int percentage = mValuesPercentage[findIndexOfValue(
+                    mPercentageRadioGroup.getCheckedRadioButtonId(), mResIdPercentage)];
+            writePercentage(percentage);
+        }
     }
 
     @Override
