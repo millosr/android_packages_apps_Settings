@@ -43,6 +43,8 @@ public class UromSeekBar implements SeekBar.OnSeekBarChangeListener, Button.OnCl
 
     public void setProgress(int value) {
         mSeekBar.setProgress(value - mValues.getMinValue(this));
+
+        mInfo.setText(mValues.getTextValue(this));
     }
 
     @Override
