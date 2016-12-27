@@ -37,12 +37,16 @@ import com.android.settings.SettingsActivity;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.urom.utils.HwScreenColors;
 
+import java.util.List;
+import java.util.ArrayList;
+
 public class UromSettings extends SettingsPreferenceFragment
         implements DialogInterface.OnClickListener, DialogInterface.OnDismissListener,
                    OnPreferenceChangeListener {
     private static final String TAG = "UromSettings";
 
     //urom
+    private static final String DOZE_BRIGHTNESS_KEY = "doze_brightness";
     private static final String LIGHTBAR_MODE_KEY = "lightbar_mode";
     private static final String COLOR_CALIBRATION_KEY = "color_calibration";
 
@@ -139,9 +143,12 @@ public class UromSettings extends SettingsPreferenceFragment
 	    mCategory.removePreference(findPreference("urom_shortcut_wakeup_settings"));
 
 	mCategory = (PreferenceCategory) findPreference("urom_display_category");
+	if (!getResources().getBoolean(R.bool.config_urom_ambient)) {
+	    mCategory.removePreference(findPreference(DOZE_BRIGHTNESS_KEY));
+	}
 	if (!getResources().getBoolean(R.bool.config_urom_lightbar)) {
-            mCategory.removePreference(findPreference(LIGHTBAR_MODE_KEY));
-        }
+	    mCategory.removePreference(findPreference(LIGHTBAR_MODE_KEY));
+	}
 	if (!HwScreenColors.isSupported()) {
 	    mCategory.removePreference(findPreference(COLOR_CALIBRATION_KEY));
 	}
@@ -174,9 +181,27 @@ public class UromSettings extends SettingsPreferenceFragment
 	if (!getResources().getBoolean(R.bool.config_urom_speakerprox)) {
 	    mCategory.removePreference(mDialer);
 	}
+	if (!getResources().getBoolean(R.bool.config_urom_lockscreen_phone)) {
+	    mCategory.removePreference(mLockscreenPhone);
+	}
 	if (!getResources().getBoolean(R.bool.config_urom_jack_broken)) {
 	    mCategory.removePreference(mJackBroken);
 	}
+
+        //Remove all empty categories
+        List<Preference> prefCatForRemove = new ArrayList<Preference>();
+        PreferenceScreen prefScreen = getPreferenceScreen();
+        int prefCount = prefScreen.getPreferenceCount();
+        for(int i=0; i<prefCount; i++) {
+            Preference pref = prefScreen.getPreference(i);
+            if (pref instanceof PreferenceCategory
+                    && ((PreferenceCategory)pref).getPreferenceCount() == 0) {
+                prefCatForRemove.add(pref);
+            }
+        }
+        for(Preference pref: prefCatForRemove) {
+            prefScreen.removePreference(pref);
+        }
     }
 
     private boolean removePref(String pkg) {
