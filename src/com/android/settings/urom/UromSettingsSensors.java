@@ -130,42 +130,10 @@ public class UromSettingsSensors extends SettingsPreferenceFragment {
     }
 
     private void writeSensorsPickupOptions() {
-        if (mSensorsPickup.isChecked()) {
-            if (mSensorsDialog != null) {
-                dismissDialogs();
-            }
-            mSensorsDialog = new AlertDialog.Builder(getActivity()).setMessage(
-                    getResources().getString(R.string.sensors_experimental_warning))
-                    .setTitle(R.string.sensors_pickup_enable)
-                    .setIconAttribute(android.R.attr.alertDialogIcon)
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            SystemProperties.set(SENSORS_PICKUP_PROPERTY, "1");
-                            rebootRequired();
-                            updateSensorsPickupOptions();
-                        }
-                    })
-                    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            // Reset
-                            mSensorsPickup.setChecked(false);
-                        }
-                    })
-                    .show();
-            mSensorsDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
-                @Override
-                public void onDismiss(DialogInterface dialog) {
-                    mSensorsDialog = null;
-                    updateSensorsPickupOptions();
-                }
-            });
-        } else {
-            SystemProperties.set(SENSORS_PICKUP_PROPERTY, "0");
-            rebootRequired();
-            updateSensorsPickupOptions();
-        }
+        SystemProperties.set(SENSORS_PICKUP_PROPERTY,
+                mSensorsPickup.isChecked() ? "1" : "0");
+        rebootRequired();
+        updateSensorsPickupOptions();
     }
 
     private void updateSensorsSignificantOptions() {
