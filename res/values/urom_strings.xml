@@ -106,6 +106,7 @@
 
     <!-- WakeUp -->
     <string name="wakeup_title">Wake Up</string>
+    <string name="wakeup_gesture_summary">To configure touchscreen gestures</string>
 
     <!-- Substratum -->
     <string name="substratum_title">Substratum</string>

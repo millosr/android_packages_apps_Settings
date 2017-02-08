@@ -133,13 +133,13 @@ public class UromSettings extends SettingsPreferenceFragment
         PreferenceCategory mCategory = null;
 
 	mCategory = (PreferenceCategory) findPreference("urom_shortcut_category");
-	if (removePref("eu.chainfire.supersu"))
+	if (!isPackageAvailable("eu.chainfire.supersu"))
 	    mCategory.removePreference(findPreference("urom_shortcut_supersu_settings"));
-	if (removePref("com.lovejoy777.rroandlayersmanager"))
+	if (!isPackageAvailable("com.lovejoy777.rroandlayersmanager"))
 	    mCategory.removePreference(findPreference("urom_shortcut_bitsyko_layers"));
-	if (removePref("projekt.substratum"))
+	if (!isPackageAvailable("projekt.substratum"))
 	    mCategory.removePreference(findPreference("urom_shortcut_substratum"));
-	if (removePref("org.pygoscelis.mobile.wakeup"))
+	if (!isPackageAvailable("org.pygoscelis.mobile.wakeup"))
 	    mCategory.removePreference(findPreference("urom_shortcut_wakeup_settings"));
 
 	mCategory = (PreferenceCategory) findPreference("urom_display_category");
@@ -204,11 +204,11 @@ public class UromSettings extends SettingsPreferenceFragment
         }
     }
 
-    private boolean removePref(String pkg) {
+    private boolean isPackageAvailable(String pkg) {
 	try {
-	    return (getPackageManager().getPackageInfo(pkg, 0) == null);
+	    return (getPackageManager().getPackageInfo(pkg, 0) != null);
 	} catch (NameNotFoundException e) {
-	    return true;
+	    return false;
 	}
     }
 
