@@ -103,6 +103,7 @@
 
     <!-- WakeUp -->
     <string name="wakeup_title">Wake Up</string>
+    <string name="wakeup_gesture_summary">Pour configurer les gestes de l\'écran tactile</string>
 
     <!-- Substratum -->
     <string name="substratum_title">Substratum</string>

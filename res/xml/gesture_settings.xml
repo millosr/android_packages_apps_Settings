@@ -54,4 +54,15 @@
         settings:animation="@raw/gesture_ambient_lift"
         settings:preview="@drawable/gesture_ambient_lift"/>
 
+    <!-- Wake Up -->
+    <PreferenceScreen
+            android:key="urom_shortcut_wakeup_settings"
+            android:title="@string/wakeup_title"
+	    android:summary="@string/wakeup_gesture_summary">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="org.pygoscelis.mobile.wakeup"
+                android:targetClass="org.pygoscelis.mobile.wakeup.WakeGestureSettings" />
+    </PreferenceScreen>
+
 </PreferenceScreen>

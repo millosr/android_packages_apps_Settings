@@ -17,6 +17,8 @@
 package com.android.settings.gestures;
 
 import android.content.Context;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Resources;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
@@ -55,6 +57,7 @@ public class GestureSettings extends SettingsPreferenceFragment implements
     private static final String PREF_KEY_PICK_UP = "gesture_pick_up";
     private static final String PREF_KEY_SWIPE_DOWN_FINGERPRINT = "gesture_swipe_down_fingerprint";
     private static final String PREF_KEY_DOUBLE_TAP_SCREEN = "gesture_double_tap_screen";
+    private static final String PREF_KEY_WAKEUP = "urom_shortcut_wakeup_settings";
     private static final String DEBUG_DOZE_COMPONENT = "debug.doze.component";
 
     private List<GesturePreference> mPreferences;
@@ -107,6 +110,10 @@ public class GestureSettings extends SettingsPreferenceFragment implements
         } else {
             removePreference(PREF_KEY_DOUBLE_TWIST);
         }
+
+	// WakeUp shortcut
+	if (!isPackageAvailable(context, "org.pygoscelis.mobile.wakeup"))
+	    removePreference(PREF_KEY_WAKEUP);
 
     }
 
@@ -201,6 +208,14 @@ public class GestureSettings extends SettingsPreferenceFragment implements
     private static boolean isDoubleTwistAvailable(Context context) {
         return hasSensor(context, R.string.gesture_double_twist_sensor_name,
                 R.string.gesture_double_twist_sensor_vendor);
+    }
+
+    private static boolean isPackageAvailable(Context context, String pkg) {
+        try {
+            return (context.getPackageManager().getPackageInfo(pkg, 0) != null);
+        } catch (NameNotFoundException e) {
+            return false;
+        }
     }
 
     private static boolean hasSensor(Context context, int nameResId, int vendorResId) {
