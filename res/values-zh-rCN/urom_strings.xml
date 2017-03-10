@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (C) 2016 nAOSProm
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- uRom -->
+    <string name="urom_category">nAOSProm</string>
+    <string name="urom_display_category">显示与通知</string>
+    <string name="urom_memory_category">内存</string>
+    <string name="urom_buttons_category">按键</string>
+    <string name="urom_generic_custom">自定义</string>
+    <string name="urom_generic_disabled">已禁用</string>
+    <string name="urom_generic_default">默认</string>
+    <string name="urom_generic_reset">重置</string>
+    <string name="urom_math_less">-</string>
+    <string name="urom_math_more">+</string>
+    <string name="urom_math_zero">0</string>
+    <string name="urom_math_percentage">%1$d%%</string>
+    <string name="urom_screen_adaptive">自适应</string>
+    <string name="urom_settings_title">nAOSProm 选项</string>
+    <string name="urom_status_bar_category">状态栏</string>
+    <string name="urom_other_category">其他</string>
+    <string name="urom_about">信息</string>
+
+    <!-- Settings -->
+    <string name="urom_settings_reboot_summary">请重启您的设备以应用更改</string>
+ 
+    <!-- Ram minfree -->
+    <string name="ram_minfree_title">低内存管理器</string>
+    <string name="ram_minfree_automatic">自动</string>
+    <string name="ram_minfree_summary">%1$d MiB</string>
+ 
+    <!-- zram -->
+    <string name="zram_size_title">内存交换</string>
+    <string name="zram_size_summary">%1$d MiB</string>
+ 
+    <!-- lightbar -->
+    <string name="lightbar_mode_title">发光带</string>
+    <string name="lightbar_mode_entries_off">始终关闭</string>
+    <string name="lightbar_mode_entries_5s">开启5秒</string>
+    <string name="lightbar_mode_entries_on">随屏幕开启/关闭</string>
+    <string name="lightbar_flash_summary">收到通知时闪烁</string>
+    <string name="lightbar_summary_with_flash">%1$s | 通知</string>
+    <string name="lightbar_screen_on">屏幕开启</string>
+    <string name="lightbar_screen_off">屏幕关闭</string>
+
+    <!-- hw keys layout -->
+    <string name="mainkeys_layout_title">物理按键布局</string>
+    <string name="mainkeys_layout_entries_deprecated">与本机一致</string>
+    <string name="mainkeys_layout_entries_modern">将菜单键映射为最近使用的应用</string>
+ 
+    <!-- hw keys music -->
+    <string name="mainkeys_music_title">音量键</string>
+    <string name="mainkeys_music_summary">屏幕关闭时长按音量键切换曲目</string>
+    
+    <!-- Camera Key -->
+    <string name="camerakey_title">相机键</string>
+    <string name="camerakey_dialog_title">启动相机应用</string>
+    <string name="camerakey_never">从不</string>
+    <string name="camerakey_longshortpress">基于屏幕状态</string>
+    <string name="camerakey_longpress_only">仅长按</string>
+
+    <!-- Navigation Bar -->
+    <string name="mainkeys_navbar_title">导航栏</string>
+    <string name="mainkeys_navbar_summary">屏幕内虚拟按键</string>
+ 
+    <!-- doze brightness -->
+    <string name="doze_brightness_title">环境亮度</string>
+ 
+    <!-- color calibration -->
+    <string name="color_calibration_title">颜色校准</string>
+    <string name="color_calibration_summary">校准屏幕的颜色</string>
+    <string name="color_red_title">红</string>
+    <string name="color_green_title">绿</string>
+    <string name="color_blue_title">蓝</string>
+    <string name="color_profiles">预设：</string>
+    <string name="color_minimum_rgb">最小 RGB</string>
+ 
+    <!-- fast charge -->
+    <string name="fast_charge">USB 快速充电</string>
+
+    <!-- batery stats -->
+    <string name="power_usage_list_summary_time_suffix">(%1$dh %2$dm)</string>
+ 
+    <!-- BitSyko Layers -->
+    <string name="bitsyko_layers">层</string>
+
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+
+    <!-- WakeUp -->
+    <string name="wakeup_title">唤醒</string>
+    <string name="wakeup_gesture_summary">配置触摸屏唤醒手势</string>
+
+    <!-- Substratum -->
+    <string name="substratum_title">Substratum</string>
+
+    <!-- KSM -->
+    <string name="ksm_title">KSM</string>
+    <string name="ksm_summary">内核同页合并</string>
+
+    <!-- Allow fake signature checkbox in developer settings -->
+    <string name="allow_signature_fake">允许伪装签名</string>
+    <string name="allow_signature_fake_summary">允许应用伪装成其他应用以绕过安全系统</string>
+    <string name="allow_signature_fake_warning">允许应用绕过安全系统可能会造成严重的安全及隐私问题！请确保该功能启用时只有无害的应用使用相应的权限。</string>
+    
+    <!-- Night/Day Mode -->
+    <string name="color_mode_day">日间</string>
+    <string name="color_mode_night">夜间</string>
+    <string name="color_preset_1900">烛光</string>
+    <string name="color_preset_2600">40W 钨丝灯</string>
+    <string name="color_preset_2850">100W 钨丝灯</string>
+    <string name="color_preset_3200">卤素灯</string>
+    <string name="color_preset_5200">碳弧灯</string>
+    <string name="color_preset_5400">正午日光</string>
+    <string name="color_preset_6000">直射日光</string>
+
+    <!-- AutoPowerModes -->
+    <string name="autopower_title">自动节省电量</string>
+    <string name="autopower_summary">环境与应用待机</string>
+    
+    <!-- Lockscreen -->
+    <string name="lockscreen_phone_title">锁屏快捷方式</string>
+    <string name="lockscreen_phone_summary">使用拨号图标取代语音助手图标</string>
+    
+    <!-- Quick Settings -->
+    <string name="qs_onefinger_title">快速下拉</string>
+    <string name="qs_onefinger_summary">以一根手指下拉打开快速设置</string>
+    <!-- Quicks settings columns -->
+    <string name="qs_columns_title">快速设置布局</string>
+    <string name="qs_columns_summary">%1$d 栏</string>
+
+    <!-- Status Bar Double Tap to Sleep -->
+    <string name="statusbar_doubletap_title">双击以睡眠</string>
+    <string name="statusbar_doubletap_summary">双击状态栏以关闭屏幕显示</string>
+
+    <!-- Status bar - Battery -->
+    <string name="status_bar_battery_title">电池</string>
+    <string name="status_bar_battery_summary">%1$s | %2$s</string>
+
+    <!-- Status bar - Battery icon options -->
+    <string name="status_bar_battery_style_title">电池状态样式</string>
+    <string name="status_bar_battery_style_icon_portrait">纵向图标</string>
+    <string name="status_bar_battery_style_icon_landscape">横向图标</string>
+    <string name="status_bar_battery_style_circle">环形</string>
+    <string name="status_bar_battery_style_dotted_circle">虚线环形</string>
+    <string name="status_bar_battery_style_text">文本</string>
+    <string name="status_bar_battery_style_hidden">隐藏</string>
+
+    <!-- Status bar - Battery percentage -->
+    <string name="status_bar_battery_percentage_title">电量百分比</string>
+    <string name="status_bar_battery_percentage_default">隐藏</string>
+    <string name="status_bar_battery_percentage_text_inside">图标内</string>
+    <string name="status_bar_battery_percentage_text_next">图标旁</string>
+
+    <!-- Sensors -->
+    <string name="sensors_title">传感器</string>
+    <string name="sensors_summary">管理传感器</string>
+    <string name="sensors_experimental_warning">本项传感器设置为实验性特性，可能在某些情况下导致系统不稳定或是设备重启。\n使用前请做好相应防备。</string>
+    <string name="sensors_pickup_title">拿起动作</string>
+    <string name="sensors_pickup_summary">检测从桌面上拿起设备的动作</string>
+    <string name="sensors_pickup_enable">允许拿起动作检测</string>
+    <string name="sensors_significant_title">显著动作</string>
+    <string name="sensors_significant_summary">检测设备的运动</string>
+    <string name="sensors_significant_enable">允许显著动作检测</string>
+    <string name="sensors_significant_disable">禁用显著动作检测</string>
+    <string name="sensors_significant_disable_warning">省电模式依赖于该传感器，因此将被禁用。</string>
+    <string name="sensors_accelerometer_title">加速度计</string>
+    <string name="sensors_accelerometer_summary">回报三个坐标轴上的重力</string>
+
+    <!-- App Ops -->
+    <string name="app_ops_user_enable_su">启用超级用户</string>
+
+    <!-- Proximity speaker -->
+    <string name="dialer_title">通话时使用免提</string>
+    <string name="prox_auto_speaker_manual_title">手动</string>
+    <string name="prox_auto_speaker_title">由距离传感器开启免提</string>
+    <string name="prox_auto_speaker_summary">在手机远离您的耳朵时自动开启免提</string>
+    <string name="prox_auto_speaker_delay_title">免提延时</string>
+    <string name="prox_auto_speaker_delay_dialog_title">免提延时（毫秒）</string>
+    <string name="prox_auto_speaker_delay_summary">免提将在 <xliff:g id="number">%d</xliff:g> 毫秒后开启</string>
+    <string name="prox_auto_speaker_incall_only_title">仅在通话中</string>
+    <string name="prox_auto_speaker_incall_only_summary_on">拨出电话时，听筒仅在收到对方应答时开启</string>
+    <string name="prox_auto_speaker_incall_only_summary_off">听筒将在所有的摘机呼叫状态中开启</string>
+
+    <!-- Jack broken detection -->
+    <string name="jack_broken_title">耳机插头检测</string>
+    <string name="jack_broken_summary">耳机插头检测失效时手动设定插入/拔出</string>
+
+    <!-- About -->
+    <string name="urom_about_rom">常用链接</string>
+    <string name="urom_about_source_title">Github</string>
+    <string name="urom_about_source_summary">迁出并贡献</string>
+    <string name="urom_about_xda_title">XDA</string>
+    <string name="urom_about_xda_summary">ROM 主帖</string>
+    <string name="urom_about_translation_title">翻译</string>
+    <string name="urom_about_donation_title">捐赠</string>
+    <string name="urom_about_developers">开发者</string>
+    <string name="urom_about_leaddeveloper">主要开发者</string>
+    <string name="urom_about_thanks">鸣谢</string>
+    <string name="urom_about_developer">开发者</string>
+    <string name="urom_about_soundfx">Sound FX</string>
+</resources>
