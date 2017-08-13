@@ -164,6 +164,12 @@
             android:title="@string/status_bar_battery_title"
             android:persistent="false" />
 
+        <PreferenceScreen
+            android:fragment="com.android.settings.urom.ClockSettings"
+            android:key="urom_clock_settings"
+            android:title="@string/clock_settings_title"
+            android:summary="@string/clock_settings_summary" />
+
     </PreferenceCategory>
 
     <PreferenceCategory android:key="urom_other_category"
