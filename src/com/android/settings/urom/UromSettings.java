@@ -67,6 +67,8 @@ public class UromSettings extends SettingsPreferenceFragment
     private static final String SENSORS_KEY = "sensors";
     private static final String AUTOPOWER_KEY = "autopower";
     public static final String AUTOPOWER_PROPERTY = "persist.sys.autopower";
+    private static final String SDCARDFS_KEY = "sdcardfs";
+    public static final String SDCARDFS_PROPERTY = "persist.sys.sdcardfs";
  
     private static final String QS_ONEFINGER_KEY = "qs_onefinger";
     private static final String QS_ONEFINGER_PROPERTY = "persist.sys.qs_onefinger";
@@ -88,6 +90,7 @@ public class UromSettings extends SettingsPreferenceFragment
     private SwitchPreference mAllowSignatureFake;
     private PreferenceScreen mSensors;
     private SwitchPreference mAutoPower;
+    private SwitchPreference mSdcardfs;
     private SwitchPreference mLockscreenPhone;
     private SwitchPreference mQsOneFinger;
     private SwitchPreference mStatusbarDt2s;
@@ -120,6 +123,7 @@ public class UromSettings extends SettingsPreferenceFragment
         mAllowSignatureFake = (SwitchPreference) findPreference(ALLOW_SIGNATURE_FAKE_KEY);
         mSensors = (PreferenceScreen) findPreference(SENSORS_KEY);
         mAutoPower = (SwitchPreference) findPreference(AUTOPOWER_KEY);
+        mSdcardfs = (SwitchPreference) findPreference(SDCARDFS_KEY);
         mLockscreenPhone = (SwitchPreference) findPreference(LOCKSCREEN_PHONE_KEY);
         mQsOneFinger = (SwitchPreference) findPreference(QS_ONEFINGER_KEY);
         mStatusbarDt2s = (SwitchPreference) findPreference(STATUSBAR_DOUBLETAP_KEY);
@@ -132,61 +136,64 @@ public class UromSettings extends SettingsPreferenceFragment
         //Hide not supported features
         PreferenceCategory mCategory = null;
 
-	mCategory = (PreferenceCategory) findPreference("urom_shortcut_category");
-	if (!isPackageAvailable("eu.chainfire.supersu"))
-	    mCategory.removePreference(findPreference("urom_shortcut_supersu_settings"));
-	if (!isPackageAvailable("com.lovejoy777.rroandlayersmanager"))
-	    mCategory.removePreference(findPreference("urom_shortcut_bitsyko_layers"));
-	if (!isPackageAvailable("projekt.substratum"))
-	    mCategory.removePreference(findPreference("urom_shortcut_substratum"));
-	if (!isPackageAvailable("org.pygoscelis.mobile.wakeup"))
-	    mCategory.removePreference(findPreference("urom_shortcut_wakeup_settings"));
+        mCategory = (PreferenceCategory) findPreference("urom_shortcut_category");
+        if (!isPackageAvailable("eu.chainfire.supersu"))
+            mCategory.removePreference(findPreference("urom_shortcut_supersu_settings"));
+        if (!isPackageAvailable("com.lovejoy777.rroandlayersmanager"))
+            mCategory.removePreference(findPreference("urom_shortcut_bitsyko_layers"));
+        if (!isPackageAvailable("projekt.substratum"))
+            mCategory.removePreference(findPreference("urom_shortcut_substratum"));
+        if (!isPackageAvailable("org.pygoscelis.mobile.wakeup"))
+            mCategory.removePreference(findPreference("urom_shortcut_wakeup_settings"));
 
-	mCategory = (PreferenceCategory) findPreference("urom_display_category");
-	if (!getResources().getBoolean(R.bool.config_urom_ambient)) {
-	    mCategory.removePreference(findPreference(DOZE_BRIGHTNESS_KEY));
-	}
-	if (!getResources().getBoolean(R.bool.config_urom_lightbar)) {
-	    mCategory.removePreference(findPreference(LIGHTBAR_MODE_KEY));
-	}
-	if (!HwScreenColors.isSupported()) {
-	    mCategory.removePreference(findPreference(COLOR_CALIBRATION_KEY));
-	}
+        mCategory = (PreferenceCategory) findPreference("urom_display_category");
+        if (!getResources().getBoolean(R.bool.config_urom_ambient)) {
+            mCategory.removePreference(findPreference(DOZE_BRIGHTNESS_KEY));
+        }
+        if (!getResources().getBoolean(R.bool.config_urom_lightbar)) {
+            mCategory.removePreference(findPreference(LIGHTBAR_MODE_KEY));
+        }
+        if (!HwScreenColors.isSupported()) {
+            mCategory.removePreference(findPreference(COLOR_CALIBRATION_KEY));
+        }
 
         mCategory = (PreferenceCategory) findPreference("urom_buttons_category");
-	if (!getResources().getBoolean(R.bool.config_urom_mainkeys)) {
-	    mCategory.removePreference(mMainkeysNavBar);
-	}
-	if (!getResources().getBoolean(R.bool.config_urom_camerakey)) {
-	    mCategory.removePreference(mCamerakey);
-	}
+        if (!getResources().getBoolean(R.bool.config_urom_mainkeys)) {
+            mCategory.removePreference(mMainkeysNavBar);
+        }
+        if (!getResources().getBoolean(R.bool.config_urom_camerakey)) {
+            mCategory.removePreference(mCamerakey);
+        }
 
         mCategory = (PreferenceCategory) findPreference("urom_memory_category");
-	if (!getResources().getBoolean(R.bool.config_urom_zram)) {
-	    mCategory.removePreference(findPreference(ZRAM_KEY));
-	}
-	if (!getResources().getBoolean(R.bool.config_urom_ksm)) {
-	    mCategory.removePreference(mKsm);
-	}
+        if (!getResources().getBoolean(R.bool.config_urom_zram)) {
+            mCategory.removePreference(findPreference(ZRAM_KEY));
+        }
+        if (!getResources().getBoolean(R.bool.config_urom_ksm)) {
+            mCategory.removePreference(mKsm);
+        }
 
         mCategory = (PreferenceCategory) findPreference("urom_system_category");
-	if (!getResources().getBoolean(R.bool.config_urom_autopower)) {
-	    mCategory.removePreference(mAutoPower);
-	}
-	if (!getResources().getBoolean(R.bool.config_urom_sensors)) {
-	    mCategory.removePreference(mSensors);
-	}
+        if (!getResources().getBoolean(R.bool.config_urom_sensors)) {
+            mCategory.removePreference(mSensors);
+        }
+        if (!getResources().getBoolean(R.bool.config_urom_autopower)) {
+            mCategory.removePreference(mAutoPower);
+        }
+        if (!getResources().getBoolean(R.bool.config_urom_sdcardfs)) {
+            mCategory.removePreference(mSdcardfs);
+        }
 
         mCategory = (PreferenceCategory) findPreference("urom_other_category");
-	if (!getResources().getBoolean(R.bool.config_urom_speakerprox)) {
-	    mCategory.removePreference(mDialer);
-	}
-	if (!getResources().getBoolean(R.bool.config_urom_lockscreen_phone)) {
-	    mCategory.removePreference(mLockscreenPhone);
-	}
-	if (!getResources().getBoolean(R.bool.config_urom_jack_broken)) {
-	    mCategory.removePreference(mJackBroken);
-	}
+        if (!getResources().getBoolean(R.bool.config_urom_speakerprox)) {
+            mCategory.removePreference(mDialer);
+        }
+        if (!getResources().getBoolean(R.bool.config_urom_lockscreen_phone)) {
+            mCategory.removePreference(mLockscreenPhone);
+        }
+        if (!getResources().getBoolean(R.bool.config_urom_jack_broken)) {
+            mCategory.removePreference(mJackBroken);
+        }
 
         //Remove all empty categories
         List<Preference> prefCatForRemove = new ArrayList<Preference>();
@@ -239,11 +246,12 @@ public class UromSettings extends SettingsPreferenceFragment
         updateAllowSignatureFakeOptions();
         updateSensorsOptions();
         updateAutoPowerOptions();
+        updateSdcardfsOptions();
         updateLockscreenPhoneOptions();
         updateQsOneFingerOptions();
         updateStatusbarDt2sOptions();
-	updateDialerOptions();
-	updateJackBrokenOptions();
+        updateDialerOptions();
+        updateJackBrokenOptions();
     }
     
     //urom
@@ -319,6 +327,17 @@ public class UromSettings extends SettingsPreferenceFragment
         rebootRequired(getActivity());
         updateAutoPowerOptions();
     }
+
+    private void updateSdcardfsOptions() {
+        mSdcardfs.setChecked(SystemProperties.get(SDCARDFS_PROPERTY, "force_off").contentEquals("force_on"));
+    }
+    
+    private void writeSdcardfsOptions() {
+        SystemProperties.set(SDCARDFS_PROPERTY, 
+                mSdcardfs.isChecked() ? "force_on" : "force_off");
+        rebootRequired(getActivity());
+        updateSdcardfsOptions();
+    }
     
     private void updateLockscreenPhoneOptions() {
         mLockscreenPhone.setChecked(SystemProperties.getBoolean(LOCKSCREEN_PHONE_PROPERTY, false));
@@ -392,6 +411,8 @@ public class UromSettings extends SettingsPreferenceFragment
             }
         } else if (preference == mAutoPower) {
             writeAutoPowerOptions();
+        } else if (preference == mSdcardfs) {
+            writeSdcardfsOptions();
         } else if (preference == mLockscreenPhone) {
             writeLockscreenPhoneOptions();
         } else if (preference == mQsOneFinger) {

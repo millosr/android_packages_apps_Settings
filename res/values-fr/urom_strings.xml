@@ -189,6 +189,10 @@
     <string name="jack_broken_title">Jack détection</string>
     <string name="jack_broken_summary">Contrôle manuel si la détection de la prise jack est défaillante</string>
 
+    <!-- sdcardfs -->
+    <string name="sdcardfs_title">sdcardfs (remplace fuse)</string>
+    <string name="sdcardfs_summary">Réduction des IOs et de l\'empreinte mémoire pour les données utilisateurs</string>
+
     <!-- About -->
     <string name="urom_about_rom">Liens utiles</string>
     <string name="urom_about_source_title">Github</string>

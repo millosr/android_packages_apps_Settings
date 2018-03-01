@@ -139,6 +139,11 @@
             android:title="@string/autopower_title"
             android:summary="@string/autopower_summary"/>
 
+        <SwitchPreference
+            android:key="sdcardfs"
+            android:title="@string/sdcardfs_title"
+            android:summary="@string/sdcardfs_summary"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory android:key="urom_status_bar_category"

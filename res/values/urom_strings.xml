@@ -203,6 +203,10 @@
     <string name="jack_broken_title">Jack detection</string>
     <string name="jack_broken_summary">Manual plug/unplug for broken jack detection</string>
 
+    <!-- sdcardfs -->
+    <string name="sdcardfs_title">sdcardfs (fuse replacement)</string>
+    <string name="sdcardfs_summary">Reduce IOs and memory print for users data</string>
+
     <!-- About -->
     <string name="urom_about_rom">Useful links</string>
     <string name="urom_about_source_title">Github</string>
