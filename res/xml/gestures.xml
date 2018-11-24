@@ -49,4 +49,15 @@
         android:title="@string/ambient_display_pickup_title"
         android:fragment="com.android.settings.gestures.PickupGestureSettings" />
 
+    <!-- Wake Up -->
+    <PreferenceScreen
+            android:key="urom_shortcut_wakeup_settings"
+            android:icon="@drawable/ic_settings_display"
+            android:title="@string/wakeup_title">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="org.pygoscelis.mobile.wakeup"
+                android:targetClass="org.pygoscelis.mobile.wakeup.WakeGestureSettings" />
+    </PreferenceScreen>
+
 </PreferenceScreen>
