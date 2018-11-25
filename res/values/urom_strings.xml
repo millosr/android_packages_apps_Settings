@@ -203,6 +203,7 @@
     <string name="jack_broken_summary">Manual plug/unplug for broken jack detection</string>
 
     <!-- About -->
+    <string name="urom_about_urom_title">About nAOSProm</string>
     <string name="urom_about_rom">Useful links</string>
     <string name="urom_about_source_title">Github</string>
     <string name="urom_about_source_summary">Checkout and contribute</string>
@@ -215,4 +216,6 @@
     <string name="urom_about_thanks">Thanks</string>
     <string name="urom_about_developer">Developer</string>
     <string name="urom_about_soundfx">Sound FX</string>
+    <string name="urom_about_version">nAOSP version</string>
+    <string name="urom_about_build_date">Build date</string>
 </resources>

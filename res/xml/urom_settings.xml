@@ -2,6 +2,16 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/urom_category">
 
+    <PreferenceCategory android:key="urom_about_category"
+            android:title="@string/urom_about">
+        <!-- Urom About -->
+        <PreferenceScreen
+                android:key="urom_shortcut_urom_about"
+                android:icon="@drawable/ic_settings_about"
+                android:title="@string/urom_about_urom_title"
+                android:fragment="com.android.settings.urom.UromSettingsAbout" />
+    </PreferenceCategory>
+
     <PreferenceCategory android:key="urom_shortcut_category"
             android:title="@string/settings_shortcut">
 
@@ -36,17 +46,6 @@
                     android:action="android.intent.action.MAIN"
                     android:targetPackage="eu.chainfire.supersu"
                     android:targetClass="eu.chainfire.supersu.MainActivity" />
-        </PreferenceScreen>
-
-        <!-- Wake Up -->
-        <PreferenceScreen
-                android:key="urom_shortcut_wakeup_settings"
-                android:icon="@drawable/ic_settings_display"
-                android:title="@string/wakeup_title">
-                <intent
-                    android:action="android.intent.action.MAIN"
-                    android:targetPackage="org.pygoscelis.mobile.wakeup"
-                    android:targetClass="org.pygoscelis.mobile.wakeup.WakeGestureSettings" />
         </PreferenceScreen>
 
     </PreferenceCategory>
@@ -127,6 +126,17 @@
 
     <PreferenceCategory android:key="urom_system_category"
             android:title="@string/header_category_system">
+
+        <!-- Wake Up -->
+        <PreferenceScreen
+                android:key="urom_shortcut_wakeup_settings"
+                android:icon="@drawable/ic_settings_display"
+                android:title="@string/wakeup_title">
+                <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="org.pygoscelis.mobile.wakeup"
+                    android:targetClass="org.pygoscelis.mobile.wakeup.WakeGestureSettings" />
+        </PreferenceScreen>
 
         <PreferenceScreen
             android:key="sensors"

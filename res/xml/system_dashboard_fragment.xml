@@ -18,6 +18,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/header_category_system">
 
+    <!-- nAOSProm settings -->
+    <Preference
+        android:key="urom_settings"
+        android:title="@string/urom_settings_title"
+        android:icon="@drawable/ic_android"
+        android:order="-280"
+        android:fragment="com.android.settings.urom.UromSettings" />
+
     <Preference
         android:key="gesture_settings"
         android:title="@string/gesture_preference_title"
@@ -34,14 +42,6 @@
         android:order="-60">
         <intent android:action="android.settings.BACKUP_AND_RESET_SETTINGS" />
     </Preference>
-
-    <!-- nAOSProm settings -->
-    <Preference
-        android:key="urom_settings"
-        android:title="@string/urom_settings_title"
-        android:icon="@drawable/ic_android"
-        android:order="-55"
-        android:fragment="com.android.settings.urom.UromSettings" />
 
     <!-- System updates -->
     <Preference
