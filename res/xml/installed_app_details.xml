@@ -86,6 +86,11 @@
         android:selectable="true"/>
 
     <Preference
+        android:key="package_name"
+        android:title="@string/urom_package_name"
+        android:selectable="false"/>
+
+    <Preference
         android:key="app_version"
         android:selectable="false"
         android:order="9999"/>

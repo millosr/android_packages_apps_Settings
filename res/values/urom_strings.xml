@@ -218,4 +218,7 @@
     <string name="urom_about_soundfx">Sound FX</string>
     <string name="urom_about_version">nAOSP version</string>
     <string name="urom_about_build_date">Build date</string>
+
+    <!-- App info settings -->
+    <string name="urom_package_name">Package name</string>
 </resources>

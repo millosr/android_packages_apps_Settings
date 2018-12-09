@@ -94,6 +94,7 @@ import com.android.settings.fuelgauge.BatteryUtils;
 import com.android.settings.notification.AppNotificationSettings;
 import com.android.settings.notification.NotificationBackend;
 import com.android.settings.notification.NotificationBackend.AppRow;
+import com.android.settings.urom.utils.UromUtils;
 import com.android.settings.widget.EntityHeaderController;
 import com.android.settingslib.AppItem;
 import com.android.settingslib.RestrictedLockUtils;
@@ -157,6 +158,7 @@ public class InstalledAppDetails extends AppInfoBase
     private static final String KEY_LAUNCH = "preferred_settings";
     private static final String KEY_BATTERY = "battery";
     private static final String KEY_MEMORY = "memory";
+    private static final String KEY_PACKAGE_NAME = "package_name";
     private static final String KEY_VERSION = "app_version";
     private static final String KEY_INSTANT_APP_SUPPORTED_LINKS =
             "instant_app_launch_supported_domain_urls";
@@ -176,6 +178,7 @@ public class InstalledAppDetails extends AppInfoBase
     private Preference mLaunchPreference;
     private Preference mDataPreference;
     private Preference mMemoryPreference;
+    private Preference mPackageNamePreference;
     private Preference mVersionPreference;
     private AppDomainsPreference mInstantAppDomainsPreference;
     private DevelopmentSettingsEnabler mDevelopmentSettingsEnabler;
@@ -237,7 +240,8 @@ public class InstalledAppDetails extends AppInfoBase
         // by not allowing disabling of apps signed with the
         // system cert and any launcher app in the system.
         if (mHomePackages.contains(mAppEntry.info.packageName)
-                || Utils.isSystemPackage(getContext().getResources(), mPm, mPackageInfo)) {
+                || (Utils.isSystemPackage(getContext().getResources(), mPm, mPackageInfo)
+                        && !UromUtils.isSystemAppDisabable(mAppEntry.info.packageName))) {
             // Disable button for core system applications.
             button.setText(R.string.disable_text);
         } else if (mAppEntry.info.enabled && !isDisabledUntilUsed()) {
@@ -457,6 +461,7 @@ public class InstalledAppDetails extends AppInfoBase
         mMemoryPreference = findPreference(KEY_MEMORY);
         mMemoryPreference.setOnPreferenceClickListener(this);
         mMemoryPreference.setVisible(mDevelopmentSettingsEnabler.getLastEnabledState());
+        mPackageNamePreference = findPreference(KEY_PACKAGE_NAME);
         mVersionPreference = findPreference(KEY_VERSION);
         mInstantAppDomainsPreference =
                 (AppDomainsPreference) findPreference(KEY_INSTANT_APP_SUPPORTED_LINKS);
@@ -617,6 +622,7 @@ public class InstalledAppDetails extends AppInfoBase
                 .setSummary(summary)
                 .setIsInstantApp(isInstantApp)
                 .done(activity, false /* rebindActions */);
+        mPackageNamePreference.setSummary(mPackageName);
         mVersionPreference.setSummary(getString(R.string.version_text,
                 BidiFormatter.getInstance().unicodeWrap(pkgInfo.versionName)));
     }
