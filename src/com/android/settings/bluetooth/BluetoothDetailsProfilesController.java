@@ -109,7 +109,7 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
             profilePref.setChecked(profile.isPreferred(device));
         }
 
-        if (profile instanceof A2dpProfile) {
+        /*if (profile instanceof A2dpProfile) {
             A2dpProfile a2dp = (A2dpProfile) profile;
             SwitchPreference highQualityPref = (SwitchPreference) mProfilesContainer.findPreference(
                     HIGH_QUALITY_AUDIO_PREF_TAG);
@@ -123,7 +123,7 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
                     highQualityPref.setVisible(false);
                 }
             }
-        }
+        }*/
     }
 
     /**
@@ -218,7 +218,7 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
      * @param profile the profile just added
      */
     private void maybeAddHighQualityAudioPref(LocalBluetoothProfile profile) {
-        if (!(profile instanceof A2dpProfile)) {
+        /*if (!(profile instanceof A2dpProfile)) {
             return;
         }
         BluetoothDevice device = mCachedDevice.getDevice();
@@ -234,7 +234,7 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
                 return true;
             });
             mProfilesContainer.addPreference(highQualityAudioPref);
-        }
+        }*/
     }
 
     /**

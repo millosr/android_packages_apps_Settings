@@ -174,7 +174,7 @@ public final class DeviceProfilesSettings extends InstrumentedDialogFragment imp
             CheckBox pref = createProfilePreference(profile);
             mProfileContainer.addView(pref);
 
-            if (profile instanceof A2dpProfile) {
+            /*if (profile instanceof A2dpProfile) {
                 BluetoothDevice device = mCachedDevice.getDevice();
                 A2dpProfile a2dpProfile = (A2dpProfile) profile;
                 if (a2dpProfile.supportsHighQualityAudio(device)) {
@@ -187,7 +187,7 @@ public final class DeviceProfilesSettings extends InstrumentedDialogFragment imp
                     mProfileContainer.addView(highQualityPref);
                 }
                 refreshProfilePreference(pref, profile);
-            }
+            }*/
         }
 
         final int pbapPermission = mCachedDevice.getPhonebookPermissionChoice();
@@ -376,7 +376,7 @@ public final class DeviceProfilesSettings extends InstrumentedDialogFragment imp
         } else {
             profilePref.setChecked(profile.isPreferred(device));
         }
-        if (profile instanceof A2dpProfile) {
+        /*if (profile instanceof A2dpProfile) {
             A2dpProfile a2dpProfile = (A2dpProfile) profile;
             View v = mProfileContainer.findViewWithTag(HIGH_QUALITY_AUDIO_PREF_TAG);
             if (v instanceof CheckBox) {
@@ -391,7 +391,7 @@ public final class DeviceProfilesSettings extends InstrumentedDialogFragment imp
                     v.setVisibility(View.GONE);
                 }
             }
-        }
+        }*/
     }
 
     private LocalBluetoothProfile getProfileOf(View v) {

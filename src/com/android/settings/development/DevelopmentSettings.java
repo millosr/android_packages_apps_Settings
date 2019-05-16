@@ -26,8 +26,8 @@ import android.app.Dialog;
 import android.app.backup.IBackupManager;
 import android.bluetooth.BluetoothA2dp;
 import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothCodecConfig;
-import android.bluetooth.BluetoothCodecStatus;
+//import android.bluetooth.BluetoothCodecConfig;
+//import android.bluetooth.BluetoothCodecStatus;
 import android.bluetooth.BluetoothHeadset;
 import android.bluetooth.BluetoothProfile;
 import android.content.BroadcastReceiver;
@@ -512,10 +512,10 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
                 findAndInitSwitchPref(BLUETOOTH_SHOW_DEVICES_WITHOUT_NAMES_KEY);
         mBluetoothDisableAbsVolume = findAndInitSwitchPref(BLUETOOTH_DISABLE_ABSOLUTE_VOLUME_KEY);
         mBluetoothEnableInbandRinging = findAndInitSwitchPref(BLUETOOTH_ENABLE_INBAND_RINGING_KEY);
-        if (!BluetoothHeadset.isInbandRingingSupported(getContext())) {
+        //if (!BluetoothHeadset.isInbandRingingSupported(getContext())) {
             removePreference(mBluetoothEnableInbandRinging);
             mBluetoothEnableInbandRinging = null;
-        }
+        //}
 
         mBluetoothSelectAvrcpVersion = addListPreference(BLUETOOTH_SELECT_AVRCP_VERSION_KEY);
         mBluetoothSelectA2dpCodec = addListPreference(BLUETOOTH_SELECT_A2DP_CODEC_KEY);
@@ -746,11 +746,11 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
                                     mBluetoothA2dpServiceListener,
                                     BluetoothProfile.A2DP);
         }
-        filter = new IntentFilter();
+        /*filter = new IntentFilter();
         filter.addAction(BluetoothA2dp.ACTION_CODEC_CONFIG_CHANGED);
         if (getActivity().registerReceiver(mBluetoothA2dpReceiver, filter) == null) {
             updateBluetoothA2dpConfigurationValues();
-        }
+        }*/
 
         mEnableAdbReceiver = new BroadcastReceiver() {
             @Override
@@ -1877,7 +1877,7 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
     }
 
     private void updateBluetoothA2dpConfigurationValues() {
-        int index;
+        /*int index;
         String[] summaries;
         BluetoothCodecStatus codecStatus = null;
         BluetoothCodecConfig codecConfig = null;
@@ -2030,12 +2030,12 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
             summaries = resources.getStringArray(R.array.bluetooth_a2dp_codec_ldac_playback_quality_summaries);
             streaming = resources.getString(R.string.bluetooth_select_a2dp_codec_streaming_label, summaries[index]);
             mBluetoothSelectA2dpLdacPlaybackQuality.setSummary(streaming);
-        }
+        }*/
     }
 
     private void writeBluetoothConfigurationOption(Preference preference,
                                                    Object newValue) {
-        String[] summaries;
+        /*String[] summaries;
         int index;
         int codecTypeValue = BluetoothCodecConfig.SOURCE_CODEC_TYPE_INVALID;
         int codecPriorityValue = BluetoothCodecConfig.CODEC_PRIORITY_DEFAULT;
@@ -2239,7 +2239,7 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
             if (mBluetoothA2dp != null) {
                 mBluetoothA2dp.setCodecConfigPreference(codecConfig);
             }
-        }
+        }*/
     }
 
     private void writeImmediatelyDestroyActivitiesOptions() {
@@ -2755,14 +2755,14 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         @Override
         public void onReceive(Context context, Intent intent) {
             Log.d(TAG, "mBluetoothA2dpReceiver.onReceive intent=" + intent);
-            String action = intent.getAction();
+            /*String action = intent.getAction();
 
             if (BluetoothA2dp.ACTION_CODEC_CONFIG_CHANGED.equals(action)) {
                 BluetoothCodecStatus codecStatus =
                     (BluetoothCodecStatus)intent.getParcelableExtra(BluetoothCodecStatus.EXTRA_CODEC_STATUS);
                 Log.d(TAG, "Received BluetoothCodecStatus=" + codecStatus);
                 updateBluetoothA2dpConfigurationValues();
-            }
+            }*/
         }
     };
 

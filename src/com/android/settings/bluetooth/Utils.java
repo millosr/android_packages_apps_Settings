@@ -162,7 +162,8 @@ public final class Utils {
     static Pair<Drawable, String> getBtClassDrawableWithDescription(Context context,
             CachedBluetoothDevice cachedDevice, float iconScale) {
         BluetoothClass btClass = cachedDevice.getBtClass();
-        final int level = cachedDevice.getBatteryLevel();
+        //final int level = cachedDevice.getBatteryLevel();
+        final int level = -1;
         if (btClass != null) {
             switch (btClass.getMajorDeviceClass()) {
                 case BluetoothClass.Device.Major.COMPUTER:
@@ -222,10 +223,10 @@ public final class Utils {
     @VisibleForTesting
     static Drawable getBluetoothDrawable(Context context, @DrawableRes int resId,
             int batteryLevel, float iconScale) {
-        if (batteryLevel != BluetoothDevice.BATTERY_LEVEL_UNKNOWN) {
+        /*if (batteryLevel != BluetoothDevice.BATTERY_LEVEL_UNKNOWN) {
             return BluetoothDeviceLayerDrawable.createLayerDrawable(context, resId, batteryLevel,
                     iconScale);
-        } else if (resId != 0) {
+        } else*/ if (resId != 0) {
             return context.getDrawable(resId);
         } else {
             return null;
