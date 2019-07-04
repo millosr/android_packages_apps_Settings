@@ -774,7 +774,7 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
             return;
         }
         getActivity().unregisterReceiver(mUsbReceiver);
-        getActivity().unregisterReceiver(mBluetoothA2dpReceiver);
+        //getActivity().unregisterReceiver(mBluetoothA2dpReceiver);
         BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
         if (adapter != null) {
             adapter.closeProfileProxy(BluetoothProfile.A2DP, mBluetoothA2dp);
