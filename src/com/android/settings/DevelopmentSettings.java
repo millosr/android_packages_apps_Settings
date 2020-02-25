@@ -462,6 +462,8 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         mWindowAnimationScale = addListPreference(WINDOW_ANIMATION_SCALE_KEY);
         mTransitionAnimationScale = addListPreference(TRANSITION_ANIMATION_SCALE_KEY);
         mAnimatorDurationScale = addListPreference(ANIMATOR_DURATION_SCALE_KEY);
+        addFasterAnimationValues();
+
         mOverlayDisplayDevices = addListPreference(OVERLAY_DISPLAY_DEVICES_KEY);
         mSimulateColorSpace = addListPreference(SIMULATE_COLOR_SPACE);
         mUSBAudio = findAndInitSwitchPref(USB_AUDIO_KEY);
@@ -519,6 +521,28 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         } else {
             removePreference(COLOR_TEMPERATURE_KEY);
             mColorTemperaturePreference = null;
+        }
+    }
+
+    private void addFasterAnimationValues() {
+        addFasterAnimationValues(mWindowAnimationScale);
+        addFasterAnimationValues(mTransitionAnimationScale);
+        addFasterAnimationValues(mAnimatorDurationScale);
+    }
+
+    private void addFasterAnimationValues(ListPreference animationScalePref) {
+        CharSequence[] values = animationScalePref.getEntryValues();
+        if (values.length > 2 && values[1].equals(".5")) {
+            List<CharSequence> valueList = new ArrayList(Arrays.asList(values));
+            valueList.add(1, ".25");
+
+            CharSequence[] entries = animationScalePref.getEntries();
+            List<CharSequence> entryList = new ArrayList(Arrays.asList(entries));
+            String entry1 = entries[1].toString();
+            entryList.add(1, entry1.replaceAll("\\.5", ".25").replaceAll("\\,5", ",25"));
+
+            animationScalePref.setEntryValues(valueList.toArray(new CharSequence[valueList.size()]));
+            animationScalePref.setEntries(entryList.toArray(new CharSequence[entryList.size()]));
         }
     }
 
