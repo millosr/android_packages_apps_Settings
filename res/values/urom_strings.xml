@@ -208,6 +208,7 @@
     <string name="sdcardfs_summary">Reduce IOs and memory print for users data</string>
 
     <!-- About -->
+    <string name="urom_about_naosp">About nAOSProm</string>
     <string name="urom_about_rom">Useful links</string>
     <string name="urom_about_source_title">Github</string>
     <string name="urom_about_source_summary">Checkout and contribute</string>
@@ -220,6 +221,8 @@
     <string name="urom_about_thanks">Thanks</string>
     <string name="urom_about_developer">Developer</string>
     <string name="urom_about_soundfx">Sound FX</string>
+    <string name="urom_about_version">nAOSP version</string>
+    <string name="urom_about_build_date">Build date</string>
 
     <!-- Clock settings -->
     <string name="clock_settings_title">Clock settings</string>
